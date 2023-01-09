@@ -13,7 +13,7 @@ const people = [
   // More people...
 ]
 
-export default function Example() {
+export default function Card() {
   return (
     <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {people.map((person) => (
