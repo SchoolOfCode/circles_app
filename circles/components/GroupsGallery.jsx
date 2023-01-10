@@ -1,10 +1,10 @@
 import { data } from "../data/events-data";
 import { useState } from "react";
 import GroupCard from "./GroupCard";
+import GroupModal from "./GroupModal";
 
 export default function GroupsGallery() {
-  const [selectedId, setSelectedId] = useState(-1);
-  const [groupInfo, setGroupInfo] = useState(false);
+  const [modalInfo, setModalInfo] = useState(false);
   // console.log(data)
 
   return (
@@ -17,38 +17,21 @@ export default function GroupsGallery() {
           height: "100vh",
           left: "0",
           top: "0",
-          background: "blue",
+          background: "#AED4E6",
           zIndex: "2",
-          display: groupInfo ? "flex" : "none",
+          display: modalInfo ? "flex" : "none",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <div
-          style={{
-            width: "40vw",
-            height: "40vh",
-            background: "pink",
-            position: "relative",
-            overflowY: "scroll",
-          }}
-        >
-          <button
-            className="absolute right-0 top-0"
-            onClick={() => setGroupInfo(false)}
-          >
-            Close
-          </button>
-          <h1>{groupInfo.name}</h1>
-          <h2>{groupInfo.tagline}</h2>
-        </div>
+        <GroupModal club={modalInfo} hideModal={() => setModalInfo(false)} />
       </div>
       <ul
         role="list"
         className="mt-40 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       >
         {data.map((club) => (
-          <GroupCard club={club} setGroupInfo={() => setGroupInfo(club)} />
+          <GroupCard club={club} setModalInfo={() => setModalInfo(club)} />
         ))}
       </ul>
     </div>
