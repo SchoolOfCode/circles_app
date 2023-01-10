@@ -54,4 +54,14 @@ export const data = [
     location: "Laurel Rd, Handsworth, Birmingham B21 9PB",
     availability: "Available",
   },
+  {
+    id: 6,
+    image:
+      "https://www.stamfordschools.org.uk/wp-content/uploads/2020/01/climbing_0004_3.jpg",
+    name: "Rock Climbing Club",
+    description: "good club adajfbn  bfai  frf ; faeubar f auref  ",
+    time: "tuesdays 6pm to 8pm",
+    location: "Laurel Rd, Handsworth, Birmingham B21 9PB",
+    availability: "Available",
+  },
 ];

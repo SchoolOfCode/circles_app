@@ -9,7 +9,7 @@ export default function GroupsGallery() {
 
   return (
     //<div className="w-[1000px] h-[300px]">
-    <div className="boxes">
+    <div>
       <div
         style={{
           position: "fixed",
@@ -28,7 +28,7 @@ export default function GroupsGallery() {
       </div>
       <ul
         role="list"
-        className="mt-40 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        className="mt-60 ml-10 mr-10 mb-10 xl:ml-20 xl:mr-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       >
         {data.map((club) => (
           <GroupCard club={club} setModalInfo={() => setModalInfo(club)} />

@@ -4,10 +4,10 @@ import { AiOutlineClose } from "react-icons/ai";
 
 export default function GroupModal({ setModalInfo, club, hideModal }) {
   return (
-    <div>
+    <div className="max-w-3xl">
       <li
         key={club.name}
-        className="
+        className="h-[100%] 
       col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow" //keep card size the same
         onClick={setModalInfo}
       >
@@ -39,7 +39,12 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
           </dl>
         </div>
         <div>
-          <p className="text-sm text-gray-501">{club.description}</p>
+          <p className="p-5 text-sm text-gray-501">{club.description}</p>
+          <p className="pl-2 pr-2 text-sm text-black font-bold">
+            {`Contact details: ${club.email}`}
+            <br />
+            {`${club.telephone}`}
+          </p>
         </div>
         <div>
           <div className="-mt-px flex divide-x divide-gray-200">
@@ -52,7 +57,7 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
                   className="h-5 w-5 text-gray-400"
                   aria-hidden="true"
                 />
-                <span className="ml-3">Email</span>
+                <span className="ml-3 mr-3">Email</span>
               </a>
             </div>
             <div className="-ml-px flex w-0 flex-1">
@@ -64,7 +69,7 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
                   className="h-5 w-5 text-gray-400"
                   aria-hidden="true"
                 />
-                <span className="ml-3">Call</span>
+                <span className="ml-3 mr-3">Call</span>
               </a>
             </div>
           </div>
