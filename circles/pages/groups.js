@@ -1,15 +1,9 @@
-import Card from "../components/card"
-import Head from "next/head"
-import Card2 from "../components/card2"
-import LayoutCards from '../components/card3'
+import GroupsGallery from "../components/GroupsGallery";
 
-export default function Groups() {
+export default function GroupsPage() {
   return (
-  
-      <div >
-      <Card/>
-      <Card2/>
-      <LayoutCards/>
-      </div>
-  )
+    <div>
+      <GroupsGallery />
+    </div>
+  );
 }
