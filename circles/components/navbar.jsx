@@ -20,13 +20,13 @@ const handleNav = () => {
                         <Link href='/'>Home</Link>
                     </li>
                     <li className='p-4'>
-                        <Link href='/'>Events</Link>
+                        <Link href='/groups'>Groups</Link>
                     </li>
                     <li className='p-4'>
-                        <Link href='/'>Profile</Link>
+                        <Link href='/profile'>Profile</Link>
                     </li>
                     <li className='p-4'>
-                        <Link href='/'>FAQs</Link>
+                        <Link href='/faq'>FAQs</Link>
                     </li>
                 </ul>
 
