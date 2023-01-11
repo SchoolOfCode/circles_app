@@ -2,14 +2,50 @@ import { data } from "../data/events-data";
 import { useState } from "react";
 import GroupCard from "./GroupCard";
 import GroupModal from "./GroupModal";
+import SearchBar from "./SearchBar";
 
 export default function GroupsGallery() {
   const [modalInfo, setModalInfo] = useState(false);
-  // console.log(data)
+  const [searchValue, setSearchValue] = useState("");
+  const [groupsData, setGroupsData] = useState([...data]);
+
+  function handleChange(e) {
+    let value = e.target.value;
+    setSearchValue(value.toLowerCase().trim());
+  }
+
+  function findMatch(key) {
+    return (key || "").toLowerCase().includes(searchValue);
+  }
+
+  function handleClick() {
+    setGroupsData(filteredResults);
+  }
+
+  const filteredResults = groupsData.filter(
+    ({ circle, description, category, location, availability, time }) => {
+      return (
+        findMatch(circle) ||
+        findMatch(description) ||
+        findMatch(category) ||
+        findMatch(location) ||
+        findMatch(availability) ||
+        findMatch(time)
+      );
+    }
+  );
 
   return (
     //<div className="w-[1000px] h-[300px]">
     <div>
+      <SearchBar
+        placeholder="e.g. knitting club"
+        className="bg-yellow-200 absolute top-36 left-[45%]"
+        buttonText="Search"
+        value={searchValue}
+        handleChange={handleChange}
+        handleClick={handleClick}
+      />
       <div
         style={{
           position: "fixed",
@@ -30,7 +66,7 @@ export default function GroupsGallery() {
         role="list"
         className="mt-60 ml-10 mr-10 mb-10 xl:ml-20 xl:mr-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       >
-        {data.map((club) => (
+        {groupsData.map((club) => (
           <GroupCard club={club} setModalInfo={() => setModalInfo(club)} />
         ))}
       </ul>
