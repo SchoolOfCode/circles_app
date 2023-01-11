@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React, {useState} from 'react'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
-import LogoBlack from '../images/LogoBlack.png'
+import LogoBlack from '../public/images/LogoBlack.png'
+import Image from "next/image"
 
 function Navbar (){
     const [nav, setNav] = useState(false)
@@ -12,21 +13,25 @@ const handleNav = () => {
 
     return(
         <div className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-200 opacity-80'>
-            <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-black'>
+            <div className='pl-10 m-auto flex justify-between items-center p-4 text-black'>
                 <Link href='/'>
-                <img src={LogoBlack}></img>
+                    <Image width={90} height={90} src={LogoBlack} className=" scale-125 flex"/>
                 </Link>
                 <ul className='hidden sm:flex'>
-                    <li className='p-4'>
+                    <li className='p-4 hover:bg-gray-700 hover:text-white
+'>
                         <Link href='/'>Home</Link>
                     </li>
-                    <li className='p-4'>
+                    <li className='p-4 hover:bg-gray-700 hover:text-white
+'>
                         <Link href='/groups'>Groups</Link>
                     </li>
-                    <li className='p-4'>
+                    <li className='p-4 hover:bg-gray-700 hover:text-white
+'>
                         <Link href='/profile'>Profile</Link>
                     </li>
-                    <li className='p-4'>
+                    <li className='p-4 hover:bg-gray-700 hover:text-white
+'>
                         <Link href='/faq'>FAQs</Link>
                     </li>
                 </ul>

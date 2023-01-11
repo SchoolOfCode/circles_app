@@ -5,7 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      font: 'Montserrat'
+    },
   },
   plugins: [require("daisyui")],
 }
