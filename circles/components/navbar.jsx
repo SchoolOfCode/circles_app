@@ -10,7 +10,7 @@ const handleNav = () => {
 }
 
     return(
-        <div className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
+        <div className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-200 opacity-80'>
             <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-black'>
                 <Link href='/'>
                 <h1 className='font-bold text-4xl'>Circles</h1>
