@@ -5,9 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      font: 'Montserrat'
+    fontFamily:{
+      'mons': ['Montserrat']
     },
+    extend: {},
   },
   plugins: [require("daisyui")],
 }
