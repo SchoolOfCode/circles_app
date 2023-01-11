@@ -9,16 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+
+    "@headlessui/react": "^1.7.7",
+    "@heroicons/react": "^2.0.13",
+
     "@netlify/plugin-nextjs": "^4.29.4",
+
     "@next/font": "13.1.1",
+    "daisyui": "^2.46.1",
+    "framer-motion": "^8.3.3",
     "next": "13.1.1",
     "next-auth": "^4.18.8",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-search-autocomplete": "^8.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
+    "postcss-nesting": "^10.2.0",
     "tailwindcss": "^3.2.4"
   }
 }
