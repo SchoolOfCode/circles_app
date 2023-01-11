@@ -12,8 +12,10 @@ const handleNav = () => {
 }
 
     return(
+
         <div className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-400 '>
             <div className='pl-10 m-auto flex justify-between items-center p-4 text-black'>
+
                 <Link href='/'>
                     <Image width={90} height={90} src={LogoBlack} className=" scale-125 flex"/>
                 </Link>
