@@ -37,7 +37,7 @@ export default function GroupsGallery() {
   );
 
   const handleOnSearch = (string) => {
-    setSearchValue(string);
+    setSearchValue(string.toLowerCase());
   };
 
   const handleOnSelect = (item) => {
