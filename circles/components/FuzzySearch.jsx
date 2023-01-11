@@ -1,28 +1,47 @@
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import React from "react";
-import { data } from "../data/events-data.js";
 
 export default function FuzzySearchBar({
-  items,
-  handleOnFocus,
-  handleOnHover,
-  handleOnSearch,
-  handleOnSelect,
+  onFocus,
+  onHover,
+  onSearch,
+  onSelect,
+  onClear,
   formatResult,
-  handleChange,
+  className,
 }) {
+  const items = [
+    { id: 1, name: "Chess" },
+    { id: 2, name: "Swimming" },
+    { id: 3, name: "Exercise" },
+    { id: 4, name: "Health" },
+    { id: 5, name: "Climbing" },
+    { id: 6, name: "Ping Pong" },
+  ];
+
+  let fuseOptions = {
+    shouldSort: true,
+    threshold: 0.6,
+    location: 0,
+    distance: 100,
+    maxPatternLength: 32,
+    minMatchCharLength: 2,
+    keys: ["name"],
+  };
+
   return (
-    <div className="absolute t-2 l-4">
+    <div className={className}>
       <div style={{ width: 400 }}>
         <ReactSearchAutocomplete
           items={items}
-          onSearch={handleOnSearch}
-          onHover={handleOnHover}
-          onSelect={handleOnSelect}
-          onFocus={handleOnFocus}
+          onSearch={onSearch}
+          onHover={onHover}
+          onSelect={onSelect}
+          onFocus={onFocus}
+          onClear={onClear}
           autoFocus
           formatResult={formatResult}
-          handleChange={handleChange}
+          fuseOptions={fuseOptions}
         />
       </div>
     </div>
