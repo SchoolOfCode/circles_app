@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import bg from '../public/images/bg.png'
+import bg2 from '../public/images/bg.png'
 
 import styles from '../styles/Home.module.css'
 
@@ -16,11 +16,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full h-screen bg-bg">
-      <Image width={90} height={90} src={bg} className="scale-125 object-fill flex"/>
-
-        <h1>Helping people find safe social spaces</h1>
-       
+      <div className="">
+        <div className=' w-3/4 h-1/2 absolute flex justify-center'>
+      <button className='h-10 pb-3 mt-48 inline-flex items-center text-center justify-center rounded-md p-2 text-gray-400 bg-green-600  hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
+'>zzzzzzzzz</button>
+      </div> 
+      <Image src={bg2} className="w-full h-full bg-cover "/>
+     
         </div>
     </>
   )

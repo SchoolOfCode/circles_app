@@ -5,14 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    backgroundImage: (theme) => ({
-      'backgroundImage': "url('/circles/public/images/bg.png)",
-  }),
+  
     fontFamily:{
       'mons': ['Montserrat']
     },
-    extend: {
-      ,
   },
+    extend: {},
   plugins: [require("daisyui")],
 }
+
