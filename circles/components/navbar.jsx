@@ -72,3 +72,4 @@ const handleNav = () => {
     )
 }
 export default Navbar
+// checking if navbar working
