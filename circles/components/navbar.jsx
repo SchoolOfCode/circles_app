@@ -18,19 +18,19 @@ const handleNav = () => {
                     <Image width={90} height={90} src={LogoBlack} className=" scale-125 flex"/>
                 </Link>
                 <ul className='hidden sm:flex'>
-                    <li className='p-4 hover:bg-gray-700 hover:text-white
+                    <li className='rounded-md p-4 hover:bg-gray-700 hover:text-white
 '>
                         <Link href='/'>Home</Link>
                     </li>
-                    <li className='p-4 hover:bg-gray-700 hover:text-white
+                    <li className='rounded-md p-4 hover:bg-gray-700 hover:text-white
 '>
                         <Link href='/groups'>Groups</Link>
                     </li>
-                    <li className='p-4 hover:bg-gray-700 hover:text-white
+                    <li className='rounded-md p-4 hover:bg-gray-700 hover:text-white
 '>
                         <Link href='/profile'>Profile</Link>
                     </li>
-                    <li className='p-4 hover:bg-gray-700 hover:text-white
+                    <li className='rounded-md p-4 hover:bg-gray-700 hover:text-white
 '>
                         <Link href='/faq'>FAQs</Link>
                     </li>
