@@ -37,7 +37,6 @@ export default function Home() {
           </button>
         )}
         <div className={styles.description}></div>
-
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>pages/index.js</code>
