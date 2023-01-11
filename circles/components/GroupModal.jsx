@@ -25,7 +25,7 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
             alt=""
           />
           <h3 className="mt-6 text-sm font-medium text-gray-900">
-            {club.name}
+            {club.circle}
           </h3>
           <dl className="mt-1 flex flex-grow flex-col justify-between">
             <dt className="sr-only">Title</dt>

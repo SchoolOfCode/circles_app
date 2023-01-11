@@ -18,19 +18,24 @@ export default function GroupsGallery() {
     return (key || "").toLowerCase().includes(searchValue);
   }
 
-  function handleClick() {
-    setGroupsData(filteredResults);
-  }
-
   const filteredResults = groupsData.filter(
-    ({ circle, description, category, location, availability, time }) => {
+    ({
+      circle,
+      description,
+      category,
+      location,
+      availability,
+      times,
+      days,
+    }) => {
       return (
         findMatch(circle) ||
         findMatch(description) ||
         findMatch(category) ||
         findMatch(location) ||
         findMatch(availability) ||
-        findMatch(time)
+        findMatch(times) ||
+        findMatch(days)
       );
     }
   );
@@ -39,12 +44,11 @@ export default function GroupsGallery() {
     //<div className="w-[1000px] h-[300px]">
     <div>
       <SearchBar
-        placeholder="e.g. knitting club"
+        placeholder="e.g. chess club"
         className="bg-yellow-200 absolute top-36 left-[45%]"
-        buttonText="Search"
         value={searchValue}
         handleChange={handleChange}
-        handleClick={handleClick}
+        labelText="Search for Circles"
       />
       <div
         style={{
@@ -64,9 +68,9 @@ export default function GroupsGallery() {
       </div>
       <ul
         role="list"
-        className="mt-60 ml-10 mr-10 mb-10 xl:ml-20 xl:mr-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        className="mt-60 ml-10 mr-10 mb-10 xl:ml-20 xl:mr-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-h-[100%] max-w-[100%]"
       >
-        {groupsData.map((club) => (
+        {filteredResults.map((club) => (
           <GroupCard club={club} setModalInfo={() => setModalInfo(club)} />
         ))}
       </ul>

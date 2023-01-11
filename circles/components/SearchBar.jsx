@@ -11,15 +11,7 @@ import React from "react";
  * @component
  * @returns A search bar that calls a handleChange function as the user types to search.
  */
-function SearchBar({
-  value,
-  className,
-  handleChange,
-  placeholder,
-  labelText,
-  handleClick,
-  buttonText,
-}) {
+function SearchBar({ value, className, handleChange, placeholder, labelText }) {
   return (
     <div className={className}>
       <label htmlFor="search">{labelText}</label>
@@ -30,7 +22,6 @@ function SearchBar({
         onChange={handleChange}
         placeholder={placeholder}
       />
-      <button onClick={handleClick}>{buttonText}</button>
     </div>
   );
 }
