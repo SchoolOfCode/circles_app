@@ -1,12 +1,13 @@
 import EventsView from "../components/EventsView";
-import YourGroups from "../components/YourGroups"
+import ProfileDisplay from "../components/ProfileDisplay";
 
 export default function Profile() {
   return (
-    <div>
-      <EventsView />
-       <YourGroups/>
-    </div>
+    <>
+      <div className="flex flex-row- justify-evenly">
+        <ProfileDisplay />
+        <EventsView />
+      </div>
+    </>
   );
 }
-

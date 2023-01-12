@@ -1,4 +1,4 @@
-import { data } from "../data/events-data";
+import { data } from "../data/clubs-data";
 import { useState } from "react";
 import GroupCard from "./GroupCard";
 import GroupModal from "./GroupModal";
