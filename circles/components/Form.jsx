@@ -7,7 +7,7 @@ const Form = (e) => {
     const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('gmail', 'template_jvez7ga', form.current, 'UoqPUn7g9o7ZvWyKi')
+    emailjs.sendForm('service_7d6w8rc', 'template_73520zy', form.current, 'g4O4KOCSWEDTS9FI7')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
