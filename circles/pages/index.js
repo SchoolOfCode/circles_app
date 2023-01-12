@@ -30,15 +30,12 @@ export default function Home() {
           <Image src={bg2} className="w-full h-full bg-cover " />
         </div>
         {session ? (
-          <button className="bg-blue-300" onClick={() => signOut()}>
-            Log out
-          </button>
+          ""
         ) : (
           <button
             className="bg-blue-300"
             onClick={() => {
               signIn();
-              // router.push("/api/auth/signin");
             }}
           >
             Sign in
