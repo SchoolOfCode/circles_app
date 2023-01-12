@@ -28,16 +28,12 @@ export default function Home() {
         
         <div className=' absolute w-28 left-[900px]  top-[400px] border border-slate-900 rounded-lg bg-[#A3DCEF] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-[#FFD862] duration-300
 ' >
-          {session ? (
-          <button className="flex pl-7 " onClick={() => signOut()}>
-              Log out
-          </button>
+          {session ? (''
         ) : (
           <button
             className="flex pl-7"
             onClick={() => {
               signIn();
-              // router.push("/api/auth/signin");
             }}
           >
             Sign in
@@ -50,9 +46,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-/* <button
-className="h-10 pb-3 mt-48 inline-flex items-center text-center justify-center rounded-md p-2 text-gray-400 bg-green-600  hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-zzzzzzzzz
-</button>*/
