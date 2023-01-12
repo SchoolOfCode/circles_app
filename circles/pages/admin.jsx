@@ -1,4 +1,5 @@
 import { useSession, getSession } from "next-auth/react";
+import Link from 'next/link';
 
 export default function Page() {
   const session = useSession();
