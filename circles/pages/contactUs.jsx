@@ -1,8 +1,13 @@
-import Form from "../components/Form";
+import Form2 from "../components/Form2";
+import Form from "../components/Form"
 
 const ContactUs = () => {
     return (
+      <div>
+      <Form2/>
+      <Form/>
       <h1>Contact</h1>
+      </div>
     )
 }
 
