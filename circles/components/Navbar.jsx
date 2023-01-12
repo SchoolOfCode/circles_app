@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import LogoBlack from "../public/images/LogoBlack.png";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+
+  const session = useSession();
 
   const handleNav = () => {
     setNav(!nav);
@@ -29,18 +32,18 @@ export default function Navbar() {
           >
             <Link href="/">Home</Link>
           </li>
-          <li
-            className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
-"
-          >
-            <Link href="/groups">Groups</Link>
-          </li>
-          <li
-            className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
-"
-          >
-            <Link href="/profile">Profile</Link>
-          </li>
+          {session.data ? (
+            <ul className="hidden sm:flex">
+              <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
+                <Link href="/groups">Groups</Link>
+              </li>
+              <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
+                <Link href="/profile">Profile</Link>
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
           <li
             className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
 "
@@ -53,6 +56,13 @@ export default function Navbar() {
           >
             <Link href="/faq">FAQs</Link>
           </li>
+          {session.data ? (
+            <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
+              <Link href="/faq">Sign out</Link>
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
 
         {/* mobile button */}
