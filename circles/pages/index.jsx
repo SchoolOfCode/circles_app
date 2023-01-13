@@ -31,7 +31,7 @@ export default function Home() {
 
             <Image width={250} height={250} src={Logoblack} className='absolute w-[300px] h-[125px]' />
         
-            <div className=' absolute w-28 left-[70px] top-[110px]  rounded-md  bg-[#A3DCEF] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-[#FFD862] duration-300
+            <div className=' absolute left-[70px] top-[110px] w-50 inline-flex justify-center px-4 py-2  rounded-md transition ease-in-out delay-150 bg-[#FFD862] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862]
 ' >
           {session ? (''
         ) : (
