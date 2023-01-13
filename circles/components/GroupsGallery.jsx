@@ -1,4 +1,4 @@
-import { data } from "../data/events-data";
+import { data } from "../data/clubs-data";
 import { useState } from "react";
 import GroupCard from "./GroupCard";
 import GroupModal from "./GroupModal";
@@ -45,23 +45,22 @@ export default function GroupsGallery() {
   };
 
   return (
-    //<div className="w-[1000px] h-[300px]">
-    <div>
+    <div className="bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen">
       <FuzzySearchBar
-        className="absolute bg-blue-300 top-32 left-[50vw]"
+        className="absolute bg-blue-300 top-32 left-[50vw] min-h-fit max-h-sm"
         onSearch={handleOnSearch}
         onSelect={handleOnSelect}
         styling={{ zIndex: 4 }} // To display it on top of the search box below
         autoFocus
       />
       <div
+        className="bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen w-full"
         style={{
           position: "fixed",
           width: "100vw",
           height: "100vh",
           left: "0",
           top: "0",
-          background: "#AED4E6",
           zIndex: "2",
           display: modalInfo ? "flex" : "none",
           justifyContent: "center",
