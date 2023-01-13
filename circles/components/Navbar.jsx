@@ -48,7 +48,7 @@ export default function Navbar() {
             className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
 "
           >
-            <Link href="/contactUs">Contact Us</Link>
+            <Link href="/contactus">Contact Us</Link>
           </li>
           <li
             className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
@@ -95,7 +95,7 @@ export default function Navbar() {
               ""
             )}
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/contactUs">Contact Us</Link>
+              <Link href="/contactus">Contact Us</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
               <Link href="/faq">Links</Link>
