@@ -52,7 +52,7 @@ const Form = (e) => {
                     </div>
                     <p className="text-xs leading-3 text-gray-600 mt-4">By clicking send you agree to our terms of service, privacy policy and how we use data as stated</p>
                     <div className="flex items-center justify-center w-full">
-                        <input type="submit" value="Send" className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-black hover:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 focus:outline-none"/>
+                        <input type="submit" value="Send" className="mt-9 w-64 inline-flex justify-center drop-shadow-xl rounded-md border border-transparent transition ease-in-out delay-150 bg-[#FFD862] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862] px-4 py-2 text-base font-light text-black shadow-sm hover:bg-[#80BEAF] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"/>
                     </div>
                     </form>
                 </div>
