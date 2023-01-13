@@ -1,11 +1,14 @@
 
 
+import Form from "../components/Form"
 
-export default function ContactUs(){
-
-return (
-    <div>
-
-    </div>
-)
+const ContactUs = () => {
+    return (
+      <div>
+      
+      <Form/>
+      <h1>Contact</h1>
+      </div>
+    )
 }
+

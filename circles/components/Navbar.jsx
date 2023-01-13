@@ -82,18 +82,31 @@ export default function Navbar() {
             <li className="p-4 text-4xl hover:text-gray-500">
               <Link href="/">Home</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/groups">Events</Link>
-            </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/profile">Profile</Link>
-            </li>
+            {session.data ? (
+              <ul className="font-mons">
+                <li className="p-4 text-4xl hover:text-gray-500">
+                  <Link href="/groups">Events</Link>
+                </li>
+                <li className="p-4 text-4xl hover:text-gray-500">
+                  <Link href="/profile">Profile</Link>
+                </li>
+              </ul>
+            ) : (
+              ""
+            )}
             <li className="p-4 text-4xl hover:text-gray-500">
               <Link href="/contactUs">Contact Us</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
               <Link href="/faq">Links</Link>
             </li>
+            {session.data ? (
+              <li className="p-4 text-4xl hover:text-gray-500">
+                <button onClick={() => signOut()}>Sign out</button>
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
       </div>
