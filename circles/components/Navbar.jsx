@@ -4,11 +4,13 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import LogoBlack from "../public/images/LogoBlack.png";
 import Image from "next/image";
 import { useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
 
   const session = useSession();
+  const router = useRouter();
 
   const handleNav = () => {
     setNav(!nav);
@@ -58,7 +60,14 @@ export default function Navbar() {
           </li>
           {session.data ? (
             <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
-              <button onClick={() => signOut()}>Sign out</button>
+              <button
+                href="/"
+                onClick={() => {
+                  signOut({ callbackUrl: "http://localhost:3000/" });
+                }}
+              >
+                Sign out
+              </button>
             </li>
           ) : (
             ""
@@ -102,7 +111,13 @@ export default function Navbar() {
             </li>
             {session.data ? (
               <li className="p-4 text-4xl hover:text-gray-500">
-                <button onClick={() => signOut()}>Sign out</button>
+                <button
+                  onClick={() => {
+                    signOut({ callbackUrl: "http://localhost:3000/" });
+                  }}
+                >
+                  Sign out
+                </button>
               </li>
             ) : (
               ""

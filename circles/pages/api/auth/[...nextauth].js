@@ -5,7 +5,7 @@ export default NextAuth({
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. 'Sign in with...')
-      name: "CirclesCredentials",
+      name: "Circles",
       credentials: {
         username: {
           label: "Email",
