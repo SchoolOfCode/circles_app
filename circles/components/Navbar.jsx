@@ -54,7 +54,7 @@ export default function Navbar() {
             className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
 "
           >
-            <Link href="/faq">Links</Link>
+            <Link href="/faq">Help</Link>
           </li>
           {session.data ? (
             <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
