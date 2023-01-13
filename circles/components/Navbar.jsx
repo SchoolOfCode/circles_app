@@ -48,13 +48,13 @@ export default function Navbar() {
             className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
 "
           >
-            <Link href="/info">Useful Links</Link>
+            <Link href="/contactUs">Contact Us</Link>
           </li>
           <li
             className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
 "
           >
-            <Link href="/faq">FAQs</Link>
+            <Link href="/faq">Links</Link>
           </li>
           {session.data ? (
             <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
@@ -95,10 +95,10 @@ export default function Navbar() {
               ""
             )}
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/info">Useful Links</Link>
+              <Link href="/contactUs">Contact Us</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/faq">FAQs</Link>
+              <Link href="/faq">Links</Link>
             </li>
             {session.data ? (
               <li className="p-4 text-4xl hover:text-gray-500">

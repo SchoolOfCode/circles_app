@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useSession, signOut, signIn } from "next-auth/react";
-import bg2 from "../public/images/bg.png";
+import LP2 from "../public/images/LP2.svg";
+import Logoblack from "../public/images/LogoBlack.png";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -20,29 +21,32 @@ export default function Home() {
       </Head>
       <div className="relative ">
         {/* <img src={bg2} className="w-full h-full bg-cover"/> */}
-        // <Image src={bg2} className="w-full h-full bg-cover" />
-        <div className="absolute bottom-2/3 ">
-          <h1 className=" absolute w-[1000px] left-[200px] -top-16 text-6xl ">
-            "Helping people access their local community through social
-            prescriptions."
-          </h1>
 
-          <div
-            className=" absolute w-28 left-[900px]  top-[400px] border border-slate-900 rounded-lg bg-[#A3DCEF] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-[#FFD862] duration-300
-"
+      //  <Image src={LP2} className="w-full h-full bg-cover" />
+        <div className='absolute w-[300px] h-[300px] bottom-44' >
+        
+        <h1 className=' transition ease-in delay-300 duration-300 opacity-100 absolute w-[1000px] left-[200px] bottom-96 text-6xl '
+        >"Helping people access their local community through social prescriptions."</h1>
+          <div className='absolute w-[300px] h-[150px] left-[950px]'>
+
+            <Image width={250} height={250} src={Logoblack} className='absolute w-[300px] h-[125px]' />
+        
+            <div className=' absolute w-28 left-[70px] top-[110px]  rounded-md  bg-[#A3DCEF] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-[#FFD862] duration-300
+' >
+          {session ? (''
+        ) : (
+          <button
+            className="flex pl-7 "
+            onClick={() => {
+              signIn();
+            }}
           >
-            {session ? (
-              ""
-            ) : (
-              <button
-                className="flex pl-7"
-                onClick={() => {
-                  signIn();
-                }}
-              >
-                Sign in
-              </button>
-            )}
+            Sign in
+          </button>
+        )}
+
+            </div>
+
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import Form2 from "../components/Form2";
+
+
 import Form from "../components/Form"
 
 const ContactUs = () => {
@@ -11,4 +12,3 @@ const ContactUs = () => {
     )
 }
 
-export default ContactUs;
