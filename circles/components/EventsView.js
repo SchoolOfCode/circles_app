@@ -45,14 +45,16 @@ export default function EventsView({ onClick }) {
   ];
 
   return (
-    <div className="flex flex-row-reverse justify-evenly h-[100vh]">
+    <div className="flex flex-row-reverse justify-around h-[80vh] w-[100vw]">
       <div
-        className="mt-[15vh] dark:bg-gray-700 bg-blue-50 min-w-96 min-h-[90vh] rounded-lg p-4"
+        className="mt-0 mr-[20vw] dark:bg-gray-700 bg-blue-50 min-w-96 min-h-[90vh] rounded-lg p-4"
         id="calendar-container-card"
       >
         <div className="mt-11 h-fit bg-white rounded-xl">
           <div className="flex justify-center font-mons font-bold text-xl pb-4">
-            <h2>January</h2>
+            <button>{"<"}</button>
+            <h2>January 2023</h2>
+            <button>{">"}</button>
           </div>
           <div className="grid grid-cols-7 gap-4 mb-6 text-2xl font-bold">
             <div>Su</div>
@@ -84,7 +86,7 @@ export default function EventsView({ onClick }) {
       </div>
       <Timeline
         items={filteredEvents}
-        className="mt-[15vh] dark:bg-gray-700 bg-blue-50 min-w-96 min-h-[90vh] rounded-lg p-4"
+        className="mt-0 dark:bg-gray-700 bg-blue-50 min-w-[400px] min-h-[90vh] rounded-lg p-4"
         id="timeline-container-card"
       />
     </div>
