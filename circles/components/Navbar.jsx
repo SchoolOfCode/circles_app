@@ -94,8 +94,7 @@ export default function Navbar() {
             {session.data ? (
               <ul className="font-mons">
                 <li className="p-4 text-4xl hover:text-gray-500">
-                  <Link href="/groups">Events</Link>
-                </li>
+                <Link href="/groups">Groups</Link>                </li>
                 <li className="p-4 text-4xl hover:text-gray-500">
                   <Link href="/profile">Profile</Link>
                 </li>
@@ -107,7 +106,7 @@ export default function Navbar() {
               <Link href="/contactus">Contact Us</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/faq">Links</Link>
+            <Link href="/faq">Help</Link>
             </li>
             {session.data ? (
               <li className="p-4 text-4xl hover:text-gray-500">
