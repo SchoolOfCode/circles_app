@@ -52,7 +52,7 @@ export default function Navbar() {
           >
             <Link href="/contactus">Contact Us</Link>
           </li>
-          <li
+          <li data-cy="help"
             className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons
 "
           >
