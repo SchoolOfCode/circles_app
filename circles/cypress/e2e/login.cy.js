@@ -1,5 +1,5 @@
-describe('template spec', () => {
-  it('passes', () => {
+describe('logintest', () => {
+  it('allows user to sign in and view groups', () => {
     cy.visit('http://localhost:3000')
     cy.get('[data-cy="signin"]').click();
     cy.get('#input-username-for-credentials-provider').clear('npmwin@gmail.com');
