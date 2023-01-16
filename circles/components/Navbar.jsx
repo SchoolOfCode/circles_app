@@ -36,7 +36,7 @@ export default function Navbar() {
           </li>
           {session.data ? (
             <ul className="hidden sm:flex">
-              <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
+              <li data-cy="groups" className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
                 <Link href="/groups">Groups</Link>
               </li>
               <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">

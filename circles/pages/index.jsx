@@ -35,7 +35,7 @@ export default function Home() {
 ' >
           {session ? (''
         ) : (
-          <button
+          <button data-cy="signin"
             className="flex pl-7 "
             onClick={() => {
               signIn();
