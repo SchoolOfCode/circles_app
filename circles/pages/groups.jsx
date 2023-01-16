@@ -2,6 +2,13 @@ import GroupsGallery from "../components/GroupsGallery";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 
+
+async function fetchGroups() {
+  let response = await fetch('/api/hello');
+  let data = await response.text();
+  console.log(data);
+}
+
 export default function GroupsPage() {
   const session = useSession();
   return (
