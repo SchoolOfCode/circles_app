@@ -1,13 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import { CLIENT_PUBLIC_FILES_PATH } from 'next/dist/shared/lib/constants';
-import prisma from '../../lib/prisma'
+import { CLIENT_PUBLIC_FILES_PATH } from "next/dist/shared/lib/constants";
+import { PrismaClient } from "@prisma/client";
+import prisma from "../../lib/prisma";
 
-export async function getStaticProps() {
-  const prisma = new PrismaClient()
-  const groups = await prisma.post.findMany()
-console.log(groups)
-  return {
-    props : { groups }
-  }
+export default async function handleGroups(req, res) {
+  const hello = await prisma.groups.findMany();
+  res.json(hello);
 }
