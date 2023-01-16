@@ -1,17 +1,11 @@
-import clientPromise from "../../lib/mongodb";
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default async function handler(req, res) {
-  const client = await clientPromise;
-  const db = client.db("circles");
-  switch (req.method) {
-    case "POST":
-      let bodyObject = JSON.parse(req.body);
-      let myGroup = await db.collection("groups").insertOne(bodyObject);
-      res.json(myGroup.ops[0]);
-      break;
-    case "GET":
-      const allGroups = await db.collection("groups").find({}).toArray();
-      res.json({ status: 200, data: allGroups });
-      break;
-  }
+import { CLIENT_PUBLIC_FILES_PATH } from "next/dist/shared/lib/constants";
+
+import prisma from "../../lib/prisma";
+
+export default async function handleGroups(req, res) {
+  const hello = await prisma.groups.findMany();
+  res.json(hello);
 }
+

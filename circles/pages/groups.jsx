@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 
 async function fetchGroups() {
-  let response = await fetch("/api/hello");
+  let response = await fetch("/api/groups");
   let data = await response.json();
   console.log(data);
 }
