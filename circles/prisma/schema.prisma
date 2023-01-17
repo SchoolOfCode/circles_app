@@ -21,7 +21,7 @@ model Groups {
   location     String
   availability String
   email        String
-  telephone    Int
+  telephone    String
   events       Events[]
 }
 

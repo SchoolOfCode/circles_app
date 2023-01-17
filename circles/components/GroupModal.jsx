@@ -6,7 +6,7 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
   return (
     <div className="max-w-3xl">
       <li
-        key={club.name}
+        key={club.club_name}
         className="h-[100%] 
       col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow" //keep card size the same
         onClick={setModalInfo}
@@ -25,7 +25,7 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
             alt=""
           />
           <h3 className="mt-6 text-sm font-medium text-gray-900">
-            {club.circle}
+            {club.club_name}
           </h3>
           <dl className="mt-1 flex flex-grow flex-col justify-between">
             <dt className="sr-only">Title</dt>

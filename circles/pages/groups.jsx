@@ -1,21 +1,38 @@
 import GroupsGallery from "../components/GroupsGallery";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { useState } from "react";
 
-async function fetchGroups() {
-  let response = await fetch("/api/groups");
+
+
+
+
+export async function getServerSideProps() {
+ 
+  let response = await fetch("http://localhost:3000/api/groups");
   let data = await response.json();
-  console.log(data);
+  // console.log(data)
+  return { props: { data } }
 }
-fetchGroups();
 
-export default function GroupsPage() {
+
+
+export default function GroupsPage({data}) {
+  console.log(data)
   const session = useSession();
+
+
+
+  // fetchGroups();
+  // if (data === !undefined){
+  // console.log(data)
+  // }
+
   return (
     <div>
       {" "}
       {session.data ? (
-        <GroupsGallery />
+        <GroupsGallery data={data} />
       ) : (
         <div className="font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen">
           <h3>Please log in to view the groups available.</h3>

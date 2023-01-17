@@ -1,7 +1,7 @@
 import { useSession, getSession } from "next-auth/react";
 import Link from 'next/link';
 
-const data = { group: 'example' };
+// const data = { group: 'example' };
 
 fetch('/api/admin', {//// Wrap in useEffect
   method: 'POST', 

@@ -13,10 +13,21 @@ export default async function handler(req, res) {
 
 async function createComment(req, res) {
     const body = req.body
+    console.log(body)
+    console.log(body.club_name)
     try {
       const newEntry = await prisma.groups.create({ /// will need to change groups to comments table value?
         data: {
-          group: body.group ,
+          club_name: body.club_name,
+          days: body.days,
+          times: body.times,
+          image: body.image,
+          tagline: body.tagline,
+          description: body.description,
+          location: body.location,
+          availability: body.availability,
+          email: body.email,
+          telephone: body.telephone
         }
       })
       return res.status(200).json(newEntry, { success: true })
