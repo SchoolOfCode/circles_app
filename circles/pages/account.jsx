@@ -9,7 +9,8 @@ export default function Profile() {
       {" "}
       {session.data ? (
         <>
-          <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen">
+          {/* <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen"> */}
+          <div>
             <AccountView />
           </div>
         </>
