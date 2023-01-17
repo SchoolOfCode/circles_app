@@ -1,7 +1,6 @@
-import EventsView from "../components/EventsView";
-import ProfileDisplay from "../components/ProfileDisplay";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import AccountView from "../components/AccountView";
 
 export default function Profile() {
   const session = useSession();
@@ -10,9 +9,9 @@ export default function Profile() {
       {" "}
       {session.data ? (
         <>
-          <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen">
-            <ProfileDisplay />
-            <EventsView />
+          {/* <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen"> */}
+          <div>
+            <AccountView />
           </div>
         </>
       ) : (
