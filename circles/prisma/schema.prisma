@@ -9,12 +9,14 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-model groups {
-  id Int @id @default(autoincrement())
-  group String 
+model User {
+  id      Int      @id @default(autoincrement())
+  email   String   @unique // <-- add unique attribute
+  profile Profile?
 }
 
-model events {
-  id Int @id @default(autoincrement())
-  group String 
+model Profile {
+  id        Int    @id @default(autoincrement())
+  user      User   @relation(fields: [userEmail], references: [email])
+  userEmail String @unique // relation scalar field (used in the `@relation` attribute above)
 }
