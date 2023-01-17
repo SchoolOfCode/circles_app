@@ -40,7 +40,7 @@ export default function Navbar() {
                 <Link href="/groups">Groups</Link>
               </li>
               <li className="rounded-md p-4 hover:bg-gray-700 hover:text-white font-bold font-mons">
-                <Link href="/profile">Profile</Link>
+                <Link href="/account">Account</Link>
               </li>
             </ul>
           ) : (
@@ -94,9 +94,10 @@ export default function Navbar() {
             {session.data ? (
               <ul className="font-mons">
                 <li className="p-4 text-4xl hover:text-gray-500">
-                <Link href="/groups">Groups</Link>                </li>
+                  <Link href="/groups">Groups</Link>{" "}
+                </li>
                 <li className="p-4 text-4xl hover:text-gray-500">
-                  <Link href="/profile">Profile</Link>
+                  <Link href="/account">Account</Link>
                 </li>
               </ul>
             ) : (
@@ -106,7 +107,7 @@ export default function Navbar() {
               <Link href="/contactus">Contact Us</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-            <Link href="/faq">Help</Link>
+              <Link href="/faq">Help</Link>
             </li>
             {session.data ? (
               <li className="p-4 text-4xl hover:text-gray-500">
