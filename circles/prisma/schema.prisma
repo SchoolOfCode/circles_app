@@ -15,14 +15,14 @@ model Groups {
   club_name    String   @unique
   days         String
   times        String
-  image        String
+  image        String?
   tagline      String
   description  String
   location     String
   availability String
   email        String
   telephone    Int
-  Events       Events[]
+  events       Events[]
 }
 
 model Events {
@@ -31,7 +31,7 @@ model Events {
   date       String
   time       String
   groups     Groups  @relation(fields: [club_name], references: [club_name])
-  club_name  String
+  club_name  String 
   running    Boolean @default(true)
 }
 
@@ -43,8 +43,8 @@ model Users {
   telephone      Int
   role           String
   link_worker_id Int
-  Feedback       Feedback[]
-  User_circles   User_circles[]
+  feedback       Feedback[]
+  user_circles   User_circles[]
 }
 
 model Feedback {
