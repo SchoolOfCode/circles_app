@@ -31,7 +31,7 @@ export default function FuzzySearchBar({
 
   return (
     <div className={className}>
-      <div style={{ width: 400 }}>
+      <div>
         <ReactSearchAutocomplete
           items={items}
           onSearch={onSearch}
