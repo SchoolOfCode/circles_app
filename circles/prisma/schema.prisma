@@ -9,14 +9,56 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-model User {
-  id      Int      @id @default(autoincrement())
-  email   String   @unique // <-- add unique attribute
-  profile Profile?
+
+model Groups {
+  id           Int      @id @default(autoincrement())
+  club_name    String   @unique
+  days         String
+  times        String
+  image        String
+  tagline      String
+  description  String
+  location     String
+  availability String
+  email        String
+  telephone    Int
+  Events       Events[]
 }
 
-model Profile {
+model Events {
+  id         Int     @id @default(autoincrement())
+  event_name String
+  date       String
+  time       String
+  groups     Groups  @relation(fields: [club_name], references: [club_name])
+  club_name  String
+  running    Boolean @default(true)
+}
+
+model Users {
+  id             Int            @id @default(autoincrement())
+  first_name     String
+  surname        String
+  email          String
+  telephone      Int
+  role           String
+  link_worker_id Int
+  Feedback       Feedback[]
+  User_circles   User_circles[]
+}
+
+model Feedback {
+  id         Int    @id @default(autoincrement())
+  user       Users  @relation(fields: [user_id], references: [id])
+  user_id    Int
+  event_name String
+  comment    String
+  rating     Int
+}
+
+model User_circles {
   id        Int    @id @default(autoincrement())
-  user      User   @relation(fields: [userEmail], references: [email])
-  userEmail String @unique // relation scalar field (used in the `@relation` attribute above)
+  user      Users  @relation(fields: [user_id], references: [id])
+  user_id   Int
+  club_name String
 }
