@@ -24,7 +24,7 @@ export default function Navbar() {
             width={90}
             height={90}
             src={LogoBlack}
-            className=" scale-125 flex"
+            className="flex"
           />
         </Link>
         <ul className="hidden sm:flex">
