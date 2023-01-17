@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
+import UserPane from "./UserPane";
 
 const data = {
   user: "John Doe",
@@ -16,12 +17,20 @@ export default function AccountView() {
     data: null,
   });
 
+function closePane(){
+  setProfilePane({...profilePane, visible:false})
+  }
   return (
     <>
       <div className="flex justify-evenly align-middle w-[100vw]">
+       <UserPane
+        visible={profilePane.visible}
+        data={profilePane.data}
+        closePane={closePane}
+       />
         <button
           onClick={() =>
-            setProfilePane({ ...{ visible: !profilePane.visible, data: data } })
+            setProfilePane({...profilePane, visible:true, data:data})
           }
         >
           <CgProfile />
