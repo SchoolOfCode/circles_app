@@ -23,7 +23,6 @@ export default function AccountView() {
   }
   return (
     <>
-      <Navbar />
       <div className="flex justify-evenly align-middle w-[100vw]">
         <UserPane
           visible={profilePane.visible}

@@ -47,7 +47,7 @@ export default function GroupsGallery() {
   return (
     <div className="bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen">
       <FuzzySearchBar
-        className="absolute bg-blue-300 top-32 left-[50vw] min-h-fit max-h-sm"
+        className=" bg-blue-300 min-h-fit max-h-sm"
         onSearch={handleOnSearch}
         onSelect={handleOnSelect}
         styling={{ zIndex: 4 }} // To display it on top of the search box below

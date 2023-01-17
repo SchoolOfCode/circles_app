@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed left-0 top-0 w-full  ease-in duration-300 bg-slate-300 z-50">
+    <div className="w-full  ease-in duration-300 bg-slate-300 z-50">
       <div className="pl-10 m-auto flex justify-between items-center p-4 text-black">
         <Link href="/">
           <Image
@@ -75,7 +75,7 @@ export default function Navbar() {
         </ul>
 
         {/* mobile button */}
-        <div onClick={handleNav} className="block sm:hidden z-10">
+        <div onClick={handleNav} className="block sm:hidden z-50">
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
 
@@ -83,8 +83,8 @@ export default function Navbar() {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300"
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300 z-40"
+              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300 z-40"
           }
         >
           <ul className="font-mons">

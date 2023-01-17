@@ -6,7 +6,6 @@ export default function GroupsPage() {
   const session = useSession();
   return (
     <div>
-      {" "}
       {session.data ? (
         <GroupsGallery />
       ) : (
