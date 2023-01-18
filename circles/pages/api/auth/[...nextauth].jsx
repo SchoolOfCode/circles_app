@@ -10,9 +10,13 @@ export default NextAuth({
         username: {
           label: "Email",
           type: "email",
-          placeholder: "jsmith@test.com",
+         placeholder: "jsmith@test.com",
         },
-        password: { label: "PIN", type: "password" },
+       password: { label: "PIN", type: "password" },
+      },
+
+      pages: {
+        signIn: "/signin"
       },
 
       async authorize(credentials, req) {
