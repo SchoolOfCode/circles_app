@@ -17,6 +17,7 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <body>
         <div className="relative ">
           <Image src={LandingP} className="w-full h-full bg-cover" />
@@ -30,12 +31,12 @@ export default function Home() {
               src={Logoblack}
               className="absolute w-[300px] h-[125px]"
             /> */}
-
             <div className="">
               {session ? (
                 ""
               ) : (
                 <button
+
                   className="pl-7 font-mons inline-flex justify-center px-4 py-2  rounded-md transition ease-in-out delay-150 bg-[rgb(255,216,98)] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862]"
                   onClick={() => {
                     signIn();
