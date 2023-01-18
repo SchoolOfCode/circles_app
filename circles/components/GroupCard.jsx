@@ -49,7 +49,7 @@ export default function GroupCard({ club, setModalInfo }) {
             </div>
             <div className="-ml-px flex w-0 flex-1">
               <a
-                href={`tel:${club.telephone}`}
+                href={`tel: ${club.telephone}`}
                 className="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-lg border border-transparent py-4 text-sm font-medium text-gray-700 hover:text-gray-500"
               >
                 <PhoneIcon

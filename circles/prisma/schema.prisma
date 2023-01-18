@@ -38,7 +38,7 @@ model Events {
 model Users {
   id             Int            @id @default(autoincrement())
   first_name     String
-  surname        String
+  surname        String 
   email          String
   telephone      Int
   role           String

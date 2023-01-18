@@ -43,7 +43,7 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
           <p className="pl-2 pr-2 text-sm text-black font-bold">
             {`Contact details: ${club.email}`}
             <br />
-            {`${club.telephone}`}
+            {`0${club.telephone}`}
           </p>
         </div>
         <div>
