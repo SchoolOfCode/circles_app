@@ -23,6 +23,7 @@ model Groups {
   email        String
   telephone    String
   events       Events[]
+  user_circles User_circles[]
 }
 
 model Events {
@@ -40,9 +41,9 @@ model Users {
   first_name     String
   surname        String 
   email          String
-  telephone      Int
+  telephone      String
   role           String
-  link_worker_id Int
+  link_worker_id Int?
   feedback       Feedback[]
   user_circles   User_circles[]
 }
@@ -60,5 +61,6 @@ model User_circles {
   id        Int    @id @default(autoincrement())
   user      Users  @relation(fields: [user_id], references: [id])
   user_id   Int
+  groups    Groups  @relation(fields: [club_name], references: [club_name])
   club_name String
 }
