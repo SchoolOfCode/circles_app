@@ -9,8 +9,8 @@ export async function getServerSideProps() {
   return { props: { events } };
 }
 
-export default function Profile({events}) {
-  console.log(events)
+export default function Profile() {
+ 
   const session = useSession();
   return (
     <div className="absolute top-24 font-mons">
@@ -19,7 +19,7 @@ export default function Profile({events}) {
         <>
           {/* <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen"> */}
           <div>
-            <AccountView events={events} />
+            <AccountView  />
           </div>
         </>
       ) : (
