@@ -2,14 +2,14 @@ export const events = [
   {
     id: 1,
     eventName: "Tea and cake",
-    date: "24/01",
+    date: "Tue Jan 24 2023",
     time: "2:30 pm to 3:30pm",
     clubName: "Book club",
   },
   {
     id: 2,
     eventName: "Weekly meetup",
-    date: "24/01",
+    date: "Tue Jan 24 2023",
     time: "5:30 pm to 7pm",
     clubName: "Ageing well",
   },
