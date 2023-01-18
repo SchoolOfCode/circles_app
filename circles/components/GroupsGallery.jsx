@@ -45,9 +45,11 @@ export default function GroupsGallery({data}) {
   };
 
   return (
-    <div className="bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen">
+    <div className="pt-32 px-10 bg-gradient-to-b from-yellow-100 to-blue-200 w-full">
       <FuzzySearchBar
-        className="absolute bg-blue-300 top-32 left-[50vw] min-h-fit max-h-sm"
+
+        className="mb-8 w-full max-w-md"
+
         onSearch={handleOnSearch}
         onSelect={handleOnSelect}
         styling={{ zIndex: 4 }} // To display it on top of the search box below
@@ -57,8 +59,8 @@ export default function GroupsGallery({data}) {
         className="bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen w-full"
         style={{
           position: "fixed",
-          width: "100vw",
-          height: "100vh",
+          // width: "100vw",
+          // height: "100vh",
           left: "0",
           top: "0",
           zIndex: "2",
@@ -71,7 +73,7 @@ export default function GroupsGallery({data}) {
       </div>
       <ul
         role="list"
-        className="mt-60 ml-10 mr-10 mb-10 xl:ml-20 xl:mr-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 max-h-[100%] max-w-[100%]"
+        className="mb-10 xl:ml-20 xl:mr-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 max-h-[100%] max-w-[100%]"
       >
         {filteredResults.map((club) => (
           <GroupCard club={club} setModalInfo={() => setModalInfo(club)} />

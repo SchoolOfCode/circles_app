@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export default function ProfileDisplay() {
   return (
     <div className="flex flex-1 flex-col p-8 mt-0 ml-[5px] dark:bg-gray-700 bg-blue-50 min-w-96 min-h-[90vh] rounded-lg w-fit">
@@ -9,21 +11,12 @@ export default function ProfileDisplay() {
       <h1>Sadako Takashi</h1>
       <h3>Your Circles</h3>
       <br></br>
-      <button className="w-64 inline-flex items-center drop-shadow-xl rounded-md border border-transparent transition ease-in-out delay-150 bg-[#FFD862] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862] px-4 py-2 text-base font-light text-black shadow-sm hover:bg-[#80BEAF] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-        Book Club{" "}
-      </button>
-      <br></br>
-      <button className="w-64 inline-flex items-center drop-shadow-xl rounded-md border border-transparent transition ease-in-out delay-150 bg-[#FFD862] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862] px-4 py-2 text-base font-light text-black shadow-sm hover:bg-[#80BEAF] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-        Mindfulness yoga{" "}
-      </button>
-      <br></br>
-      <button className="w-64 inline-flex items-center drop-shadow-xl rounded-md border border-transparent transition ease-in-out delay-150 bg-[#FFD862] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862] px-4 py-2 text-base font-light text-black shadow-sm hover:bg-[#80BEAF] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-        Singing for the soul{" "}
-      </button>
-      <br></br>
-      <button className="w-64 inline-flex items-center drop-shadow-xl rounded-md border border-transparent transition ease-in-out delay-150 bg-[#FFD862] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862] px-4 py-2 text-base font-light text-black shadow-sm hover:bg-[#80BEAF] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-        Gardening club{" "}
-      </button>
+      <Button />
+      <Button
+        buttonText="Upcoming Events"
+        handleClick="../pages/account/events.jsx"
+      />
+      <Link href="../pages/account/events.jsx">Upcoming Events</Link>
       <br></br>
     </div>
   );

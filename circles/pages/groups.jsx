@@ -14,7 +14,6 @@ export default function GroupsPage({ data }) {
 
   return (
     <div>
-      {" "}
       {session.data ? (
         <GroupsGallery data={data} />
       ) : (
