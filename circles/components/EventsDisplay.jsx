@@ -7,9 +7,10 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function EventsDisplay() {
   const [startDate, setStartDate] = useState(new Date());
 
-  //const [events, setEvents] = useState([...events]);
-  let date = `${startDate}`.substring(0, 16);
-  let filteredEvents = events.filter((event) => event.date === date);
+  let date = `${startDate}`.substring(0, 15);
+  let filteredEvents = events.filter((event) => {
+    return event.date === date;
+  });
 
   return (
     <>
@@ -18,8 +19,6 @@ export default function EventsDisplay() {
           selected={startDate}
           onChange={(Date) => {
             setStartDate(Date);
-            console.log(date);
-            console.log(filteredEvents);
           }}
         />
       </div>
@@ -29,3 +28,10 @@ export default function EventsDisplay() {
     </>
   );
 }
+
+// console.log({
+//     left: event.date,
+//     right: date,
+//     condition: event.date === date,
+//     length: date.length === event.date.length,
+//   });
