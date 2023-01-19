@@ -1,11 +1,11 @@
-import { data } from "../data/clubs-data";
+// import { data } from "../data/clubs-data";
 import { useState } from "react";
 import GroupCard from "./GroupCard";
 import GroupModal from "./GroupModal";
 //import SearchBar from "./SearchBar";
 import FuzzySearchBar from "./FuzzySearch";
 
-export default function GroupsGallery() {
+export default function GroupsGallery({data}) {
   const [modalInfo, setModalInfo] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [groupsData, setGroupsData] = useState([...data]);

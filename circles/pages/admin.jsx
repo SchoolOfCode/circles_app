@@ -1,5 +1,23 @@
 import { useSession, getSession } from "next-auth/react";
-import Link from 'next/link';
+import Link from "next/link";
+
+// const data = { group: 'example' };
+
+// fetch('/api/admin', {//// Wrap in useEffect
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(data),
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log('Success:', data);
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });
+//   // fetch()
 
 export default function Page() {
   const session = useSession();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import UserPane from "./UserPane/UserPane";
-import Navbar from "./Navbar";
+import EventsDisplay from "./EventsDisplay";
 
 const data = {
   user: "John Doe",
@@ -12,7 +12,19 @@ const data = {
   circles: ["swimming club, mountain climbing"],
 };
 
-export default function AccountView() {
+export default function AccountView({ events }) {
+  // const [state, dispatch] = useReducer(reducer, initialState);
+  // const intialState = [...events]
+
+  // function reducer(state, action){
+  //   switch (action.type) {
+  //     case "TODAY":
+  //       return state.filter((event)=> )
+  //   }
+  // }
+
+  console.log(events);
+
   const [profilePane, setProfilePane] = useState({
     visible: false,
     data: null,
@@ -21,22 +33,29 @@ export default function AccountView() {
   function closePane() {
     setProfilePane({ ...profilePane, visible: false });
   }
+
   return (
     <>
-      <div className="flex justify-evenly align-middle w-[100vw]">
+      <div className="flex align-middle w-screen h-screen">
         <UserPane
           visible={profilePane.visible}
           data={profilePane.data}
           closePane={closePane}
+          // handleUpcoming={handleUpcoming}
+          // handlePast={handlePast}
         />
-        <button
-          onClick={() =>
-            setProfilePane({ ...profilePane, visible: true, data: data })
-          }
-        >
-          <CgProfile />
-        </button>
-        <h1>Is this visible? {profilePane.visible ? "yes" : "no"}</h1>
+        <div className="flex justify-evenly w-[80vw] h-[85vh] bg-amber-200">
+          <div className="flex flex-col justify-start mt-4">
+            <button
+              onClick={() =>
+                setProfilePane({ ...profilePane, visible: true, data: data })
+              }
+            >
+              <CgProfile />
+            </button>
+          </div>
+          <EventsDisplay events={events} />
+        </div>
       </div>
     </>
   );
