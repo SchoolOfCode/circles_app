@@ -43,10 +43,10 @@ export default function Navbar() {
             ""
           )}
           <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
-            <Link href="/contactus">Contact Us</Link>
+            <Link href="/contact-us">Contact Us</Link>
           </li>
           <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
-            <Link href="/faq">Help</Link>
+            <Link href="/help">Help</Link>
           </li>
           {session.data ? (
             <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
