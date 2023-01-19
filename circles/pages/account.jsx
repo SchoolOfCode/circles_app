@@ -3,7 +3,7 @@ import Link from "next/link";
 import AccountView from "../components/AccountView";
 
 export async function getServerSideProps() {
-  let response = await fetch("http://localhost:3000/api/events");
+  //let response = await fetch("http://localhost:3000/api/events");
   let events = await response.json();
 
   return { props: { events } };
