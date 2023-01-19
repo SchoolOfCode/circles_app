@@ -1,11 +1,11 @@
-import { data } from "../data/clubs-data";
+// import { data } from "../data/clubs-data";
 import { useState } from "react";
 import GroupCard from "./GroupCard";
 import GroupModal from "./GroupModal";
 //import SearchBar from "./SearchBar";
 import FuzzySearchBar from "./FuzzySearch";
 
-export default function GroupsGallery() {
+export default function GroupsGallery({data}) {
   const [modalInfo, setModalInfo] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [groupsData, setGroupsData] = useState([...data]);
@@ -47,7 +47,9 @@ export default function GroupsGallery() {
   return (
     <div className="pt-32 px-10 bg-gradient-to-b from-yellow-100 to-blue-200 w-full">
       <FuzzySearchBar
+
         className="mb-8 w-full max-w-md"
+
         onSearch={handleOnSearch}
         onSelect={handleOnSelect}
         styling={{ zIndex: 4 }} // To display it on top of the search box below
