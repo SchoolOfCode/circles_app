@@ -10,6 +10,7 @@ export async function getServerSideProps() {
 }
 
 export default function Profile() {
+
   const session = useSession();
   return (
     <div className="absolute top-24 font-mons">
@@ -18,7 +19,9 @@ export default function Profile() {
         <>
           {/* <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen"> */}
           <div>
+
             <AccountView />
+
           </div>
         </>
       ) : (

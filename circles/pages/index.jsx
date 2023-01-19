@@ -18,26 +18,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body>
+      <div>
         <div className="relative ">
-          <Image src={LandingP} className="w-full h-full bg-cover" />
+          <Image src={LandingP} className="w-full h-full bg-cover" /> 
           <h1 className=" transition ease-in delay-300 duration-300 opacity-100 absolute w-[1000px] left-[200px] bottom-96 text-6xl ">
             "Helping people find their circles"
           </h1>
           <div className="absolute w-[300px] h-[150px] left-[950px]">
-            {/* <Image
-              width={250}
-              height={250}
-              src={Logoblack}
-              className="absolute w-[300px] h-[125px]"
-            /> */}
+         
             <div className="">
               {session ? (
                 ""
               ) : (
                 <button
 
-                  className="pl-7 font-mons inline-flex justify-center px-4 py-2  rounded-md transition ease-in-out delay-150 bg-[rgb(255,216,98)] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862]"
+                  className="pl-7 font-mons inline-flex justify-center px-4 py-2  rounded-md transition ease-in-out delay-150 bg-[rgb(255,216,98)] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 "
                   onClick={() => {
                     signIn();
                   }}
@@ -48,7 +43,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </body>
+      </div>
     </div>
   );
 }
