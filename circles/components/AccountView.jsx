@@ -29,15 +29,16 @@ export default function AccountView() {
           data={profilePane.data}
           closePane={closePane}
         />
-        <div className="flex justify-evenly w-[80vw] h-[85vh]">
-          <button
-            onClick={() =>
-              setProfilePane({ ...profilePane, visible: true, data: data })
-            }
-          >
-            <CgProfile />
-          </button>
-          <h1>Is this visible? {profilePane.visible ? "yes" : "no"}</h1>
+        <div className="flex justify-evenly w-[80vw] h-[85vh] bg-amber-200">
+          <div className="flex flex-col justify-start mt-4">
+            <button
+              onClick={() =>
+                setProfilePane({ ...profilePane, visible: true, data: data })
+              }
+            >
+              <CgProfile />
+            </button>
+          </div>
           <EventsDisplay />
         </div>
       </div>
