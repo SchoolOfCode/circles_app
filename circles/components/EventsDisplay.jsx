@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import Timeline from "./Timeline";
-import { events } from "../data/events-data.js";
+//import { events } from "../data/events-data.js";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function EventsDisplay() {
+export default function EventsDisplay({ events }) {
   const [startDate, setStartDate] = useState(new Date());
-  let date = `${startDate}`.substring(0, 15);
-  let d = new Date(date); //converts string into date format
-  console.log(d);
+
   let filteredEvents = events.filter((event) => {
-    return event.date === date;
+    const eventDate = new Date(event.date);
+    return eventDate.setHours(0, 0, 0, 0) === startDate.setHours(0, 0, 0, 0);
   });
 
   return (
