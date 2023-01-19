@@ -3,9 +3,13 @@ import Link from "next/link";
 import AccountView from "../components/AccountView";
 
 export async function getServerSideProps() {
-  let response = await fetch("https://circlesapp.netlify.app/api/events");
-  let events = await response.json();
-  return { props: { events } };
+  try {
+    let response = await fetch("https://circlesapp.netlify.app/api/events");
+    let events = await response.json();
+    return { props: { events } };
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export default function Profile({ events }) {
