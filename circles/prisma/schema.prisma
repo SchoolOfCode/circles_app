@@ -34,6 +34,8 @@ model Events {
   groups     Groups  @relation(fields: [club_name], references: [club_name])
   club_name  String 
   running    Boolean @default(true)
+  start_time DateTime @db.Time @default(now())
+  end_time DateTime @db.Date @default(now())
 }
 
 model Users {
