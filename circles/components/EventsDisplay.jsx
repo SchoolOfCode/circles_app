@@ -6,14 +6,15 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function EventsDisplay() {
   const [startDate, setStartDate] = useState(new Date());
-
   let date = `${startDate}`.substring(0, 15);
+  let d = new Date(date); //converts string into date format
+  console.log(d);
   let filteredEvents = events.filter((event) => {
     return event.date === date;
   });
 
   return (
-    <>
+    <div className="flex flex-row-reverse bg-zinc-400">
       <div>
         <DatePicker
           selected={startDate}
@@ -22,10 +23,10 @@ export default function EventsDisplay() {
           }}
         />
       </div>
-      <div>
+      <div className="bg-slate-400">
         <Timeline items={filteredEvents} />
       </div>
-    </>
+    </div>
   );
 }
 
