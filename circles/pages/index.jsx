@@ -1,13 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { useSession, signOut, signIn } from "next-auth/react";
-import LP2 from "../public/images/LP2.svg";
+import LandingP from "../public/images/LandingP.png";
 import Logoblack from "../public/images/LogoBlack.png";
 
 export default function Home() {
   const { data: session } = useSession();
-  const router = useRouter();
   console.log("session on index", session);
 
   return (
@@ -19,34 +17,30 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative ">
-        {/* <img src={bg2} className="w-full h-full bg-cover"/> */}
 
-      //  <Image src={LP2} className="w-full h-full bg-cover" />
-        <div className='absolute w-[300px] h-[300px] bottom-44' >
-        
-        <h1 className=' transition ease-in delay-300 duration-300 opacity-100 absolute w-[1000px] left-[200px] bottom-96 text-6xl '
-        >"Helping people access their local community through social prescriptions."</h1>
-          <div className='absolute w-[300px] h-[150px] left-[950px]'>
 
-            <Image width={250} height={250} src={Logoblack} className='absolute w-[300px] h-[125px]' />
-        
-            <div className=' absolute left-[70px] top-[110px] w-50 inline-flex justify-center px-4 py-2  rounded-md transition ease-in-out delay-150 bg-[#FFD862] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 bg-[#FFD862]
-' >
-          {session ? (''
-        ) : (
-          <button data-cy="signin"
-            className="flex pl-7 "
-            onClick={() => {
-              signIn();
-            }}
-          >
-            Sign in
-          </button>
-        )}
-
+      <div>
+        <div className="relative ">
+          <Image src={LandingP} className="w-full h-full bg-cover" /> 
+          <h1 className=" transition ease-in delay-300 duration-300 opacity-100 absolute w-[1000px] left-[200px] bottom-96 text-6xl ">
+            "Helping people find their circles"
+          </h1>
+          <div className="absolute w-[300px] h-[150px] left-[950px]">
+         
+            <div className="">
+              {session ? (
+                ""
+              ) : (
+                <button data-cy="signin" 
+                  className="pl-7 font-mons inline-flex justify-center px-4 py-2  rounded-md transition ease-in-out delay-150 bg-[rgb(255,216,98)] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 "
+                  onClick={() => {
+                    signIn();
+                  }}
+                >
+                  Sign in
+                </button>
+              )}
             </div>
-
           </div>
         </div>
       </div>

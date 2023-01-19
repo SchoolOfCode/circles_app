@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Groups {
+  id           Int      @id @default(autoincrement())
+  club_name    String   @unique
+  days         String
+  times        String
+  image        String?
+  tagline      String
+  description  String
+  location     String
+  availability String
+  email        String
+  telephone    String
+  events       Events[]
+  user_circles User_circles[]
+}
+
+model Events {
+  id         Int     @id @default(autoincrement())
+  event_name String
+  date       String
+  time       String
+  groups     Groups  @relation(fields: [club_name], references: [club_name])
+  club_name  String 
+  running    Boolean @default(true)
+}
+
+model Users {
+  id             Int            @id @default(autoincrement())
+  first_name     String
+  surname        String 
+  email          String
+  telephone      String
+  role           String
+  link_worker_id Int?
+  feedback       Feedback[]
+  user_circles   User_circles[]
+}
+
+model Feedback {
+  id         Int    @id @default(autoincrement())
+  user       Users  @relation(fields: [user_id], references: [id])
+  user_id    Int
+  event_name String
+  comment    String
+  rating     Int
+}
+
+model User_circles {
+  id        Int    @id @default(autoincrement())
+  user      Users  @relation(fields: [user_id], references: [id])
+  user_id   Int
+  groups    Groups  @relation(fields: [club_name], references: [club_name])
+  club_name String
+}

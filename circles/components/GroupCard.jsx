@@ -5,7 +5,7 @@ export default function GroupCard({ club, setModalInfo }) {
   return (
     <div>
       <li
-        key={club.name}
+        key={club.club_name}
         className=" 
        col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow min-h-[250px]"
         onClick={setModalInfo}
@@ -17,7 +17,7 @@ export default function GroupCard({ club, setModalInfo }) {
             alt=""
           />
           <h3 className="mt-6 mb-6 text-sm font-medium text-gray-900 pb-1">
-            {club.circle}
+            {club.club_name}
           </h3>
           <div className="mb-1">
             <dl className="mt-1 flex flex-grow flex-col justify-between">
@@ -49,7 +49,7 @@ export default function GroupCard({ club, setModalInfo }) {
             </div>
             <div className="-ml-px flex w-0 flex-1">
               <a
-                href={`tel:${club.telephone}`}
+                href={`tel: ${club.telephone}`}
                 className="relative inline-flex w-0 flex-1 items-center justify-center rounded-br-lg border border-transparent py-4 text-sm font-medium text-gray-700 hover:text-gray-500"
               >
                 <PhoneIcon

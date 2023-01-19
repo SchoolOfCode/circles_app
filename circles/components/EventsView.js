@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { events } from "../data/events-data";
 import Timeline from "./Timeline";
 
+
+
+
 export default function EventsView({ onClick }) {
   const [date, setDate] = useState(null);
   const [btnState, setBtnState] = useState(false);
