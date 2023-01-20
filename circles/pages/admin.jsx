@@ -1,5 +1,4 @@
 import { useSession, getSession } from "next-auth/react";
-import Link from "next/link";
 
 // const data = { group: 'example' };
 
