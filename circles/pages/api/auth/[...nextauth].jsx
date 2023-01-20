@@ -15,9 +15,7 @@ export default NextAuth({
        password: { label: "PIN", type: "password" },
       },
 
-      pages: {
-        signIn: "/signin"
-      },
+     
 
       async authorize(credentials, req) {
         console.log("credentials", credentials);
@@ -58,6 +56,14 @@ export default NextAuth({
       },
     }),
   ],
+  // pages: {
+  //   signIn: "/signin",
+  // },
+
+
+
+
+  
   callbacks: {
     jwt: async (options) => {
       //if sign in is attempted successfully a jwt token is created, options contains all the data available

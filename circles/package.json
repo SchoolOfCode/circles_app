@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.4.9",
     "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
@@ -17,16 +18,19 @@
     "@prisma/client": "^4.8.1",
     "daisyui": "^2.46.1",
     "emailjs-com": "^3.2.0",
+    "formik": "^2.2.9",
     "framer-motion": "^8.3.3",
     "next": "13.1.1",
     "next-auth": "^4.18.8",
+    "next-auth-client": "^1.5.0",
     "react": "18.2.0",
     "react-calendar": "^4.0.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-search-autocomplete": "^8.3.1",
     "react-side-pane": "^2.4.6",
-    "react-sliding-pane": "^7.3.0"
+    "react-sliding-pane": "^7.3.0",
+    "v8": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "18.11.18",
