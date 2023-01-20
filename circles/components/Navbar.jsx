@@ -19,12 +19,7 @@ export default function Navbar() {
     <div className="w-full  ease-in duration-300 bg-white z-50">
       <div className="pl-10 m-auto flex justify-between items-center p-4 text-black">
         <Link href="/">
-          <Image
-            width={90}
-            height={90}
-            src={LogoBlack}
-            className="flex"
-          />
+          <Image width={90} height={90} src={LogoBlack} className="flex" />
         </Link>
         <ul className="hidden sm:flex">
           <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
@@ -32,7 +27,10 @@ export default function Navbar() {
           </li>
           {session.data ? (
             <ul className="hidden sm:flex">
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <li
+                data-cy="groups"
+                className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
+              >
                 <Link href="/groups">Groups</Link>
               </li>
               <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
@@ -45,7 +43,10 @@ export default function Navbar() {
           <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
             <Link href="/contact-us">Contact Us</Link>
           </li>
-          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+          <li
+            data-cy="help"
+            className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
+          >
             <Link href="/help">Help</Link>
           </li>
           {session.data ? (
