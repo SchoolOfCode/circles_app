@@ -25,23 +25,7 @@ export default function Home() {
           "Helping people find their circles"
         </h1>
         <FeedbackModal />
-        <div className="absolute w-[300px] h-[150px] left-[950px]">
-          <div className="">
-            {session ? (
-              ""
-            ) : (
-              <button
-                data-cy="signin"
-                className="pl-7 font-mons inline-flex justify-center px-4 py-2  rounded-md transition ease-in-out delay-150 bg-[rgb(255,216,98)] hover:-translate-y-1 hover:scale-110 hover:bg-[#80BEAF] duration-300 "
-                onClick={() => {
-                  signIn();
-                }}
-              >
-                Sign in
-              </button>
-            )}
-          </div>
-        </div>
+        <div className="absolute w-[300px] h-[150px] left-[950px]"></div>
       </div>
     </>
   );

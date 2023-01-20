@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import LogoBlack from "../public/images/LogoBlack.png";
 import Image from "next/image";
-import { useSession, signOut } from "next-auth/react";
+import { useSession, signOut, signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
@@ -61,7 +61,15 @@ export default function Navbar() {
               </button>
             </li>
           ) : (
-            ""
+            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <button
+                onClick={() => {
+                  signIn({ callbackUrl: "http://localhost:3000/" });
+                }}
+              >
+                Sign In
+              </button>
+            </li>
           )}
         </ul>
 
@@ -111,7 +119,15 @@ export default function Navbar() {
                 </button>
               </li>
             ) : (
-              ""
+              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+                <button
+                  onClick={() => {
+                    signIn({ callbackUrl: "http://localhost:3000/" });
+                  }}
+                >
+                  Sign In
+                </button>
+              </li>
             )}
           </ul>
         </div>
