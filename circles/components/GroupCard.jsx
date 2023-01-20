@@ -1,11 +1,12 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 
+
 export default function GroupCard({ club, setModalInfo }) {
   return (
     <div>
       <li
-        key={club.club_name}
+        key={club.id}
         className=" 
        col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow min-h-[250px]"
         onClick={setModalInfo}

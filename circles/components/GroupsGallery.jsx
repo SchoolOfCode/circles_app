@@ -4,6 +4,7 @@ import GroupCard from "./GroupCard";
 import GroupModal from "./GroupModal";
 //import SearchBar from "./SearchBar";
 import FuzzySearchBar from "./FuzzySearch";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function GroupsGallery({data}) {
   const [modalInfo, setModalInfo] = useState(false);
@@ -76,7 +77,7 @@ export default function GroupsGallery({data}) {
         className="mb-10 xl:ml-20 xl:mr-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 max-h-[100%] max-w-[100%]"
       >
         {filteredResults.map((club) => (
-          <GroupCard club={club} setModalInfo={() => setModalInfo(club)} />
+          <GroupCard key={uuidv4()} club={club} setModalInfo={() => setModalInfo(club)} />
         ))}
       </ul>
     </div>
