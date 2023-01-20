@@ -55,11 +55,11 @@ export default NextAuth({
     }),
   ],
   theme: {
-    //   colorScheme: "auto", // "auto" | "dark" | "light"
-         brandColor: "94C5B1", // Hex color code
-         logo: "https://i.ibb.co/kyh22hV/cccccccc.png", // Absolute URL to image
-    //   buttonText: "" // Hex color code
-     },
+       colorScheme: "light", // "auto" | "dark" | "light"
+       brandColor: "#000080", // Hex color code
+       logo: "https://i.ibb.co/kyh22hV/cccccccc.png", // Absolute URL to image
+  //   buttonText: "" // Hex color code
+   },
   callbacks: {
     jwt: async (options) => {
       //if sign in is attempted successfully a jwt token is created, options contains all the data available
