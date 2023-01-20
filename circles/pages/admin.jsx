@@ -3,21 +3,22 @@ import Link from "next/link";
 
 // const data = { group: 'example' };
 
-// fetch('/api/admin', {//// Wrap in useEffect
-//   method: 'POST',
+// fetch("/api/admin", {
+//   //// Wrap in useEffect
+//   method: "POST",
 //   headers: {
-//     'Content-Type': 'application/json',
+//     "Content-Type": "application/json",
 //   },
 //   body: JSON.stringify(data),
 // })
 //   .then((response) => response.json())
 //   .then((data) => {
-//     console.log('Success:', data);
+//     console.log("Success:", data);
 //   })
 //   .catch((error) => {
-//     console.error('Error:', error);
+//     console.error("Error:", error);
 //   });
-//   // fetch()
+// fetch()
 
 export default function Page() {
   const session = useSession();

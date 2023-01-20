@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useSession, signOut, signIn } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 import LandingP from "../public/images/Group 226.png";
-import Logoblack from "../public/images/LogoBlack.png";
 import FeedbackModal from "../components/FeedbackModal";
 
 export default function Home() {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import { CgProfile } from "react-icons/cg";
 import UserPane from "./UserPane/UserPane";
 import EventsDisplay from "./EventsDisplay";
@@ -12,18 +12,37 @@ const data = {
   circles: ["swimming club, mountain climbing"],
 };
 
-export default function AccountView({ events }) {
-  // const [state, dispatch] = useReducer(reducer, initialState);
-  // const intialState = [...events]
+export default function AccountView({ events, user }) {
+  const initialState = [...events];
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  // function reducer(state, action){
-  //   switch (action.type) {
-  //     case "TODAY":
-  //       return state.filter((event)=> )
-  //   }
-  // }
+  function reducer(state, action) {
+    const today = new Date().setHours(0, 0, 0, 0);
+    switch (action.type) {
+      case "UPCOMING":
+        return state.filter((event) => {
+          const eventDate = new Date(event.date);
+          console.log("UPCOMING");
+          return eventDate.setHours(0, 0, 0, 0) >= today;
+        });
+      case "PAST":
+        return state.filter((event) => {
+          const eventDate = new Date(event.date);
+          console.log("PAST");
+          return eventDate.setHours(0, 0, 0, 0) === today;
+        });
+      default:
+        return state.filter((event) => {
+          const eventDate = new Date(event.date);
+          console.log(eventsList);
+          return eventDate.setHours(0, 0, 0, 0) === today;
+        });
+    }
+  }
 
-  console.log(events);
+  //need to create a state object {past:..., upcoming:...,current:...}
+  //pass differents properties of this object as states to events display
+  //conditionally render either 'timeline' or other component.
 
   const [profilePane, setProfilePane] = useState({
     visible: false,
@@ -41,8 +60,9 @@ export default function AccountView({ events }) {
           visible={profilePane.visible}
           data={profilePane.data}
           closePane={closePane}
-          // handleUpcoming={handleUpcoming}
-          // handlePast={handlePast}
+          user={user}
+          handleUpcoming={() => dispatch({ type: "UPCOMING" })}
+          handlePast={() => dispatch({ type: "PAST" })}
         />
         <div className="flex justify-evenly w-[80vw] h-[85vh] bg-amber-200">
           <div className="flex flex-col justify-start mt-4">
@@ -54,7 +74,7 @@ export default function AccountView({ events }) {
               <CgProfile />
             </button>
           </div>
-          <EventsDisplay events={events} />
+          <EventsDisplay events={state} />
         </div>
       </div>
     </>
