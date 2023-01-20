@@ -13,6 +13,7 @@ model Groups {
   days         String
   times        String
   image        String?
+  image_alt    String   @default("alt image")
   tagline      String
   description  String
   location     String
@@ -29,9 +30,10 @@ model Events {
   date       String
   time       String
   club_name  String
+  location   String   @default("location")
   running    Boolean  @default(true)
-  start_time DateTime @default(now()) @db.Time(6)
-  end_time   DateTime @default(now()) @db.Date
+  start_time DateTime 
+  end_time   DateTime 
   groups     Groups   @relation(fields: [club_name], references: [club_name])
 }
 

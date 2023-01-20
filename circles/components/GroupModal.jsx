@@ -1,12 +1,14 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 
-import { AiOutlineClose } from "react-icons/ai";
+
+
+
 
 export default function GroupModal({ setModalInfo, club, hideModal }) {
   return (
     <div className="max-w-3xl">
       <li
-        key={club.club_name}
+        key={club.id}
         className="h-[100%] 
       col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow" //keep card size the same
         onClick={setModalInfo}

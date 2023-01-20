@@ -9,8 +9,8 @@ export async function getServerSideProps() {
   return { props: { events } };
 }
 
-export default function Profile() {
-
+export default function Profile({events}) {
+console.log(events)
   const session = useSession();
   return (
     <div className="absolute top-24 font-mons">
