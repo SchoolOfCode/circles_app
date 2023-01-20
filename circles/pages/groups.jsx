@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 
 export async function getServerSideProps() {
-  let response = await fetch("http://localhost:3000/api/groups");
+  let response = await fetch("https://circlesapp.netlify.app/api/groups");
   let data = await response.json();
   return { props: { data } };
 }

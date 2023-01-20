@@ -15,7 +15,7 @@ export default function GroupCard({ club, setModalInfo }) {
           <img
             className="mx-auto h-24 w-24 flex-shrink-0 rounded-full"
             src={club.image}
-            alt=""
+            alt="" //add cub.alt from new field from groups model
           />
           <h3 className="mt-6 mb-6 text-sm font-medium text-gray-900 pb-1">
             {club.club_name}
