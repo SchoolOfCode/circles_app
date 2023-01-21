@@ -16,7 +16,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full  ease-in duration-300 bg-white z-50">
+    <div className="w-full  ease-in duration-300 bg-white z-50 drop-shadow-xl shadow-black">
       <div className="pl-10 m-auto flex justify-between items-center p-4 text-black">
         <Link href="/">
           <Image width={90} height={90} src={LogoBlack} className="flex" />
