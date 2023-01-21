@@ -3,6 +3,7 @@ import { SessionProvider } from "next-auth/react";
 import Navbar from "../components/Navbar";
 import "../components/UserPane/UserPane.css";
 import Head from "next/head";
+import Footer from "../components/Footer";
 
 export default function App({
   Component,
@@ -18,6 +19,7 @@ export default function App({
       </Head>
       <Navbar />
       <Component {...pageProps} />
+      <Footer/>
     </SessionProvider>
   );
 }

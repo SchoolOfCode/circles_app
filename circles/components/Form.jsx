@@ -18,7 +18,7 @@ const Form = (e) => {
     //   e.target.reset()
   
     return (
-<div className="bg-gradient-to-b from-yellow-100 to-blue-200 h-screen pt-20 ">
+<div className="bg-gradient-to-b from-yellow-100 to-[#BAE5F3] h-screen pt-20 ">
             <div className="w-full flex items-center justify-center my-12 pb-10 ">
                 <div className="absolute top-40 left-2/4 bg-white shadow opacity-95 rounded py-28 lg:px-28 px-8">
                     <p className="md:text-3xl text-xl font-mons font-bold leading-7 text-center text-gray-700 ">Let's get in touch</p>

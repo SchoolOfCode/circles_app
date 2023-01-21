@@ -21,36 +21,36 @@ export default function Navbar() {
         <Link href="/">
           <Image width={90} height={90} src={LogoBlack} className="flex" />
         </Link>
-        <ul className="hidden sm:flex">
-          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+        <ul className="hidden sm:flex font-bold">
+          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black">
             <Link href="/">Home</Link>
           </li>
           {session.data ? (
             <ul className="hidden sm:flex">
               <li
                 data-cy="groups"
-                className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
+                className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black "
               >
                 <Link href="/groups">Groups</Link>
               </li>
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black">
                 <Link href="/account">Account</Link>
               </li>
             </ul>
           ) : (
             ""
           )}
-          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black ">
             <Link href="/contactus">Contact Us</Link>
           </li>
           <li
             data-cy="help"
-            className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
+            className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black "
           >
             <Link href="/help">Help</Link>
           </li>
           {session.data ? (
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <li className="rounded-md p-4 bg-black text-white hover:bg-[#BAE5F3] hover:text-black ">
               <button
                 href="/"
                 onClick={() => {
@@ -61,7 +61,7 @@ export default function Navbar() {
               </button>
             </li>
           ) : (
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <li className="rounded-md p-4 text-white bg-black hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 onClick={() => {
                   signIn({ callbackUrl: "http://localhost:3000/" });
@@ -86,30 +86,30 @@ export default function Navbar() {
               : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300 z-40"
           }
         >
-          <ul className="font-mons">
-            <li className="p-4 text-4xl hover:text-gray-500">
+          <ul>
+            <li className="p-4 text-4xl hover:text-gray-500 font-bold">
               <Link href="/">Home</Link>
             </li>
             {session.data ? (
-              <ul className="font-mons">
-                <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <ul>
+                <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black ">
                   <Link href="/groups">Groups</Link>{" "}
                 </li>
-                <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+                <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black ">
                   <Link href="/account">Account</Link>
                 </li>
               </ul>
             ) : (
               ""
             )}
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black  ">
               <Link href="/contactus">Contact Us</Link>
             </li>
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black  ">
               <Link href="/help">Help</Link>
             </li>
             {session.data ? (
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <li className="rounded-md p-4 bg-black text-white hover:bg-[#BAE5F3] hover:text-black ">
                 <button
                   onClick={() => {
                     signOut({ callbackUrl: "http://localhost:3000/" });
@@ -119,7 +119,7 @@ export default function Navbar() {
                 </button>
               </li>
             ) : (
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <li className="rounded-md p-4 bg-black text-white hover:bg-[#BAE5F3] hover:text-black font-bold">
                 <button
                   onClick={() => {
                     signIn({ callbackUrl: "http://localhost:3000/" });

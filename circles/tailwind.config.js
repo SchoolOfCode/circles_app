@@ -4,11 +4,12 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    fontFamily: {
-      mons: ["Montserrat"],
-    },
+  theme: {},
+  extend: {
+    colors: {
+      'babyblue': '#BAE5F3'
+    }
+    
   },
-  extend: {},
   plugins: [require("daisyui")],
 };
