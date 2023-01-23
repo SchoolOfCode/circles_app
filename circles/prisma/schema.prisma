@@ -13,13 +13,13 @@ model Groups {
   days         String
   times        String
   image        String?
-  image_alt    String   @default("alt image")
   tagline      String
   description  String
   location     String
   availability String
   email        String
   telephone    String
+  image_alt    String         @default("alt image")
   events       Events[]
   user_circles User_circles[]
 }
@@ -28,12 +28,11 @@ model Events {
   id         Int      @id @default(autoincrement())
   event_name String
   date       String
-  time       String
   club_name  String
-  location   String   @default("location")
   running    Boolean  @default(true)
-  start_time DateTime 
-  end_time   DateTime 
+  end_time   DateTime
+  location   String   @default("location")
+  start_time DateTime
   groups     Groups   @relation(fields: [club_name], references: [club_name])
 }
 
@@ -50,12 +49,12 @@ model Users {
 }
 
 model Feedback {
-  id               Int      @id @default(autoincrement())
-  user_id          Int
-  event_name       String
-  comment          String
-  rating           Int
-  user             Users    @relation(fields: [user_id], references: [id])
+  id         Int    @id @default(autoincrement())
+  user_id    Int
+  event_name String
+  comment    String
+  rating     Int
+  user       Users  @relation(fields: [user_id], references: [id])
 }
 
 model User_circles {

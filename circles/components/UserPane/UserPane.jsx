@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export default function UserPane({
   visible,
-  data,
-  linkWorkerData,
+  user,
+  // linkWorkerData,
   closePane,
   handleUpcoming,
   handlePast,
@@ -20,13 +20,13 @@ export default function UserPane({
     <SlidingPane
       className="sliding-pane"
       isOpen={visible}
-      user={data?.user}
+      user={user}
       width={paneWidth}
       onRequestClose={closePane}
       hideHeader
       from="left"
     >
-      {data ? (
+      {user ? (
         <div>
           <a onClick={closePane}>
             <GrClose />
@@ -37,12 +37,12 @@ export default function UserPane({
             alt=""
           />
           <div className="flex flex-col justify-evenly">
-            <h1>{`${data.user}`}</h1>
-            <h2>Your link worker is:</h2>
+            <h1>{`${user.name}`}</h1>
+            {/* <h2>Your link worker is:</h2>
             <h3>{data?.linkWorker}</h3>
             <h2>Their contact details are:</h2>
             <h3>{linkWorkerData?.phone}</h3>
-            <h3>{linkWorkerData?.email}</h3>
+            <h3>{linkWorkerData?.email}</h3> */}
           </div>
           <div className="flex flex-col justify-evenly">
             <h1>Your circles</h1>
