@@ -5,7 +5,7 @@ export default function ContactUs() {
   return (
     <div>
       <Form />
-      <Footer/>
+    <Footer/>
     </div>
   );
 }

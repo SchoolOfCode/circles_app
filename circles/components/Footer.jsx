@@ -4,22 +4,19 @@ import Logoblack from "../public/images/LogoBlack 2.png";
 export default function Footer (){
     return (
         
-        <footer className=" dark:bg-gray-800 dark:text-gray-50 pt-32 bottom-0">
-	<div className="mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
+        <footer className="mt-8 dark:bg-gray-800 dark:text-gray-50 pt-10 pb-0">
+	<div className="mt-8 space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
 		<div className="grid grid-cols-12">
+
 			<div className="pb-6 col-span-full md:pb-0 md:col-span-6">
-				<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 md:justify-start">
-					<div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
-						
+			<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 md:justify-start">
+					<div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">	
 					</div>
-             
-					
 				</a>
                 <div className="absolute right-3/4">
                 <Image src={Logoblack} alt="circles logo" width={200}/>
                 </div>
-                
-			</div>
+               </div>
             
 			<div className="col-span-6 text-center md:text-left md:col-span-3">
 				<p className="pb-1 lg:text-xl md:text-lg sm:text-s font-semibold">EXPLORE</p>
@@ -72,7 +69,7 @@ export default function Footer (){
 			</div>
 		</div>
         
-		<div className="grid justify-center pt-6 lg:justify-between pl-10 pr-10 pb-14 text-sm text-center dark:text-gray-400 h-14 sm:h-2 md:h-5 lg:-5 w-full bg-[#BAE5F3] sm:bg-none md:bg-none">
+		<div className="grid justify-center mt-6 lg:justify-between pl-10 pr-10 pb-14 text-sm text-center dark:text-gray-400 h-14 sm:h-2 md:h-5 lg:-5 w-full bg-[#BAE5F3] sm:bg-none md:bg-none">
 			<div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
 				<span className="lg:text-sm md:text-xs sm:text-xs ">© 2023 Circles. Privacy Policy All rights reserved.</span>
 				
