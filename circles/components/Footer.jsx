@@ -138,6 +138,7 @@ export default function Footer() {
                 >
                   Blog
                 </a>
+				</li>
                 <li>
                   <a
                     rel="noopener noreferrer"
@@ -147,7 +148,7 @@ export default function Footer() {
                     Terms and Conditions
                   </a>
                 </li>
-              </li>
+              
             </ul>
           </div>
         </div>
