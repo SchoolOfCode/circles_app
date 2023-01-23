@@ -13,32 +13,45 @@ const data = {
 };
 
 export default function AccountView({ events, user }) {
-  const initialState = [...events];
-  const [state, dispatch] = useReducer(reducer, initialState);
+  //initial state needs to be current date
+  //default needs to be current
   const [calendarDate, setCalendarDate] = useState(new Date());
+
+  console.log(calendarDate);
+
+  const initialState = events.filter((event) => {
+    const eventDate = new Date(event.date);
+    return eventDate.setHours(0, 0, 0, 0) === calendarDate.setHours(0, 0, 0, 0);
+  });
+
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   function reducer(state, action) {
     const today = new Date().setHours(0, 0, 0, 0);
     switch (action.type) {
       case "UPCOMING":
-        return state.filter((event) => {
+        return action.events.filter((event) => {
           const eventDate = new Date(event.date);
           console.log("UPCOMING");
           return eventDate.setHours(0, 0, 0, 0) >= today;
         });
       case "PAST":
-        return state.filter((event) => {
+        return action.events.filter((event) => {
           const eventDate = new Date(event.date);
           console.log("PAST");
           return eventDate.setHours(0, 0, 0, 0) < today;
         });
-      default:
-        return state.filter((event) => {
+
+      case "SELECTED":
+        return action.events.filter((event) => {
           const eventDate = new Date(event.date);
+          //console.log("DEFAULT");
           return (
             eventDate.setHours(0, 0, 0, 0) === calendarDate.setHours(0, 0, 0, 0)
           );
         });
+      default:
+        return initialState;
     }
   }
 
@@ -63,8 +76,10 @@ export default function AccountView({ events, user }) {
           data={profilePane.data}
           closePane={closePane}
           user={user}
-          handleUpcoming={() => dispatch({ type: "UPCOMING" })}
-          handlePast={() => dispatch({ type: "PAST" })}
+          handleUpcoming={() =>
+            dispatch({ type: "UPCOMING", events: [...events] })
+          }
+          handlePast={() => dispatch({ type: "PAST", events: [...events] })}
         />
         <div className="flex justify-evenly w-[80vw] h-[85vh] bg-amber-200">
           <div className="flex flex-col justify-start mt-4">
@@ -79,7 +94,8 @@ export default function AccountView({ events, user }) {
           <EventsDisplay
             events={state}
             handleDateChange={(Date) => {
-              setStartDate(Date);
+              setCalendarDate(Date);
+              dispatch({ type: "SELECTED", events: [...events] });
             }}
             startDate={calendarDate}
           />
