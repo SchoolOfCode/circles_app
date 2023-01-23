@@ -27,8 +27,8 @@ export default function Navbar() {
       >
         <Link aria-label="Returns to home page" href="/">
           <Image
-            width={90}
-            height={90}
+            width={120}
+            height={120}
             src={LogoBlack}
             className="flex"
             alt="Circles company logo"
@@ -37,25 +37,25 @@ export default function Navbar() {
           />
         </Link>
         <Menubar className="hidden sm:flex text-sm font-bold">
-          <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+          <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
             <Link href="/">Home</Link>
           </Menuitem>
           {session.data ? (
-            <Menubar className="hidden sm:flex">
+            <Menubar className="hidden sm:flex text-sm font-bold">
               <Menuitem
                 data-cy="groups"
-                className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black "
+                className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
               >
                 <Link href="/groups">Groups</Link>
               </Menuitem>
-              <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
                 <Link href="/account">Account</Link>
               </Menuitem>
             </Menubar>
           ) : (
             ""
           )}
-          <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+          <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
             <Link href="/contactus">Contact Us</Link>
           </Menuitem>
           <Menuitem
@@ -65,7 +65,7 @@ export default function Navbar() {
             <Link href="/help">Help</Link>
           </Menuitem>
           {session.data ? (
-            <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 href="/"
                 onClick={() => {
@@ -76,7 +76,7 @@ export default function Navbar() {
               </button>
             </Menuitem>
           ) : (
-            <Menuitem className="rounded-md p-4 text-white hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 onClick={() => {
                   signIn({ callbackUrl: "http://localhost:3000/" });
@@ -98,8 +98,8 @@ export default function Navbar() {
           aria-label="Circles mobile navigation bar"
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-fMenubarl h-screen bg-white ease-in duration-300 z-40"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-fMenubarl h-screen bg-white ease-in duration-300 z-40"
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300 z-40"
+              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300 z-40"
           }
         >
           <ul>
