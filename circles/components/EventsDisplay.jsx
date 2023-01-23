@@ -11,11 +11,11 @@ export default function EventsDisplay({ events, handleDateChange, startDate }) {
   // });
 
   return (
-    <div className="flex flex-row-reverse bg-zinc-400">
+    <div className="flex flex-row-reverse ">
       <div>
         <DatePicker selected={startDate} onChange={handleDateChange} />
       </div>
-      <div className="bg-slate-400">
+            <div className="inset-0 z-50 bg-slate-400">
         <Timeline items={events} />
       </div>
     </div>

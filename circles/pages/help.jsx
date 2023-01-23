@@ -10,6 +10,7 @@ import parentsupport from "../public/images/parent support.jpg";
 import ccth from "../public/images/ccth.png";
 
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 
 
 export default function Faq ({img, title, description}){
@@ -129,7 +130,7 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
 
         </div>
 
-        <section className="bg-gradient-to-b from-yellow-100 to-blue-200 max-h-full mt-32  pt-60 font-mons">
+        <section className="bg-gradient-to-b from-yellow-100 to-[#BAE5F3] max-h-full mt-32 pt-60 pb-60 font-mons">
 	<div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8  ">
 		<h2 className="mb-32 text-4xl font-bold leading-none text-center sm:text-6xl">Frequently Asked Questions</h2>
 		<div className="divide-y divide-gray-700 text-xl">
@@ -156,7 +157,7 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
 
     
     
-            
+            <Footer/>
         </section>
     )
 }

@@ -18,8 +18,7 @@ export default function Navbar() {
 
   return (
     <div
-      aria-label="Circles"
-      className="w-fMenubarl  ease-in duration-300 bg-white z-50"
+      aria-label="Circles" className="w-full  ease-in duration-300 bg-white z-50 drop-shadow-xl shadow-black">
     >
       <div
         aria-label="Circles navigation bar"
@@ -36,7 +35,7 @@ export default function Navbar() {
             aria-label="Circles company logo"
           />
         </Link>
-        <Menubar className="hidden sm:flex">
+        <Menubar className="hidden sm:flex text-sm font-bold">
           <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
             <Link href="/">Home</Link>
           </Menuitem>
@@ -44,7 +43,7 @@ export default function Navbar() {
             <Menubar className="hidden sm:flex">
               <Menuitem
                 data-cy="groups"
-                className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
+                className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black "
               >
                 <Link href="/groups">Groups</Link>
               </Menuitem>
@@ -60,7 +59,7 @@ export default function Navbar() {
           </Menuitem>
           <Menuitem
             data-cy="help"
-            className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
+            className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black "
           >
             <Link href="/help">Help</Link>
           </Menuitem>
@@ -76,7 +75,7 @@ export default function Navbar() {
               </button>
             </Menuitem>
           ) : (
-            <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <Menuitem className="rounded-md p-4 text-white hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 onClick={() => {
                   signIn({ callbackUrl: "http://localhost:3000/" });
@@ -102,30 +101,30 @@ export default function Navbar() {
               : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-fMenubarl h-screen bg-white ease-in duration-300 z-40"
           }
         >
-          <ul className="font-mons">
-            <li className="p-4 text-4xl hover:text-gray-500">
+          <ul>
+            <li className="p-4 text-4xl hover:text-gray-500 font-bold">
               <Link href="/">Home</Link>
             </li>
             {session.data ? (
-              <li className="font-mons">
+              <ul>
                 <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
                   <Link href="/groups">Groups</Link>{" "}
                 </li>
-                <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+                <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black ">
                   <Link href="/account">Account</Link>
                 </li>
               </li>
             ) : (
               ""
             )}
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black  ">
               <Link href="/contactus">Contact Us</Link>
             </li>
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black  ">
               <Link href="/help">Help</Link>
             </li>
             {session.data ? (
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <li className="rounded-md p-4 bg-black text-white hover:bg-[#BAE5F3] hover:text-black ">
                 <button
                   onClick={() => {
                     signOut({ callbackUrl: "http://localhost:3000/" });
@@ -135,7 +134,7 @@ export default function Navbar() {
                 </button>
               </li>
             ) : (
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              <li className="rounded-md p-4 bg-black text-white hover:bg-[#BAE5F3] hover:text-black font-bold">
                 <button
                   onClick={() => {
                     signIn({ callbackUrl: "http://localhost:3000/" });

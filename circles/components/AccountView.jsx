@@ -2,6 +2,7 @@ import React, { useState, useReducer } from "react";
 import { CgProfile } from "react-icons/cg";
 import UserPane from "./UserPane/UserPane";
 import EventsDisplay from "./EventsDisplay";
+import Footer from "./Footer";
 
 const data = {
   user: "John Doe",
@@ -69,8 +70,8 @@ console.log(events)
   }
 
   return (
-    <>
-      <div className="flex align-middle w-screen h-screen">
+    <div className="h-screen w-screen bg-gradient-to-b from-yellow-100 to-[#BAE5F3]">
+      <div className="flex align-middle w-screen h-screen  ">
         <UserPane
           visible={profilePane.visible}
           data={profilePane.data}
@@ -81,7 +82,7 @@ console.log(events)
           }
           handlePast={() => dispatch({ type: "PAST", events: [...events] })}
         />
-        <div className="flex justify-evenly w-[80vw] h-[85vh] bg-amber-200">
+        <div className="flex justify-evenly w-[80vw] h-[85vh] ">
           <div className="flex flex-col justify-start mt-4">
             <button
               onClick={() =>
@@ -100,7 +101,9 @@ console.log(events)
             startDate={calendarDate}
           />
         </div>
+        
       </div>
-    </>
+      <Footer/>
+    </div>
   );
 }

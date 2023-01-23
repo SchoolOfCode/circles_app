@@ -46,18 +46,24 @@ export default function GroupsGallery({data}) {
   };
 
   return (
-    <div className="pt-32 px-10 bg-gradient-to-b from-yellow-100 to-blue-200 w-full">
+    <div className="pt-32 pb-32 px-10 bg-gradient-to-b from-yellow-100 to-[#BAE5F3] h-full">
+      
+      <h1 className="text-6xl flex justify-center mb-20 ">Circles near you.</h1>
+      <div className="flex justify-center">
       <FuzzySearchBar
 
-        className="mb-8 w-full max-w-md"
+          className="mb-20 w-full max-w-md"
 
-        onSearch={handleOnSearch}
-        onSelect={handleOnSelect}
-        styling={{ zIndex: 4 }} // To display it on top of the search box below
-        autoFocus
-      />
+          onSearch={handleOnSearch}
+          onSelect={handleOnSelect}
+          styling={{ zIndex: 4 }} // To display it on top of the search box below
+          autoFocus
+          />
+
+      </div>
+     
       <div
-        className="bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen w-full"
+        className="bg-gradient-to-b from-yellow-100 to-teal-100 h-full w-full"
         style={{
           position: "fixed",
           // width: "100vw",

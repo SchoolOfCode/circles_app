@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import "../components/UserPane/UserPane.css";
 import Head from "next/head";
 
+
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
@@ -18,6 +19,7 @@ export default function App({
       </Head>
       <Navbar />
       <Component {...pageProps} />
+      
     </SessionProvider>
   );
 }
