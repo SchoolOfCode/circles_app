@@ -4,7 +4,7 @@ import Logoblack from "../public/images/LogoBlack 2.png";
 export default function Footer (){
     return (
         
-        <footer className=" dark:bg-gray-800 dark:text-gray-50 pt-32">
+        <footer className=" dark:bg-gray-800 dark:text-gray-50 pt-32 bottom-0">
 	<div className="mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
 		<div className="grid grid-cols-12">
 			<div className="pb-6 col-span-full md:pb-0 md:col-span-6">

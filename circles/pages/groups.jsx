@@ -1,6 +1,7 @@
 import GroupsGallery from "../components/GroupsGallery";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import Footer from "../components/Footer";
 
 export async function getServerSideProps() {
   let response = await fetch("https://circlesapp.netlify.app/api/groups");
@@ -27,6 +28,7 @@ export default function GroupsPage({ data }) {
           </h3>
         </div>
       )}{" "}
+      <Footer/>
     </div>
   );
 }

@@ -21,36 +21,36 @@ export default function Navbar() {
         <Link href="/">
           <Image width={90} height={90} src={LogoBlack} className="flex" />
         </Link>
-        <ul className="hidden sm:flex font-bold">
-          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black">
+        <ul className="hidden sm:flex text-sm font-bold">
+          <li className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black">
             <Link href="/">Home</Link>
           </li>
           {session.data ? (
-            <ul className="hidden sm:flex">
+            <ul className="hidden sx:flex">
               <li
                 data-cy="groups"
-                className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black "
+                className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black "
               >
                 <Link href="/groups">Groups</Link>
               </li>
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black">
+              <li className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black">
                 <Link href="/account">Account</Link>
               </li>
             </ul>
           ) : (
             ""
           )}
-          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black ">
+          <li className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black ">
             <Link href="/contactus">Contact Us</Link>
           </li>
           <li
             data-cy="help"
-            className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black "
+            className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black "
           >
             <Link href="/help">Help</Link>
           </li>
           {session.data ? (
-            <li className="rounded-md p-4 bg-black text-white hover:bg-[#BAE5F3] hover:text-black ">
+            <li className="rounded-md p-3 bg-black text-white hover:bg-[#BAE5F3] hover:text-black ">
               <button
                 href="/"
                 onClick={() => {
@@ -61,7 +61,7 @@ export default function Navbar() {
               </button>
             </li>
           ) : (
-            <li className="rounded-md p-4 text-white bg-black hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <li className="rounded-md p-3 text-white bg-black hover:bg-[#BAE5F3] hover:text-black font-bold text-sm">
               <button
                 onClick={() => {
                   signIn({ callbackUrl: "http://localhost:3000/" });

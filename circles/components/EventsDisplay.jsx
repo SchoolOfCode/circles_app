@@ -13,7 +13,7 @@ export default function EventsDisplay({ events }) {
   });
 
   return (
-    <div className="flex flex-row-reverse bg-zinc-400">
+    <div className="flex flex-row-reverse ">
       <div>
         <DatePicker
           selected={startDate}
@@ -22,8 +22,10 @@ export default function EventsDisplay({ events }) {
           }}
         />
       </div>
-      <div className="bg-slate-400">
+      <div className="bg-white opacity-20 h-screen w-96 p-14 "></div>
+      <div className="inset-0 z-50">
         <Timeline items={filteredEvents} />
+      
       </div>
     </div>
   );
