@@ -18,7 +18,8 @@ export default function Navbar() {
 
   return (
     <div
-      aria-label="Circles" className="w-full  ease-in duration-300 bg-white z-50 drop-shadow-xl shadow-black">
+      aria-label="Circles"
+      className="w-full  ease-in duration-300 bg-white z-50 drop-shadow-xl shadow-black"
     >
       <div
         aria-label="Circles navigation bar"
@@ -113,7 +114,7 @@ export default function Navbar() {
                 <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black ">
                   <Link href="/account">Account</Link>
                 </li>
-              </li>
+              </ul>
             ) : (
               ""
             )}
