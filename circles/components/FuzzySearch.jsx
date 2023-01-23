@@ -30,7 +30,10 @@ export default function FuzzySearchBar({
   };
 
   return (
-    <div className={className}>
+    <div
+      className={className}
+      aria-label="Type the name of a group you want to join"
+    >
       <div>
         <ReactSearchAutocomplete
           items={items}
