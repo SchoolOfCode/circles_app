@@ -20,7 +20,9 @@ export async function getServerSideProps() {
   return { props: { events } };
 }
 
+
 export default function Profile({ events }) {
+
   const session = useSession();
   console.log(session);
 

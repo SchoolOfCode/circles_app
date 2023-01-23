@@ -1,11 +1,12 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 
+
 export default function GroupCard({ club, setModalInfo }) {
   return (
-    <div>
+    
       <li
-        key={club.club_name}
+        key={club.id}
         className=" 
        col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow min-h-[250px]"
         onClick={setModalInfo}
@@ -14,7 +15,7 @@ export default function GroupCard({ club, setModalInfo }) {
           <img
             className="mx-auto h-24 w-24 flex-shrink-0 rounded-full"
             src={club.image}
-            alt=""
+            alt="" //add cub.alt from new field from groups model
           />
           <h3 className="mt-6 mb-6 text-sm font-medium text-gray-900 pb-1">
             {club.club_name}
@@ -62,6 +63,6 @@ export default function GroupCard({ club, setModalInfo }) {
           </div>
         </div>
       </li>
-    </div>
+    
   );
 }
