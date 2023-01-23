@@ -19,9 +19,9 @@ export default function Timeline({ items, className, handleClick }) {
                 <div className="flex flex-col justify-between">
                   <div className="text-sm">
                     <h2 className="card-actions">
-                      {`${currentDate}`.substring(0, 10)}
+                      {`${item.date}`.substring(0, 10)}
                     </h2>
-                    <h2>{item.time}</h2>
+                    <h2>{item.start_time}</h2>
                   </div>
                   {currentDate <= eventDate ? (
                     ""

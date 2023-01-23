@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export default function UserPane({
   visible,
-  data,
-  linkWorkerData,
+  user,
+  // linkWorkerData,
   closePane,
   handleUpcoming,
   handlePast,
@@ -20,13 +20,13 @@ export default function UserPane({
     <SlidingPane
       className="sliding-pane"
       isOpen={visible}
-      user={data?.user}
+      user={user}
       width={paneWidth}
       onRequestClose={closePane}
       hideHeader
       from="left"
     >
-      {data ? (
+      {user ? (
         <div>
           <a onClick={closePane}>
             <GrClose />
@@ -37,6 +37,13 @@ export default function UserPane({
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""
           />
+          <div className="flex flex-col justify-evenly">
+            <h1>{`${user.name}`}</h1>
+            {/* <h2>Your link worker is:</h2>
+            <h3>{data?.linkWorker}</h3>
+            <h2>Their contact details are:</h2>
+            <h3>{linkWorkerData?.phone}</h3>
+            <h3>{linkWorkerData?.email}</h3> */}
           </div>
           <div className="flex flex-col justify-evenly mt-10">
             <h1 className="text-2xl font-bold flex justify-center ">{`${data.user}`}</h1>

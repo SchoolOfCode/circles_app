@@ -4,28 +4,19 @@ import Timeline from "./Timeline";
 //import { events } from "../data/events-data.js";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function EventsDisplay({ events }) {
-  const [startDate, setStartDate] = useState(new Date());
-
-  let filteredEvents = events.filter((event) => {
-    const eventDate = new Date(event.date);
-    return eventDate.setHours(0, 0, 0, 0) === startDate.setHours(0, 0, 0, 0);
-  });
+export default function EventsDisplay({ events, handleDateChange, startDate }) {
+  // let filteredEvents = events.filter((event) => {
+  //   const eventDate = new Date(event.date);
+  //   return eventDate.setHours(0, 0, 0, 0) === startDate.setHours(0, 0, 0, 0);
+  // });
 
   return (
     <div className="flex flex-row-reverse ">
       <div>
-        <DatePicker
-          selected={startDate}
-          onChange={(Date) => {
-            setStartDate(Date);
-          }}
-        />
+        <DatePicker selected={startDate} onChange={handleDateChange} />
       </div>
-      <div className="bg-white opacity-20 h-screen w-96 p-14 "></div>
-      <div className="inset-0 z-50">
-        <Timeline items={filteredEvents} />
-      
+            <div className="inset-0 z-50 bg-slate-400">
+        <Timeline items={events} />
       </div>
     </div>
   );
