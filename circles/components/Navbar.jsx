@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </li>
           {session.data ? (
-            <ul className="hidden sx:flex">
+            <ul className="hidden sm:flex">
               <li
                 data-cy="groups"
                 className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black "
