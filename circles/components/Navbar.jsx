@@ -4,7 +4,8 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import LogoBlack from "../public/images/LogoBlack.png";
 import Image from "next/image";
 import { useSession, signOut, signIn } from "next-auth/react";
-import { useRouter } from "next/router";
+import Menubar from "../components/Menubar";
+import Menuitem from "../components/Menuitem";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -16,41 +17,55 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full  ease-in duration-300 bg-white z-50">
-      <div className="pl-10 m-auto flex justify-between items-center p-4 text-black">
-        <Link href="/">
-          <Image width={90} height={90} src={LogoBlack} className="flex" />
+    <div
+      aria-label="Circles"
+      className="w-fMenubarl  ease-in duration-300 bg-white z-50"
+    >
+      <div
+        aria-label="Circles navigation bar"
+        className="pl-10 m-auto flex justify-between items-center p-4 text-black"
+      >
+        <Link aria-label="Returns to home page" href="/">
+          <Image
+            width={90}
+            height={90}
+            src={LogoBlack}
+            className="flex"
+            alt="Circles company logo"
+            role="img"
+            aria-label="Circles company logo"
+          />
         </Link>
-        <ul className="hidden sm:flex">
-          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+        <Menubar className="hidden sm:flex">
+          <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
             <Link href="/">Home</Link>
-          </li>
+          </Menuitem>
           {session.data ? (
-            <ul className="hidden sm:flex">
-              <li
+            <Menubar className="hidden sm:flex">
+              <Menuitem
                 data-cy="groups"
                 className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
               >
                 <Link href="/groups">Groups</Link>
-              </li>
-              <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+              </Menuitem>
+              <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
                 <Link href="/account">Account</Link>
-              </li>
-            </ul>
+              </Menuitem>
+            </Menubar>
           ) : (
             ""
           )}
-          <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+          <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
             <Link href="/contactus">Contact Us</Link>
-          </li>
-          <li
+          </Menuitem>
+          <Menuitem
             data-cy="help"
             className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
           >
             <Link href="/help">Help</Link>
-          </li>
+          </Menuitem>
           {session.data ? (
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 href="/"
                 onClick={() => {
@@ -59,9 +74,9 @@ export default function Navbar() {
               >
                 Sign out
               </button>
-            </li>
+            </Menuitem>
           ) : (
-            <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <Menuitem className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 onClick={() => {
                   signIn({ callbackUrl: "http://localhost:3000/" });
@@ -69,9 +84,9 @@ export default function Navbar() {
               >
                 Sign In
               </button>
-            </li>
+            </Menuitem>
           )}
-        </ul>
+        </Menubar>
 
         {/* mobile button */}
         <div onClick={handleNav} className="block sm:hidden z-50">
@@ -80,10 +95,11 @@ export default function Navbar() {
 
         {/* mobile Menu */}
         <div
+          aria-label="Circles mobile navigation bar"
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300 z-40"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white ease-in duration-300 z-40"
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-fMenubarl h-screen bg-white ease-in duration-300 z-40"
+              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-fMenubarl h-screen bg-white ease-in duration-300 z-40"
           }
         >
           <ul className="font-mons">
@@ -91,14 +107,14 @@ export default function Navbar() {
               <Link href="/">Home</Link>
             </li>
             {session.data ? (
-              <ul className="font-mons">
+              <li className="font-mons">
                 <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
                   <Link href="/groups">Groups</Link>{" "}
                 </li>
                 <li className="rounded-md p-4 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
                   <Link href="/account">Account</Link>
                 </li>
-              </ul>
+              </li>
             ) : (
               ""
             )}
