@@ -21,7 +21,7 @@ export default function Timeline({ items, className, handleClick }) {
                     <h2 className="card-actions">
                       {`${item.date}`.substring(0, 10)}
                     </h2>
-                    <h2>{item.time}</h2>
+                    <h2>{item.start_time}</h2>
                   </div>
                   {currentDate <= eventDate ? (
                     ""

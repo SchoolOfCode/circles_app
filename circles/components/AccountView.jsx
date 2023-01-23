@@ -16,7 +16,7 @@ export default function AccountView({ events, user }) {
   //initial state needs to be current date
   //default needs to be current
   const [calendarDate, setCalendarDate] = useState(new Date());
-
+console.log(events)
   console.log(calendarDate);
 
   const initialState = events.filter((event) => {

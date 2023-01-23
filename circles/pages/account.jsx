@@ -3,7 +3,7 @@ import Link from "next/link";
 import AccountView from "../components/AccountView";
 
 export async function getServerSideProps() {
-  let responseEvents = await fetch("https://circlesapp.netlify.app/api/events");
+  let responseEvents = await fetch("http://localhost:3000/api/events");
   let events = await responseEvents.json();
   // const session1 = useSession();
   // console.log(session1);

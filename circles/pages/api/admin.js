@@ -45,7 +45,7 @@ import {useState} from "react"
 
 
 export default function Table({ columns, data }) {
-    const [value, setValue] = useState(globalFilter)
+ 
     // Use the state and functions returned from useTable to build your UI
     const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
       useTable({
@@ -53,27 +53,18 @@ export default function Table({ columns, data }) {
         data,
       });
 
-      function GlobalFilter({
-        preGlobalFilteredRows,
-        globalFilter,
-        setGlobalFilter,
-      }) {}
-        const count = preGlobalFilteredRows.length
-        
-        const onChange = useAsyncDebounce(value => {
-          setGlobalFilter(value || undefined)
-        }, 200) 
+   
     // Render the UI for your table
     return (
            
       <table {...getTableProps()} border="1">
          <span>
       Search:{' '}
-      <input value={value ||""}
-        onChange={e => {
-          setValue(e.target.value);
-          onChange(e.target.value);
-        }}
+      <input 
+        // onChange={e => {
+        //   setValue(e.target.value);
+        //   onChange(e.target.value);
+        // }}
         placeholder={` records...`}
       />
     </span>
