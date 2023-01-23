@@ -5,26 +5,14 @@ import Timeline from "./Timeline";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function EventsDisplay({ events, handleDateChange, startDate }) {
-  // let filteredEvents = events.filter((event) => {
-  //   const eventDate = new Date(event.date);
-  //   return eventDate.setHours(0, 0, 0, 0) === startDate.setHours(0, 0, 0, 0);
-  // });
-
   return (
     <div className="flex flex-row-reverse ">
       <div>
         <DatePicker selected={startDate} onChange={handleDateChange} />
       </div>
-            <div className="inset-0 z-50 bg-slate-400">
+      <div className="inset-0 z-50 bg-slate-400">
         <Timeline items={events} />
       </div>
     </div>
   );
 }
-
-// console.log({
-//     left: event.date,
-//     right: date,
-//     condition: event.date === date,
-//     length: date.length === event.date.length,
-//   });

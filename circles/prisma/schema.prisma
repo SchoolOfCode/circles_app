@@ -43,9 +43,19 @@ model Users {
   email          String
   telephone      String
   role           String
-  link_worker_id Int?
+  link_worker_id Int @default(1)
   feedback       Feedback[]
   user_circles   User_circles[]
+  link_worker    LinkWorkers    @relation(fields: [link_worker_id], references: [id])
+}
+
+model LinkWorkers {
+  id         Int     @id @default(autoincrement())
+  first_name String
+  surname    String
+  email      String
+  telephone  String
+  Users      Users[]
 }
 
 model Feedback {

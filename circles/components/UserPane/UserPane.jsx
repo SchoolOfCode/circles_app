@@ -18,7 +18,7 @@ export default function UserPane({
 
   return (
     <SlidingPane
-      className="sliding-pane"
+      className="sliding-pane rounded-md"
       isOpen={visible}
       user={user}
       width={paneWidth}
@@ -31,14 +31,14 @@ export default function UserPane({
           <a onClick={closePane}>
             <GrClose />
           </a>
-          <div className="flex justify-center">
+          <div className="flex flex-col justify-center">
             <img
               className="inline-block h-[180px] w-[180px] rounded-full p-2  bg-gradient-to-b from-yellow-100 to-[#BAE5F3] "
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
               alt=""
             />
             <div className="flex flex-col justify-evenly">
-              <h1>{`${user.name}`}</h1>
+              <h1>{`${user.first_name} ${user.surname}`}</h1>
               {/* <h2>Your link worker is:</h2>
             <h3>{data?.linkWorker}</h3>
             <h2>Their contact details are:</h2>

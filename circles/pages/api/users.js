@@ -9,13 +9,10 @@ export default async function handleUser(req, res) {
         contains: req.body.email,
       },
     },
+    include: {
+      User_circles: true,
+      first_name: true,
+    },
   });
-  //     where: {
-  //       email: req.body,
-  //     },
-  //   });
   res.json(getUser);
 }
-
-//session.user.email
-//const { data: session } = useSession();
