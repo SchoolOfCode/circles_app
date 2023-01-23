@@ -29,6 +29,7 @@
     "react-side-pane": "^2.4.6",
     "react-sliding-pane": "^7.3.0",
     "swiper": "^8.4.6"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "18.11.18",
