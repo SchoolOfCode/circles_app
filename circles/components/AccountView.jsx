@@ -15,6 +15,7 @@ const data = {
 export default function AccountView({ events, user }) {
   const initialState = [...events];
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [calendarDate, setCalendarDate] = useState(new Date());
 
   function reducer(state, action) {
     const today = new Date().setHours(0, 0, 0, 0);
@@ -29,19 +30,20 @@ export default function AccountView({ events, user }) {
         return state.filter((event) => {
           const eventDate = new Date(event.date);
           console.log("PAST");
-          return eventDate.setHours(0, 0, 0, 0) === today;
+          return eventDate.setHours(0, 0, 0, 0) < today;
         });
       default:
         return state.filter((event) => {
           const eventDate = new Date(event.date);
-          console.log(eventsList);
-          return eventDate.setHours(0, 0, 0, 0) === today;
+          return (
+            eventDate.setHours(0, 0, 0, 0) === calendarDate.setHours(0, 0, 0, 0)
+          );
         });
     }
   }
 
   //need to create a state object {past:..., upcoming:...,current:...}
-  //pass differents properties of this object as states to events display
+  //pass different properties of this object as states to events display
   //conditionally render either 'timeline' or other component.
 
   const [profilePane, setProfilePane] = useState({
@@ -74,7 +76,13 @@ export default function AccountView({ events, user }) {
               <CgProfile />
             </button>
           </div>
-          <EventsDisplay events={state} />
+          <EventsDisplay
+            events={state}
+            handleDateChange={(Date) => {
+              setStartDate(Date);
+            }}
+            startDate={calendarDate}
+          />
         </div>
       </div>
     </>
