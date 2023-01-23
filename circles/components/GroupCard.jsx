@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function GroupCard({ club, setModalInfo }) {
   return (
-    <div>
+    
       <li
         key={club.id}
         className=" 
@@ -63,6 +63,6 @@ export default function GroupCard({ club, setModalInfo }) {
           </div>
         </div>
       </li>
-    </div>
+    
   );
 }
