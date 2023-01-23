@@ -3,8 +3,20 @@ import Link from "next/link";
 import AccountView from "../components/AccountView";
 
 export async function getServerSideProps() {
-  let response = await fetch("https://circlesapp.netlify.app/api/events");
-  let events = await response.json();
+  let responseEvents = await fetch("https://circlesapp.netlify.app/api/events");
+  let events = await responseEvents.json();
+  // const session1 = useSession();
+  // console.log(session1);
+
+  // let responseUser = await fetch("/api/users", {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({ email: session.data.user.email }),
+  // });
+
+  // let user = await responseUser.json();
   return { props: { events } };
 }
 
@@ -12,6 +24,8 @@ export async function getServerSideProps() {
 export default function Profile({ events }) {
 
   const session = useSession();
+  console.log(session);
+
   return (
     <div className="absolute top-24 font-mons">
       {" "}
@@ -19,7 +33,7 @@ export default function Profile({ events }) {
         <>
           {/* <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen"> */}
           <div>
-            <AccountView events={events} />
+            <AccountView events={events} user={session.data.user} />
           </div>
         </>
       ) : (

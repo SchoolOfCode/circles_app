@@ -4,21 +4,26 @@ import React from "react";
 import Table from "./api/admin";
 // const data = { user: 'example' };
 
-// fetch('/api/admin', {
-//   method: 'POST',
+
+// fetch("/api/admin", {
+//   //// Wrap in useEffect
+//   method: "POST",
+
 //   headers: {
-//     'Content-Type': 'application/json',
+//     "Content-Type": "application/json",
 //   },
 //   body: JSON.stringify(data),
 // })
 //   .then((response) => response.json())
 //   .then((data) => {
-//     console.log('Success:', data);
+//     console.log("Success:", data);
 //   })
 //   .catch((error) => {
-//     console.error('Error:', error);
+//     console.error("Error:", error);
 //   });
-  
+
+// fetch()
+
 
 export default function Admin() {
   const session = useSession();
