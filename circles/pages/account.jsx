@@ -36,7 +36,7 @@ export default function Profile({ events }) {
       {" "}
       {session.data ? (
         <>
-          <div>
+          <div className="">
             <AccountView events={events} user={user} />
           </div>
         </>

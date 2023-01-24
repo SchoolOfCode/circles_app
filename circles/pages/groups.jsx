@@ -4,7 +4,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 
 export async function getServerSideProps() {
-  let response = await fetch("https://circlesapp.netlify.app/api/groups");
+  let response = await fetch("http://localhost:3000/api/groups");
   let data = await response.json();
   return { props: { data } };
 }
@@ -28,7 +28,7 @@ export default function GroupsPage({ data }) {
           </h3>
         </div>
       )}{" "}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
