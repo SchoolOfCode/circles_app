@@ -12,7 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.7.7",
-    "@heroicons/react": "^2.0.13",
+    "@heroicons/react": "^1.0.6",
     "@netlify/plugin-nextjs": "^4.29.4",
     "@next/font": "13.1.1",
     "@prisma/client": "^4.8.1",
@@ -29,8 +29,8 @@
     "react-search-autocomplete": "^8.3.1",
     "react-side-pane": "^2.4.6",
     "react-sliding-pane": "^7.3.0",
-    "swiper": "^8.4.6",
     "react-table": "^7.8.0",
+    "swiper": "^8.4.6",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 import { useSession, getSession } from "next-auth/react";
 import React from "react";
 
-import Table from "./api/admin";
+import Table from "../components/table/table";
 // const data = { user: 'example' };
 
 
@@ -25,91 +25,100 @@ import Table from "./api/admin";
 // fetch()
 
 
-export default function Admin() {
+export async function getServerSideProps() {
+  let response = await fetch("http://localhost:3000/api/admin");
+  let newData = await response.json();
+  console.log(newData)
+  return { props: { newData } };
+}
+
+console.log()
+export default function Admin({newData}) {
   const session = useSession();
   console.log("session", session);
+  console.log(newData)
 
-  const getData = () => [
-    {
-      name: "Jane Cooper",
-      email: "jane.cooper@example.com",
-      title: "Regional Paradigm Technician",
-      department: "Optimization",
-      status: "Active",
-      role: "Admin",
-      imgUrl:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-    },
-    {
-      name: "Cody Fisher",
-      email: "cody.fisher@example.com",
-      title: "Product Directives Officer",
-      department: "Intranet",
-      status: "Active",
-      role: "Owner",
-      imgUrl:
-        "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-    },
-    {
-      name: "Esther Howard",
-      email: "esther.howard@example.com",
-      title: "Forward Response Developer",
-      department: "Directives",
-      status: "Active",
-      role: "Member",
-      imgUrl:
-        "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-    },
-    {
-      name: "Jenny Wilson",
-      email: "jenny.wilson@example.com",
-      title: "Central Security Manager",
-      department: "Program",
-      status: "Active",
-      role: "Member",
-      imgUrl:
-        "https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-    },
-    {
-      name: "Kristin Watson",
-      email: "kristin.watson@example.com",
-      title: "Lean Implementation Liaison",
-      department: "Mobility",
-      status: "Active",
-      role: "Admin",
-      imgUrl:
-        "https://images.unsplash.com/photo-1532417344469-368f9ae6d187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-    },
-    {
-      name: "Cameron Williamson",
-      email: "cameron.williamson@example.com",
-      title: "Internal Applications Engineer",
-      department: "Security",
-      status: "Active",
-      role: "Member",
-      imgUrl:
-        "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-    },
-  ];
+  const getData = () => newData
+  //   {
+  //     name: "Jane Cooper",
+  //     email: "jane.cooper@example.com",
+  //     title: "Regional Paradigm Technician",
+  //     department: "Optimization",
+  //     status: "Active",
+  //     role: "Admin",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  //   },
+  //   {
+  //     name: "Cody Fisher",
+  //     email: "cody.fisher@example.com",
+  //     title: "Product Directives Officer",
+  //     department: "Intranet",
+  //     status: "Active",
+  //     role: "Owner",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  //   },
+  //   {
+  //     name: "Esther Howard",
+  //     email: "esther.howard@example.com",
+  //     title: "Forward Response Developer",
+  //     department: "Directives",
+  //     status: "Active",
+  //     role: "Member",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  //   },
+  //   {
+  //     name: "Jenny Wilson",
+  //     email: "jenny.wilson@example.com",
+  //     title: "Central Security Manager",
+  //     department: "Program",
+  //     status: "Active",
+  //     role: "Member",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  //   },
+  //   {
+  //     name: "Kristin Watson",
+  //     email: "kristin.watson@example.com",
+  //     title: "Lean Implementation Liaison",
+  //     department: "Mobility",
+  //     status: "Active",
+  //     role: "Admin",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1532417344469-368f9ae6d187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  //   },
+  //   {
+  //     name: "danny bains",
+  //     email: "cameron.williamson@example.com",
+  //     title: "Internal Applications Engineer",
+  //     department: "Security",
+  //     status: "Active",
+  //     role: "Member",
+  //     imgUrl:
+  //       "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+  //   },
+  // ];
   
 
     const columns = React.useMemo(
       () => [
         {
-          Header: "Name",
-          accessor: "name",
+          Header: "id",
+          accessor: "id",
         },
         {
-          Header: "Title",
-          accessor: "title",
+          Header: "First_name",
+          accessor: "first_name",
         },
         {
-          Header: "Status",
-          accessor: "status",
+          Header: "Surname",
+          accessor: "surname",
         },
         {
-          Header: "Role",
-          accessor: "department",
+          Header: "Email",
+          accessor: "email",
         },
       ],
       []
@@ -130,11 +139,11 @@ export default function Admin() {
   if (session.data?.role === "admin") {
     return (
       <div>
-      <div>
+      <div className="ml-5">
         <h1>Admin Access Only!</h1>
-        <p>Welcome to the Admin Dashboard</p>
+        <p className="text-2xl">Welcome to the Admin Dashboard</p>
       </div>
-      <div>
+      <div className="ml-5">
       <Table columns={columns} data={data} />
     </div>
     </div>
