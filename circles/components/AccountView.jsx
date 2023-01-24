@@ -66,7 +66,7 @@ export default function AccountView({ events, user }) {
 
   return (
     <div className="h-screen w-screen bg-gradient-to-b from-yellow-100 to-[#BAE5F3]">
-      <div className="flex align-middle w-screen h-screen  ">
+      <div className="flex align-middle w-screen h-screen">
         <UserPane
           visible={profilePane.visible}
           data={profilePane.data}
@@ -77,7 +77,7 @@ export default function AccountView({ events, user }) {
           }
           handlePast={() => dispatch({ type: "PAST", events: [...events] })}
         />
-        <div className="flex justify-evenly w-[80vw] h-[85vh] ">
+        <div className="flex justify-evenly w-[80vw] h-[100%] ">
           <div className="flex flex-col justify-start mt-4">
             <button
               onClick={() =>

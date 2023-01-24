@@ -6,13 +6,11 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function EventsDisplay({ events, handleDateChange, startDate }) {
   return (
-    <div className="flex flex-row-reverse ">
+    <div className="flex flex-row-reverse">
       <div>
         <DatePicker selected={startDate} onChange={handleDateChange} />
       </div>
-      <div className="inset-0 bg-slate-400">
-        <Timeline items={events} />
-      </div>
+      <Timeline items={events} />
     </div>
   );
 }
