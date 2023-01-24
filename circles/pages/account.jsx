@@ -32,7 +32,7 @@ export default function Profile({ events }) {
   }, [session.data]);
 
   return (
-    <div className="absolute top-24 font-mons">
+    <div className=" font-mons">
       {" "}
       {session.data ? (
         <>
