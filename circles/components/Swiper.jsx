@@ -51,29 +51,29 @@ export default function SwiperSlideshow() {
 <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32 lg:mt-2 lg:mx-96 font-semibold flex justify-center text-center text-gray-400 ">Our mission is to support and encourage socially disconnected individuals integrate into their local communities.</smaller>
 
 
-<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 mt-14 sm:mt-20 ml-10 sm:ml-24 lg:ml-24">
+<div className="grid grid-cols-2 gap-x-24 sm:grid-cols-2 lg:grid-cols-4 mt-14 sm:mt-20 px-24">
 <div>
-  <Image src={find} className="ml-4 lg:ml-6 sm:ml-10 w-24 lg:w-40 sm:w-40" />
-  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl  pt-5 lg:w-60 sm:w-60 mr-10 text-center">Find</h1>
-  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10 ">Helping you to find events near you and connect to your community.</p>
+  <Image src={find} className="mx-auto w-24 lg:w-40 sm:w-40" />
+  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">Find</h1>
+  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">Helping you to find events near you and connect to your community.</p>
   </div>
   
   <div>
-  <Image src={community} className="ml-4 lg:ml-6 sm:ml-10 w-24 lg:w-40 sm:w-40" />
-  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 lg:w-60 sm:w-60 mr-10 text-center">Community</h1>
-  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10 mb-10 sm:mb-20">Helping you to intergrate into your community and feel apart of it. </p>
+  <Image src={community} className="mx-auto w-24 lg:w-40 sm:w-40" />
+  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">Community</h1>
+  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">Helping you to intergrate into your community and feel apart of it. </p>
   </div>
 
   <div>
-  <Image src={support} className="ml-4 lg:ml-6 sm:ml-10 w-24 lg:w-40 sm:w-40" />
-  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl  pt-5 lg:w-60 sm:w-60 mr-10 text-center">Support</h1>
-  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10">Providing you with the support you need most and offering a helping hand where ever possible.</p>
+  <Image src={support} className="mx-auto w-24 lg:w-40 sm:w-40" />
+  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">Support</h1>
+  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">Providing you with the support you need most and offering a helping hand where ever possible.</p>
   </div>
 
   <div>
-  <Image src={connect} className="ml-4 lg:ml-6 sm:ml-10 w-24 lg:w-40 sm:w-40" />
-  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 lg:w-60 sm:w-60 mr-10 text-center">Connect</h1>
-  <p className=" text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10">Helping you feel more connected to your local community and build true connections.</p>
+  <Image src={connect} className="mx-auto w-24 lg:w-40 sm:w-40" />
+  <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">Connect</h1>
+  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">Helping you feel more connected to your local community and build true connections.</p>
   </div>
 </div>
   
@@ -98,17 +98,17 @@ export default function SwiperSlideshow() {
       >
         <SwiperSlide>
 <Image src={ipad1} className="w-full h-full bg-cover mt-20 " />
-          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10 lg:text-4xl sm:text-2xl text-lg font-semibold">
+<div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
+          <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
             "Access"
           </div>
           <div  data-swiper-parallax="-100">
-            <p className="absolute top-20 lg:top-72 sm:top-48 lg:left-60 left-10 sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
+            <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
             It's simple! use the pin that 
             your link worker gives you
             to sign up.
-            
-             
             </p>
+          </div>
           </div>
         </SwiperSlide> 
 
