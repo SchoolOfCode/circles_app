@@ -12,7 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.7.7",
-    "@heroicons/react": "^1.0.6",
+    "@heroicons/react": "^2.0.13",
     "@netlify/plugin-nextjs": "^4.29.4",
     "@next/font": "13.1.1",
     "@prisma/client": "^4.8.1",
