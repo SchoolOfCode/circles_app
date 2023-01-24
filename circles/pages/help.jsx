@@ -15,7 +15,7 @@ export default function Faq({ img, title, description }) {
           alt="colour gradient"
         />
         <div className="">
-          <h2 className=" relative text-black text-4xl lg:text-7xl xl:text-7xl font-bold ml-5 sm:ml-28 sm:mr-28 lg:ml-20 mb-5 -mt-96 sm:-mt-72 lg:-mt-[6em] text-center">
+          <h2 data-cy="faqheading" className=" relative text-black text-4xl lg:text-7xl xl:text-7xl font-bold ml-5 sm:ml-28 sm:mr-28 lg:ml-20 mb-5 -mt-96 sm:-mt-72 lg:-mt-[6em] text-center">
             Useful Links & FAQ's
           </h2>
           <p className="relative text-black text-sm sm:text-sm lg:text-lg ml-10 mr-10 sm:ml-28 sm:mr-28 lg:ml-20 text-center">

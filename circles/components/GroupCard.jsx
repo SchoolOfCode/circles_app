@@ -1,6 +1,7 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import Image from "next/image";
+import Button from "../components/Button"
 
 export default function GroupCard({ club, setModalInfo }) {
   return (
@@ -32,6 +33,7 @@ export default function GroupCard({ club, setModalInfo }) {
             </dd>
           </dl>
         </div>
+        {/* <div> <Button buttonText={'Join'}/></div> */}
       </div>
       <div>
         <div className="-mt-px flex divide-x divide-gray-200">
