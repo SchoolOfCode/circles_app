@@ -61,19 +61,19 @@ export default function SwiperSlideshow() {
   <div>
   <Image src={community} className="ml-4 lg:ml-6 sm:ml-10 w-24 lg:w-40 sm:w-40" />
   <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 lg:w-60 sm:w-60 mr-10 text-center">Community</h1>
-  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10 mb-10 sm:mb-20">Helping you to find events near you and connect to your community.</p>
+  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10 mb-10 sm:mb-20">Helping you to intergrate into your community and feel apart of it. </p>
   </div>
 
   <div>
   <Image src={support} className="ml-4 lg:ml-6 sm:ml-10 w-24 lg:w-40 sm:w-40" />
   <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl  pt-5 lg:w-60 sm:w-60 mr-10 text-center">Support</h1>
-  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10">Helping you to find events near you and connect to your community.</p>
+  <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10">Providing you with the support you need most and offering a helping hand where ever possible.</p>
   </div>
 
   <div>
   <Image src={connect} className="ml-4 lg:ml-6 sm:ml-10 w-24 lg:w-40 sm:w-40" />
   <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 lg:w-60 sm:w-60 mr-10 text-center">Connect</h1>
-  <p className=" text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10">Helping you to find events near you and connect to your community.</p>
+  <p className=" text-center text-xs sm:text-lg lg:text-lg xl:text-lg xl:w-64 lg:w-60 sm:w-60 mr-10">Helping you feel more connected to your local community and build true connections.</p>
   </div>
 </div>
   
