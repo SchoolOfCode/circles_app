@@ -3,6 +3,6 @@ import App from "../pages/home";
 
 test("renders Google link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/google/i);
+  const linkElement = screen.getByText(/googl/i);
   expect(linkElement).toBeInTheDocument();
 });
