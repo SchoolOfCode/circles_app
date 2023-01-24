@@ -9,9 +9,7 @@ import Menuitem from "../components/Menuitem";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-
   const session = useSession();
-
   const handleNav = () => {
     setNav(!nav);
   };
