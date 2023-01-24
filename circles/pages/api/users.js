@@ -10,7 +10,7 @@ export default async function handleUser(req, res) {
       },
     },
     include: {
-      User_circles: true,
+      user_circles: true,
       link_worker:true
     },
   });

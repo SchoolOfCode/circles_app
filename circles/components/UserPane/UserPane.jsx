@@ -39,36 +39,23 @@ export default function UserPane({
             />
             <div className="flex flex-col justify-evenly">
               <h1>{`${user.first_name} ${user.surname}`}</h1>
-              {/* <h2>Your link worker is:</h2>
-            <h3>{data?.linkWorker}</h3>
+              <h2>Your link worker is:</h2>
+            <h3>{`${user.link_worker.first_name} ${user.link_worker.surname}`}</h3>
             <h2>Their contact details are:</h2>
-            <h3>{linkWorkerData?.phone}</h3>
-            <h3>{linkWorkerData?.email}</h3> */}
+            <h3>{user.link_worker.telephone}</h3>
+            <h3>{user.link_worker.email}</h3>
             </div>
             <div className="flex flex-col justify-evenly mt-10">
-              {/* <h1 className="text-2xl font-bold flex justify-center ">{`${data?.user}`}</h1>
-              <p className="text-sm flex justify-center ">{data?.dateJoined}</p>
-              <h2 className="text-lg flex justify-center mt-10 ">
-                Your link worker is:
-              </h2>
-              <h3 className="text-lg font-semibold flex justify-center ">
-                {data?.linkWorker}
-              </h3>
-              <h2 className="text-lg font-semibold flex justify-center mt-10">
-                Their contact details are:
-              </h2>
-              <h3 className="text-lg flex justify-center ">
-                {linkWorkerData?.phone}
-              </h3>
-              <h3 className="text-lg flex justify-center ">
-                {data?.linkWorkerEmail}
-              </h3> */}
-              {/* <h3 className="text-lg flex justify-center ">{linkWorkerData?.email}</h3> */}
             </div>
             <div className="flex flex-col justify-evenly">
               <h1 className="text-xl font-bold mt-20 mb-5 flex justify-center">
                 Your circles:
               </h1>
+             <ul>
+              {user.user_circles.map((circle) =>
+              <li>{circle.club_name}</li>
+              )}
+              </ul>
             </div>
             <div className="flex justify-center mb-5">
               <Button
