@@ -17,8 +17,6 @@ export default function AccountView({ events, user }) {
   //initial state needs to be current date
   //default needs to be current
   const [calendarDate, setCalendarDate] = useState(new Date());
-console.log(events)
-  console.log(calendarDate);
 
   const initialState = events.filter((event) => {
     const eventDate = new Date(event.date);
@@ -33,20 +31,17 @@ console.log(events)
       case "UPCOMING":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
-          console.log("UPCOMING");
           return eventDate.setHours(0, 0, 0, 0) >= today;
         });
       case "PAST":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
-          console.log("PAST");
           return eventDate.setHours(0, 0, 0, 0) < today;
         });
 
       case "SELECTED":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
-          //console.log("DEFAULT");
           return (
             eventDate.setHours(0, 0, 0, 0) === calendarDate.setHours(0, 0, 0, 0)
           );
@@ -101,9 +96,8 @@ console.log(events)
             startDate={calendarDate}
           />
         </div>
-        
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
