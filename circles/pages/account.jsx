@@ -25,7 +25,7 @@ export default function Profile({ events }) {
       });
 
       let userData = await responseUser.json();
-console.log(userData)
+      console.log(userData);
       setUser(userData[0]);
     }
     fetchData();

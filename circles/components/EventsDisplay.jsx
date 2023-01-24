@@ -10,7 +10,7 @@ export default function EventsDisplay({ events, handleDateChange, startDate }) {
       <div>
         <DatePicker selected={startDate} onChange={handleDateChange} />
       </div>
-      <div className="inset-0 z-50 bg-slate-400">
+      <div className="inset-0 bg-slate-400">
         <Timeline items={events} />
       </div>
     </div>
