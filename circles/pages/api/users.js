@@ -11,7 +11,7 @@ export default async function handleUser(req, res) {
     },
     include: {
       User_circles: true,
-      first_name: true,
+      link_worker:true
     },
   });
   res.json(getUser);

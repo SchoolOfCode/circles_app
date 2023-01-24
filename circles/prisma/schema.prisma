@@ -43,7 +43,7 @@ model Users {
   email          String
   telephone      String
   role           String
-  link_worker_id Int @default(1)
+  link_worker_id Int 
   feedback       Feedback[]
   user_circles   User_circles[]
   link_worker    LinkWorkers    @relation(fields: [link_worker_id], references: [id])
