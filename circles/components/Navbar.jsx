@@ -75,8 +75,6 @@ export default function Navbar() {
             </Menuitem>
           ) : (
             <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
-
-            <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 onClick={() => {
                   signIn({ callbackUrl: "http://localhost:3000/" });
