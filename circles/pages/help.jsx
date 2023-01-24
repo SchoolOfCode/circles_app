@@ -8,36 +8,33 @@ import silverline from "../public/images/Silver-Line.jpg";
 import cag from "../public/images/cag-devon.png";
 import parentsupport from "../public/images/parent support.jpg";
 import ccth from "../public/images/ccth.png";
-
+import Link from "next/link";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 
-export default function Faq({ img, title, description }) {
-  return (
-    <section>
-      <div className="relative">
-        <Image
-          src={image}
-          width={1000}
-          className="w-screen"
-          alt="colour gradient"
-        />
-        <div className="absolute text-white top-1/2 left-[700px] -translate-x-1/2 -translate-y-1/2">
-          <h2 className="text-black text-7xl font-bold mb-10 ">
-            Useful Links & FAQ's
-          </h2>
-          <p className="text-black text-2xl">
-            This page showcases a range of organisations and charities that
-            provide services relating to Health, Well Being, Loss and more.
-            Click on to visit their website and scroll to the bottom of the page
-            for frequently asked questions.
-          </p>
-        </div>
-      </div>
 
-      <div className="flex justify-center items-center">
-        <div className="grid gap-x-8 gap-y-20 grid-cols-4 mt-20">
-          <Card
+export default function Faq ({img, title, description}){
+    return (
+        <section>
+        <div>
+        <Image src={image} width={1000}  className="w-screen h-[28em] lg:h-[40em]"   alt="colour gradient"/>
+        <div className="">
+        <h2 className=" relative text-black text-4xl lg:text-7xl xl:text-7xl font-bold ml-5 sm:ml-28 sm:mr-28 lg:ml-20 mb-5 -mt-96 sm:-mt-72 lg:-mt-[6em] text-center">Useful Links & FAQ's</h2>
+        <p className="relative text-black text-sm sm:text-sm lg:text-lg ml-10 mr-10 sm:ml-28 sm:mr-28 lg:ml-20 text-center">
+        This page showcases a range of organisations and charities that provide services 
+        relating to Health, Well Being, Loss and more. Click on read more to visit their website and
+        click <Link href='#faq' className="underline font-bold ">here</Link> to go to frequently asked questions.
+        </p>
+
+        </div>
+       
+        </div>
+              
+     
+        
+        <div className="flex justify-center items-center">
+        <div className="grid gap-x-8 gap-y-20  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 mt-28 lg:mt-80">
+        <Card
             img="https://www.ageuk.org.uk/bp-assets/globalassets/calderdale--kirklees/2022/_potential-web-banner-1.png"
             title="Age Uk"
             description="We're a local charity supporting older people, their families and carers.
@@ -191,7 +188,44 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
         </div>
       </section>
 
-      <Footer />
-    </section>
-  );
+        <section className="bg-gradient-to-b from-yellow-100 to-[#BAE5F3] max-h-full mt-32 pt-14 lg:pt-40 lg:pb-40 sm:pt-28 pb-14 font-mons">
+	<div className="container flex flex-col justify-center px-12 py-8 mx-auto md:p-8  ">
+		<h1 className="text-3xl sm:text-3xl lg:text-5xl font-bold leading-none text-center mb-5 sm:mb-28" id="faq">Frequently Asked Questions</h1>
+		<div className="divide-y divide-gray-700 text-xl">
+			<div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
+				<h3 className="font-semibold md:col-span-5 text-xs lg:text-sm sm:text-lg mt-10 lg:mt-0">How do I get started?</h3>
+				<p className="md:pl-0 md:col-span-7 text-xs lg:text-sm sm:text-lg">Your Link worker will give you a pin and you will be able to sign in with it, after that your details will be populated and you can start attending local events..</p>
+			</div>
+			<div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
+				<h3 className="font-semibold md:col-span-5 text-xs lg:text-sm sm:text-lg mt-10 lg:mt-0">How many events can i sign up for?</h3>
+				<p className="md:pl-0 md:col-span-7  text-xs lg:text-sm sm:text-lg ">To sign up for an event, navigate your to the events page where you will see your local events, choose the event you would like to attend the click attending?</p>
+			</div>
+			<div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
+				<h3 className="font-semibold md:col-span-5 text-xs lg:text-sm sm:text-lg mt-10 lg:mt-0 ">If I can't attend an event can I cancel it?</h3>
+				<p className="md:pl-0 md:col-span-7 text-xs lg:text-sm sm:text-lg">If for whatever reason you are unable to attend an event that you are booked in for, you can cancel at any time before the event by going to the event page, finding the event and clicking cancel.</p>
+			</div>
+			<div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
+				<h3 className="font-semibold md:col-span-5 text-xs lg:text-sm sm:text-lg lg:mt-0">If I need additional support and help who should I contact?</h3>
+				<p className="md:pl-0 md:col-span-7 text-xs lg:text-sm sm:text-lg">If you need additional support please contact your assigned Link worker and they can assist you..</p>
+			</div>
+            <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
+				<h3 className="font-semibold md:col-span-5 text-xs lg:text-sm sm:text-lg lg:mt-0">If I need additional support and help who should I contact?</h3>
+				<p className="md:pl-0 md:col-span-7 text-xs lg:text-sm sm:text-lg">If you need additional support please contact your assigned Link worker and they can assist you..</p>
+			</div>
+            <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
+				<h3 className="font-semibold md:col-span-5 text-xs lg:text-sm sm:text-lg lg:mt-0">If I need additional support and help who should I contact?</h3>
+				<p className="md:pl-0 md:col-span-7 text-xs lg:text-sm sm:text-lg">If you need additional support please contact your assigned Link worker and they can assist you..</p>
+			</div>
+		</div>
+        
+	</div>
+    
+</section>
+       
+
+    
+    
+            <Footer/>
+        </section>
+    )
 }

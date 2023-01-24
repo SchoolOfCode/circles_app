@@ -21,7 +21,7 @@ export default function Navbar() {
     >
       <div
         aria-label="Circles navigation bar"
-        className="pl-10 m-auto flex justify-between items-center p-4 text-black"
+        className="pl-10 m-auto flex justify-between items-center p-3 text-black"
       >
         <Link aria-label="Returns to home page" href="/">
           <Image
@@ -74,6 +74,8 @@ export default function Navbar() {
               </button>
             </Menuitem>
           ) : (
+            <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+
             <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 onClick={() => {
