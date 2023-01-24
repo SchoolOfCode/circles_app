@@ -9,9 +9,7 @@ import Menuitem from "../components/Menuitem";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-
   const session = useSession();
-
   const handleNav = () => {
     setNav(!nav);
   };
@@ -27,8 +25,8 @@ export default function Navbar() {
       >
         <Link aria-label="Returns to home page" href="/">
           <Image
-            width={90}
-            height={90}
+            width={120}
+            height={120}
             src={LogoBlack}
             className="flex"
             alt="Circles company logo"
@@ -41,10 +39,10 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </Menuitem>
           {session.data ? (
-            <Menubar className="hidden sm:flex">
+            <Menubar className="hidden sm:flex text-sm font-bold">
               <Menuitem
                 data-cy="groups"
-                className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black "
+                className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons"
               >
                 <Link href="/groups">Groups</Link>
               </Menuitem>
@@ -76,7 +74,9 @@ export default function Navbar() {
               </button>
             </Menuitem>
           ) : (
-            <Menuitem className="rounded-md p-3 text-white hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+            <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
+
+            <Menuitem className="rounded-md p-3 hover:bg-[#BAE5F3] hover:text-black font-bold font-mons">
               <button
                 onClick={() => {
                   signIn({ callbackUrl: "http://localhost:3000/" });
