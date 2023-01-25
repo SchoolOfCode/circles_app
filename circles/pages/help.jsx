@@ -21,6 +21,7 @@ export default function Faq({ img, title, description }) {
           <p className="relative text-black text-sm sm:text-sm lg:text-lg ml-10 mr-10 sm:ml-28 sm:mr-28 lg:ml-20 text-center">
             This page showcases a range of organisations and charities that
             provide services relating to Health, Well Being, Loss and more.
+            <br></br>
             Click on read more to visit their website and click{" "}
             <Link href="#faq" className="underline font-bold ">
               here
