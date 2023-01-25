@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "../public/images/Slice 1 (1).png";
+import image from "../public/images/slice3.png";
 import Link from "next/link";
 import Card from "../components/Card";
 import Footer from "../components/Footer";

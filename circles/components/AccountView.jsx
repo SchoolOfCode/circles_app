@@ -14,8 +14,6 @@ const data = {
 };
 
 export default function AccountView({ events, user }) {
-  //initial state needs to be current date
-  //default needs to be current
   const [calendarDate, setCalendarDate] = useState(new Date());
   const [header, setHeader] = useState("Today's Events");
 
@@ -32,17 +30,20 @@ export default function AccountView({ events, user }) {
       case "UPCOMING":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
+          setHeader("Your Upcoming Events");
           return eventDate.setHours(0, 0, 0, 0) >= today;
         });
       case "PAST":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
+          setHeader("Your Past Events");
           return eventDate.setHours(0, 0, 0, 0) < today;
         });
 
       case "SELECTED":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
+          setHeader("Your Events on " + `${calendarDate}`.substring(0, 11));
           return (
             eventDate.setHours(0, 0, 0, 0) === calendarDate.setHours(0, 0, 0, 0)
           );
@@ -90,22 +91,16 @@ export default function AccountView({ events, user }) {
               handleDateChange={(Date) => {
                 setCalendarDate(Date);
                 dispatch({ type: "SELECTED", events: [...events] });
-                setHeader(
-                  "Your Events on " + `${calendarDate}`.substring(0, 11)
-                );
               }}
               handleToday={() => {
                 setCalendarDate(new Date());
                 dispatch({ type: "SELECTED", events: [...events] });
-                setHeader("Today's Events");
               }}
               handleUpcoming={() => {
                 dispatch({ type: "UPCOMING", events: [...events] });
-                setHeader("Your Upcoming Events");
               }}
               handlePast={() => {
                 dispatch({ type: "PAST", events: [...events] });
-                setHeader("Your Past Events");
               }}
               startDate={calendarDate}
             />
