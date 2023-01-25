@@ -3,12 +3,12 @@ import { useState } from "react";
 import FeedbackModal from "./FeedbackModal";
 
 export default function Timeline({ items }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div
       // className="flex flex-col justify-evenly mt-[20vh] h-[100%]"
-      className="flex flex-col justify-evenly h-[100%] py-auto"
+      className="flex flex-col justify-evenly py-auto"
       id="timeline-container-card"
     >
       {items.map((item) => {

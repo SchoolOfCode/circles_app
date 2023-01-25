@@ -26,7 +26,7 @@ export default function EventsDisplay({
         <Button buttonText="Upcoming" handleClick={handleUpcoming} />
         <Button buttonText="Past" handleClick={handlePast} />
       </div>
-      <div className="h-[85%] bg-[rgba(255,255,255,0.3)] overflow-y-scroll rounded-lg mx-20 my-10 pt-10">
+      <div className="h-[85%] bg-[rgba(255,255,255,0.3)] overflow-y-scroll rounded-lg mx-20 my-10 pt-0">
         <Timeline items={events} />
       </div>
     </div>

@@ -1,38 +1,38 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Button from "./Button";
 
 export default function FeedbackModal({ user_id, event_name, open, setOpen }) {
   //const [heartState, setHeartState] = useState(0);
-  const [data, setData] = useState([
-    { user_id: 0, event_name: "", comment: "", rating: 0 },
-  ]);
+  // const [data, setData] = useState([
+  //   { user_id: 0, event_name: "", comment: "", rating: 0 },
+  // ]);
 
   // Is this submitFunction going to get called on loading? How do we change that, if so?
   function submitReview(data) {
-    setData({ user_id: 0, event_name: "", comment: "", rating: 0 });
+    //setData({ user_id: 0, event_name: "", comment: "", rating: 0 });
     setOpen(false);
   }
 
-  useEffect(() => {
-    // Is /api/admin the right path for a post request to the Feedback table?
-    fetch("/api/admin", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-    // Do we just want this to occur whenever data changes?
-  }),
-    [data];
+  // useEffect(() => {
+  //   // Is /api/admin the right path for a post request to the Feedback table?
+  //   fetch("/api/admin", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log("Success:", data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error:", error);
+  //     });
+  //   // Do we just want this to occur whenever data changes?
+  // }),
+  //   [data];
 
   return (
     <Transition.Root show={open} as={Fragment}>

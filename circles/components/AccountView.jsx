@@ -4,15 +4,6 @@ import UserPane from "./UserPane/UserPane";
 import EventsDisplay from "./EventsDisplay";
 import Footer from "./Footer";
 
-const data = {
-  user: "John Doe",
-  linkWorker: "Lynne Summers",
-  email: "johndoe@test.com",
-  dateJoined: "09/01/2023",
-  linkWorkerEmail: "lynnesummers@cab.com",
-  circles: ["swimming club, mountain climbing"],
-};
-
 export default function AccountView({ events, user }) {
   const [calendarDate, setCalendarDate] = useState(new Date());
   const [header, setHeader] = useState("Today's Events");
@@ -24,7 +15,7 @@ export default function AccountView({ events, user }) {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  function reducer(state, action) {
+  function reducer(action) {
     const today = new Date().setHours(0, 0, 0, 0);
     switch (action.type) {
       case "UPCOMING":
@@ -52,6 +43,7 @@ export default function AccountView({ events, user }) {
         return initialState;
     }
   }
+  console.log(state);
 
   const [profilePane, setProfilePane] = useState({
     visible: false,
