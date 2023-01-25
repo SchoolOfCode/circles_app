@@ -20,7 +20,6 @@ export default function EventsDisplay({
           selected={startDate}
           onChange={handleDateChange}
           className="border-[rgba(186,229,243)] border-solid border-[4px] rounded-md shadow-md mb-10 ml-3"
-          todayButton="Today"
         />
         <Button buttonText="Today" handleClick={handleToday} />
         <Button buttonText="Upcoming" handleClick={handleUpcoming} />
