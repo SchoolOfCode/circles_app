@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "../public/images/slice3.png";
+import image from "../public/images/slice11.png";
 import Link from "next/link";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
@@ -10,7 +10,6 @@ export default function Faq({ img, title, description }) {
       <div>
         <Image
           src={image}
-          width={1000}
           className="w-screen lg:h-[40em]"
           alt="colour gradient"
         />
