@@ -24,56 +24,12 @@ export default function Footer() {
               EXPLORE
             </p>
             <ul className="text-xs lg:text-sm md:text-sm sm:text-sm">
-              <li>
+
+            <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#about"
+                  href="/"
                   className="hover:dark:text-white"
-                >
-                  About
-                </a>
-              </li>
-              
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-white"
-                >
-                  Resources
-                </a>
-              </li>
-              
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="/help"
-                  className="hover:dark:text-white"
-                >
-                  Useful Links
-                </a>
-              </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="/circles/pages/help.jsx"
-                  className="hover:dark:text-white"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-span-6 text-center md:text-left md:col-span-3 sm:mr-20 mt-10 sm:mt-0 lg:mt-0 xl:mt-0">
-            <p className="pb-1 sm:text-sm lg:text-sm md:text-lg text-xs font-semibold">
-              INFORMATION
-            </p>
-            <ul className="lg:text-sm md:text-sm sm:text-sm text-xs">
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
                 >
                   Home
                 </a>
@@ -81,40 +37,40 @@ export default function Footer() {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
+                  href="/groups"
+                  className="hover:dark:text-white"
                 >
-                  Organisations
+                  Groups
+                </a>
+              </li>
+        
+              
+            </ul>
+          </div>
+          <div className="col-span-6 text-center md:text-left md:col-span-3 sm:mr-20 mt-10 sm:mt-0 lg:mt-0 xl:mt-0">
+            <p className="pb-1 sm:text-sm lg:text-sm md:text-lg text-xs font-semibold">
+              INFORMATION
+            </p>
+            <ul className="lg:text-sm md:text-sm sm:text-sm text-xs">
+            <li>
+                <a
+                  rel="noopener noreferrer"
+                  href="/account"
+                  className="hover:dark:text-white"
+                >
+                  Account
                 </a>
               </li>
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
+                  href="/contactus"
+                  className="hover:dark:text-white"
                 >
-                  Media
+                  Contact
                 </a>
               </li>
               
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
-                >
-                  Blog
-                </a>
-				</li>
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="hover:dark:text-violet-400"
-                  >
-                    Terms and Conditions
-                  </a>
-                </li>
               
             </ul>
           </div>
