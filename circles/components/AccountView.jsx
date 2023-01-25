@@ -15,7 +15,7 @@ export default function AccountView({ events, user }) {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  function reducer(action) {
+  function reducer(state, action) {
     const today = new Date().setHours(0, 0, 0, 0);
     switch (action.type) {
       case "UPCOMING":
