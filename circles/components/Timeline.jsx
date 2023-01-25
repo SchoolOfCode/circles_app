@@ -1,6 +1,10 @@
 import React from "react";
+import { useState } from "react";
+import FeedbackModal from "./FeedbackModal";
 
-export default function Timeline({ items, handleClick }) {
+export default function Timeline({ items }) {
+  const [open, setOpen] = useState(true);
+
   return (
     <div
       // className="flex flex-col justify-evenly mt-[20vh] h-[100%]"
@@ -39,7 +43,7 @@ export default function Timeline({ items, handleClick }) {
                     </span>
                   ) : (
                     <button
-                      onClick={handleClick}
+                      onClick={() => setOpen(true)}
                       className="decoration-black decoration-solid decoration-4 text-md border-4 border-[#BAE5F3] rounded-lg"
                     >
                       Add feedback
@@ -54,6 +58,7 @@ export default function Timeline({ items, handleClick }) {
             </div>
           );
         })}
+        <FeedbackModal open={open} setOpen={setOpen} />
       </div>
     </div>
   );
