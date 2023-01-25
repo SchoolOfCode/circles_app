@@ -10,6 +10,8 @@ export default function EventsDisplay({
   handleDateChange,
   startDate,
   handleToday,
+  handleUpcoming,
+  handlePast,
 }) {
   return (
     <div className="flex flex-col lg:flex-row-reverse">
@@ -17,10 +19,12 @@ export default function EventsDisplay({
         <DatePicker
           selected={startDate}
           onChange={handleDateChange}
-          className="border-[rgba(186,229,243)] border-solid border-[4px] rounded-md shadow-md mb-10"
+          className="border-[rgba(186,229,243)] border-solid border-[4px] rounded-md shadow-md mb-10 ml-3"
           todayButton="Today"
         />
         <Button buttonText="Today" handleClick={handleToday} />
+        <Button buttonText="Upcoming" handleClick={handleUpcoming} />
+        <Button buttonText="Past" handleClick={handlePast} />
       </div>
       <Timeline items={events} />
     </div>

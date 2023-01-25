@@ -69,14 +69,6 @@ export default function AccountView({ events, user }) {
           data={profilePane.data}
           closePane={closePane}
           user={user}
-          handleUpcoming={() => {
-            dispatch({ type: "UPCOMING", events: [...events] });
-            setHeader("Your Upcoming Events");
-          }}
-          handlePast={() => {
-            dispatch({ type: "PAST", events: [...events] });
-            setHeader("Your Past Events");
-          }}
         />
         <div className="flex flex-col align-middle mx-auto p-0">
           <h1 className="mx-auto mt-10 text-3xl">{header}</h1>
@@ -106,6 +98,14 @@ export default function AccountView({ events, user }) {
                 setCalendarDate(new Date());
                 dispatch({ type: "SELECTED", events: [...events] });
                 setHeader("Today's Events");
+              }}
+              handleUpcoming={() => {
+                dispatch({ type: "UPCOMING", events: [...events] });
+                setHeader("Your Upcoming Events");
+              }}
+              handlePast={() => {
+                dispatch({ type: "PAST", events: [...events] });
+                setHeader("Your Past Events");
               }}
               startDate={calendarDate}
             />
