@@ -79,11 +79,11 @@ export default function AccountView({ events, user }) {
                 onClick={() =>
                   setProfilePane({ ...profilePane, visible: true, data: data })
                 }
-                className="flex flex-row justify-evenly bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(186,229,243)] rounded-lg h-12 shadow-md"
+                className="flex flex-row justify-evenly bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(186,229,243)] rounded-lg h-12 shadow-md w-48"
               >
                 {" "}
                 <CgProfile size={35} className="mt-1.5 mb-2 ml-3" />
-                <h1 className="p-3">View Profile Menu</h1>
+                <h1 className="p-3">View Profile</h1>
               </button>
             </div>
             <EventsDisplay

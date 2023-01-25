@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import Button from "./Button";
 
 export default function FeedbackModal({ user_id, event_name, open, setOpen }) {
-  const [heartState, setHeartState] = useState(0);
+  //const [heartState, setHeartState] = useState(0);
   const [data, setData] = useState([
     { user_id: 0, event_name: "", comment: "", rating: 0 },
   ]);
