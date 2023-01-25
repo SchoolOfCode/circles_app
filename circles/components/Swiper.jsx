@@ -100,11 +100,11 @@ export default function SwiperSlideshow() {
 <Image src={ipad1} className="w-full h-full bg-cover mt-20 " />
 <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
           <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
-            "Access"
+            Access
           </div>
           <div  data-swiper-parallax="-100">
             <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
-            It's simple! use the pin that 
+            Simply Use the pin that 
             your link worker gives you
             to sign up.
             </p>
@@ -114,46 +114,47 @@ export default function SwiperSlideshow() {
 
         <SwiperSlide  >
           <Image src={ipad2}  className="w-full h-full bg-cover mt-20" />
-          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10 lg:text-4xl sm:text-2xl text-lg font-semibold">
-            "Circles"
+          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
+          <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
+            Connect with circles
           </div>
           <div data-swiper-parallax="-100">
-            <p className="absolute top-20 lg:top-72 sm:top-48 lg:left-60 left-10 sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3 ">
+            <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
             Connect with people with similar
             interests and find events near you.
-            
-             
             </p>
+            </div>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
-          <Image src={ipad3} className="w-full h-full bg-cover mt-20 " />
-          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10 lg:text-4xl sm:text-2xl text-lg font-semibold">
-            "Sign up"
+        <SwiperSlide  >
+          <Image src={ipad2}  className="w-full h-full bg-cover mt-20" />
+          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
+          <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
+          Keep Track
           </div>
           <div data-swiper-parallax="-100">
-            <p className="absolute top-20 lg:top-72 sm:top-48 lg:left-60 left-10 sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
-            Sign up for an event by email or a quick call.
-            
-             
-            </p>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image src={ipad4} className="w-full h-full bg-cover mt-20" />
-          <div className="absolute top-72 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10 lg:text-4xl sm:text-2xl text-lg font-semibold">
-            "Keep Track"
-          </div>
-          <div data-swiper-parallax="-100">
-            <p className="absolute top-20 lg:top-72 sm:top-48 lg:left-60 left-10 sm:mr-[22em] mr-48 sm:left-20 lg:mr-[32em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
+            <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
             Your dashboard will help you
             manage and keep-up-to-date 
             with your events.
-            
-             
             </p>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide  >
+          <Image src={ipad2}  className="w-full h-full bg-cover mt-20" />
+          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
+          <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
+            Sign up
+          </div>
+          <div data-swiper-parallax="-100">
+            <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
+            Sign up for an event by email or a quick call.
+
+            </p>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
