@@ -6,53 +6,55 @@ import { useState } from "react";
 
 export default function UserPane({
   visible,
-  data,
-  linkWorkerData,
+  user,
   closePane,
   handleUpcoming,
   handlePast,
 }) {
   const [max, setMax] = useState(false);
 
-  const paneWidth = max || window.innerWidth < 600 ? "100%" : "500px";
+  const paneWidth = max || window.innerWidth < 600 ? "100%" : "400px";
 
   return (
     <SlidingPane
-      className="sliding-pane"
+      className="sliding-pane rounded-md"
       isOpen={visible}
-      user={data?.user}
+      user={user}
       width={paneWidth}
       onRequestClose={closePane}
       hideHeader
       from="left"
     >
-      {data ? (
-        <div>
-          <a onClick={closePane}>
-            <GrClose />
-          </a>
-          <img
-            className="inline-block h-[120px] w-[120px] rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
-          <div className="flex flex-col justify-evenly">
-            <h1>{`${data.user}`}</h1>
-            <h2>Your link worker is:</h2>
-            <h3>{data?.linkWorker}</h3>
-            <h2>Their contact details are:</h2>
-            <h3>{linkWorkerData?.phone}</h3>
-            <h3>{linkWorkerData?.email}</h3>
-          </div>
-          <div className="flex flex-col justify-evenly">
-            <h1>Your circles</h1>
-          </div>
-          <div className="flex flex-col justify-evenly">
-            <Button
-              buttonText="Your upcoming events"
-              handleClick={handleUpcoming}
+      {user ? (
+        <div className="flex flex-col justify-center">
+          <button onClick={closePane}>
+            <GrClose className="float-right" />
+          </button>
+          <div className="flex justify-center my-2">
+            <img
+              className="inline-block h-[180px] w-[180px] rounded-full p-2  bg-gradient-to-b from-yellow-100 to-[#BAE5F3] shadow-md"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt=""
             />
-            <Button buttonText="Your past events" handleClick={handlePast} />
+          </div>
+          <div className="flex justify-center py-1">
+            <div className="flex flex-col justify-evenly text-center">
+              <h1 className="font-bold m-2 text-lg">{`${user.first_name} ${user.surname}`}</h1>
+              <div className="p-2 bg-yellow-100 rounded-lg mt-4 mb-5">
+                <h2 className="font-bold">Your Link Worker</h2>
+                <h3>{`${user.link_worker.first_name} ${user.link_worker.surname}`}</h3>
+                <h3>{user.link_worker.telephone}</h3>
+                <h3>{user.link_worker.email}</h3>
+              </div>
+              <div className="flex flex-col justify-evenly bg-[#BAE5F3] rounded-lg my-3 pt-3 px-3">
+                <h1 className="font-bold flex justify-center">Your Circles</h1>
+                <ul className="mt-0 mb-4">
+                  {user.user_circles.map((circle) => (
+                    <li>{circle.club_name}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       ) : (

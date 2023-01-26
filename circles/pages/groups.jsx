@@ -1,25 +1,24 @@
 import GroupsGallery from "../components/GroupsGallery";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import Footer from "../components/Footer";
 
 export async function getServerSideProps() {
-  try {
-    let response = await fetch("https://circlesapp.netlify.app/api/groups");
-    let data = await response.json();
-    return { props: { data } };
-  } catch (error) {
-    console.log(error);
-  }
+  //let response = await fetch(`${process.env.CIRCLES_GROUPS_API_ENDPOINT}`);
+  let response = await fetch(`${process.env.CIRCLES_GROUPS_API_ENDPOINT}`);
+
+  let groups = await response.json();
+  return { props: { groups } };
 }
 
-export default function GroupsPage({ data }) {
-  console.log(data);
+export default function GroupsPage({ groups }) {
+  console.log(groups);
   const session = useSession();
 
   return (
     <div>
       {session.data ? (
-        <GroupsGallery data={data} />
+        <GroupsGallery data={groups} />
       ) : (
         <div className="font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen">
           <h3>Please log in to view the groups available.</h3>
@@ -31,6 +30,7 @@ export default function GroupsPage({ data }) {
           </h3>
         </div>
       )}{" "}
+      <Footer />
     </div>
   );
 }
