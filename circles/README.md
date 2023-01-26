@@ -1,6 +1,6 @@
 # Circles
 
-Welcome to the Circles app, built in Next JS by Danny Bains, [Iona Meadows](https://github.com/ionajosephine), [Please add your names]. The following are instructions for how you can use this app, as a developer. 
+Welcome to the Circles app, built in Next JS by [Danny Bains](https://github.com/DannyBains2), [Iona Meadows](https://github.com/ionajosephine), [Isabelle Francis](https://github.com/B2ella), [Camila Brizzi](https://github.com/sea-breezy), [Matt Doherty](https://github.com/matt190589/matt190589), Gabs. The following are instructions for how you can use this app, as a developer. 
 
 ## Getting Started
 

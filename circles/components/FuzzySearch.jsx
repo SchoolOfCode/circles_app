@@ -18,7 +18,6 @@ export default function FuzzySearchBar({
     { id: 5, name: "Climbing" },
     { id: 6, name: "Ping Pong" },
     { id: 7, name: "Volunteer" },
-    { id: 8, name: "Disabilities" },
   ];
 
   let fuseOptions = {
