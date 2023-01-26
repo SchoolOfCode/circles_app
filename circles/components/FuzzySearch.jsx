@@ -17,6 +17,7 @@ export default function FuzzySearchBar({
     { id: 4, name: "Health" },
     { id: 5, name: "Climbing" },
     { id: 6, name: "Ping Pong" },
+    { id: 7, name: "Volunteer" },
   ];
 
   let fuseOptions = {
@@ -30,7 +31,10 @@ export default function FuzzySearchBar({
   };
 
   return (
-    <div className={className}>
+    <div
+      className={className}
+      aria-label="Type the name of a group you want to join"
+    >
       <div>
         <ReactSearchAutocomplete
           items={items}

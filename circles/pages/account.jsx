@@ -1,27 +1,46 @@
 import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import AccountView from "../components/AccountView";
 
 export async function getServerSideProps() {
-  try {
-    let response = await fetch("https://circlesapp.netlify.app/api/events");
-    let events = await response.json();
-    return { props: { events } };
-  } catch (error) {
-    console.log(error);
-  }
+  //let responseEvents = await fetch("http://localhost:3000/api/events");
+  let responseEvents = await fetch(
+    `${process.env.CIRCLES_EVENTS_API_ENDPOINT}`
+  );
+  let events = await responseEvents.json();
+  return { props: { events } };
 }
 
 export default function Profile({ events }) {
   const session = useSession();
+  const [user, setUser] = useState("");
+
+
+  useEffect(() => {
+    async function fetchData() {
+      let responseUser = await fetch("/api/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: session.data?.user.email }),
+      });
+
+      let userData = await responseUser.json();
+      console.log(userData);
+      setUser(userData[0]);
+    }
+    fetchData();
+  }, [session.data]);
+
   return (
-    <div className="absolute top-24 font-mons">
+    <div className=" font-mons">
       {" "}
       {session.data ? (
         <>
-          {/* <div className="flex flex-row- justify-evenly font-mons bg-gradient-to-b from-yellow-100 to-blue-200 min-h-screen min-w-screen"> */}
-          <div>
-            <AccountView events={events} />
+          <div className="">
+            <AccountView events={events} user={user} />
           </div>
         </>
       ) : (
