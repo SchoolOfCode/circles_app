@@ -1,9 +1,9 @@
 import Footer from "../components/Footer";
 import { useSession, signIn } from "next-auth/react";
 import SwiperSlideshow from "../components/Swiper";
-import LandingP from "../public/images/Group 226.png";
+import LandingP from "/images/Group 226.png";
 import Image from "next/image";
-import quote2 from "../public/images/white_mons.png";
+import quote2 from "/images/white_mons.png";
 import Link from "next/link";
 
 export default function Home() {
