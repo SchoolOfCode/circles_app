@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 export async function getServerSideProps() {
   //let response = await fetch(`${process.env.CIRCLES_GROUPS_API_ENDPOINT}`);
-  let response = await fetch(`${process.env.CIRCLES_GROUPS_API_ENDPOINT}`);
+  let response = await fetch("https://circlesapp.netlify.app/api/groups");
 
   let groups = await response.json();
   return { props: { groups } };
