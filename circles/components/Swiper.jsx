@@ -37,8 +37,15 @@ export default function SwiperSlideshow() {
           {" "}
           Our purpose{" "}
         </h1>
-        <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32 lg:mt-2 lg:mx-96 font-semibold flex justify-center text-center text-gray-400 ">
-          Our mission is to encourage social integration in local communities.
+        <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32 lg:mt-2 lg:mx-72 font-semibold text-center text-gray-400 ">
+          Our mission is to support individuals make the most of the{" "}
+          <a
+            href="https://www.england.nhs.uk/personalisedcare/social-prescribing/"
+            className="font-bold text-[#000000] hover:text-[rgba(186,229,243)] underline"
+          >
+            Social Prescribing
+          </a>{" "}
+          scheme.
         </smaller>
 
         <div className="grid grid-cols-2 gap-x-24 sm:grid-cols-2 lg:grid-cols-4 mt-14 sm:mt-20 px-24">
