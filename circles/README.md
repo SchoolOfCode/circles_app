@@ -1,9 +1,9 @@
-# Circles
+<b><h1 style="font-style: bold; font-size: 40px;">Circles</h1></b>
 
-Welcome to the Circles app designed to help users find their circles. For the best performance access the circles web application via a Desktop or Laptop. 
+Welcome to the Circles app designed to help users find their circles. For the best performance access the circles web application via a Desktop or Laptop. Access the website here: https://circlesapp.netlify.app/.
 
 
-**The Problem**
+<br/><h1 style="font-style: bold; font-size: 25px;">The Problem</h1>
 
 Social isolation is becoming more and more of an issue in today's day and age and can be caused by a number of reasons.  Old age, leaving the workforce, death of a spouse, illness or disability to name a few. For these reasons, individuals can struggle to integrate into their local communities. This is where social prescribing steps in. Social prescribing, also known as community referral, is when a health professional refers individuals to link workers who will then try to connect them to support in their community. 
 
@@ -11,15 +11,23 @@ Social isolation is becoming more and more of an issue in today's day and age an
 
 
 
-**The Solution**
+
+<br/><h1 style="font-style: bold; font-size: 25px;">The Solution</h1>
 
 Our solution was to design a web-based, centralised platform that allows users to quickly access reliable information on their local communities and to facilitate integration into those social circles, allowing them to easily join and keep track of their local events. The Ideation of this application has been designed and heavily influenced by our research and communication with link workers at citzens advice. 
 
-## Screenshots
 
-![Screenshot](homescreenshot.png)
+## Screenshots 
 
-<img alt="Homepage" src="/circles/public/images/homescreenshot.png" width>
+![Screenshot](/circles/public/images/homescreenshot.png)
+![Screenshot](/circles/public/images/helpscreenshoot.png)
+![Screenshot](/circles/public/images/signinscreenshot.png)
+![Screenshot](/circles/public/images/groupsscreenshot.png)
+![Screenshot](/circles/public/images/accountscreenshot.png)
+![Screenshot](/circles/public/images/conactscreenshot.png)
+![Screenshot](/circles/public/images/faqscreenshot.png)
+
+
 
 
 ## Tech Stack
@@ -39,38 +47,58 @@ Our solution was to design a web-based, centralised platform that allows users t
 - **Deployment:** Netlify 
 
 
-## Getting Started
+## How to run Locally
 
-First, clone the repo, run:
+First, clone the repo,
 
+```bash
+  cd circles
 ```
-npm i
+
+**Install dependencies** 
+
+setting it up, run:
+
+```bash
+  npm install or npm i
 ```
 
-then you should be able to run the development server:
+Start the server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the homepage.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the homepage.</br>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Documentation
 
-- Figma
-- Miro
-- Excalidraw
-- Trello
+- [Figma](https://www.figma.com/file/5LxoxkXd8TX23JeYynXC8W/Untitled?node-id=0%3A1&t=k7QRcaKyMFDbISQr-0)
+- [Miro](https://miro.com/app/board/uXjVP12KJHY=/)
+- [Excalidraw](https://excalidraw.com/#room=53e6ab962b6b000fab16,J32pqtFo4XtF4sVgZ0v4uw)
+- [Trello](https://trello.com/b/sEcoz1SA/silver-surfers)
 - Google spreadsheets
 - Google Presentation 
+
+### Improvements
+
+- Work on the responsiveness of the website so that it's available on both mobile and Ipad
+- Scroll bar on the account page needs to disappear when there are no events 
+- 
+- 
+
+### Challenges
+- Can only use 5 connections 
+- 
+- 
+- 
+- 
+- 
+
 
 ## Authors:
 
@@ -78,13 +106,15 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 - [Danny Bains](https://github.com/DannyBains2)
 
+- Gabriel Bricklesby
+
 - [Iona Meadows](https://github.com/ionajosephine)
 
 - [Isabelle Francis](https://github.com/B2ella)
 
 - [Matt Doherty](https://github.com/matt190589/matt190589)
 
-- Gabriel Bricklesby
+
 
 ## Learn More
 

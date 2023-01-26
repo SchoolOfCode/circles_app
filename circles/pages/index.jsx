@@ -23,7 +23,7 @@ export default function Home() {
           an{" "}
           <Link
             href="./contactus"
-            className="underline font-bold text-[#000000] hover:text-[rgba(186,229,243)]"
+            className=" font-bold text-[#000000] hover:text-[rgba(186,229,243)]"
           >
             email.
           </Link>
