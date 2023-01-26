@@ -19,13 +19,16 @@ export default function Profile({ events }) {
 
   useEffect(() => {
     async function fetchData() {
-      let responseUser = await fetch("/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: session.data?.user.email }),
-      });
+      let responseUser = await fetch(
+        "https://circlesapp.netlify.app/api/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: session.data?.user.email }),
+        }
+      );
 
       let userData = await responseUser.json();
       console.log(userData);
