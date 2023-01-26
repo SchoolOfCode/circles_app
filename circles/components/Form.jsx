@@ -24,7 +24,6 @@ const Form = (e) => {
       );
     e.target.reset();
   };
-  //   e.target.reset()
 
   return (
     <div className="pt-32 pb-32 px-10 bg-gradient-to-b from-yellow-100 to-blue-200 w-full">

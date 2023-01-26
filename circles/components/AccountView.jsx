@@ -4,18 +4,7 @@ import UserPane from "./UserPane/UserPane";
 import EventsDisplay from "./EventsDisplay";
 import Footer from "./Footer";
 
-const data = {
-  user: "John Doe",
-  linkWorker: "Lynne Summers",
-  email: "johndoe@test.com",
-  dateJoined: "09/01/2023",
-  linkWorkerEmail: "lynnesummers@cab.com",
-  circles: ["swimming club, mountain climbing"],
-};
-
 export default function AccountView({ events, user }) {
-  //initial state needs to be current date
-  //default needs to be current
   const [calendarDate, setCalendarDate] = useState(new Date());
   const [header, setHeader] = useState("Today's Events");
 
@@ -32,17 +21,20 @@ export default function AccountView({ events, user }) {
       case "UPCOMING":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
+          setHeader("Your Upcoming Events");
           return eventDate.setHours(0, 0, 0, 0) >= today;
         });
       case "PAST":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
+          setHeader("Your Past Events");
           return eventDate.setHours(0, 0, 0, 0) < today;
         });
 
       case "SELECTED":
         return action.events.filter((event) => {
           const eventDate = new Date(event.date);
+          setHeader("Your Events on " + `${calendarDate}`.substring(0, 11));
           return (
             eventDate.setHours(0, 0, 0, 0) === calendarDate.setHours(0, 0, 0, 0)
           );
@@ -51,6 +43,7 @@ export default function AccountView({ events, user }) {
         return initialState;
     }
   }
+  console.log(state);
 
   const [profilePane, setProfilePane] = useState({
     visible: false,
@@ -76,13 +69,13 @@ export default function AccountView({ events, user }) {
             <div className="flex flex-col justify-start">
               <button
                 onClick={() =>
-                  setProfilePane({ ...profilePane, visible: true, data: data })
+                  setProfilePane({ ...profilePane, visible: true })
                 }
-                className="flex flex-row justify-evenly bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(186,229,243)] rounded-lg h-12 shadow-md"
+                className="flex flex-row justify-evenly bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(186,229,243)] rounded-lg h-12 shadow-md w-48"
               >
                 {" "}
-                <CgProfile size={35} className="mt-1.5 mb-2 ml-3" />
-                <h1 className="p-3">View Profile Menu</h1>
+                <CgProfile size={35} className="mt-1.5 mb-2 ml-2" />
+                <h1 className="pr-3 py-3">View Profile</h1>
               </button>
             </div>
             <EventsDisplay
@@ -90,22 +83,16 @@ export default function AccountView({ events, user }) {
               handleDateChange={(Date) => {
                 setCalendarDate(Date);
                 dispatch({ type: "SELECTED", events: [...events] });
-                setHeader(
-                  "Your Events on " + `${calendarDate}`.substring(0, 11)
-                );
               }}
               handleToday={() => {
                 setCalendarDate(new Date());
                 dispatch({ type: "SELECTED", events: [...events] });
-                setHeader("Today's Events");
               }}
               handleUpcoming={() => {
                 dispatch({ type: "UPCOMING", events: [...events] });
-                setHeader("Your Upcoming Events");
               }}
               handlePast={() => {
                 dispatch({ type: "PAST", events: [...events] });
-                setHeader("Your Past Events");
               }}
               startDate={calendarDate}
             />
