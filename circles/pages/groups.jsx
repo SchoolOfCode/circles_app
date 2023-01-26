@@ -4,9 +4,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 
 export async function getServerSideProps() {
-
   let response = await fetch(`${process.env.CIRCLES_GROUPS_API_ENDPOINT}`);
-  let data = await response.json();
+  let groups = await response.json();
   return { props: { groups } };
 }
 
