@@ -4,13 +4,14 @@ import Link from "next/link";
 import AccountView from "../components/AccountView";
 
 export async function getServerSideProps() {
+
   //let responseEvents = await fetch("http://localhost:3000/api/events");
   let responseEvents = await fetch(
     `${process.env.CIRCLES_EVENTS_API_ENDPOINT}`
   );
   let events = await responseEvents.json();
   return { props: { events } };
-}
+  };
 
 export default function Profile({ events }) {
   const session = useSession();
