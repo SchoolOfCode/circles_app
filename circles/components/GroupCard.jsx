@@ -10,7 +10,7 @@ export default function GroupCard({ club, setModalInfo }) {
        col-span-1 flex flex-col divide-y divide-gray-200 rounded-2xl bg-white text-center shadow min-h-[250px]"
       onClick={setModalInfo}
     >
-      <div className="flex flex-1 flex-col p-8">
+      <div className="flex flex-1 flex-col px-3 py-5">
         <img
           className="mx-auto h-24 w-24 flex-shrink-0 rounded-full"
           src={club.image}
@@ -20,15 +20,16 @@ export default function GroupCard({ club, setModalInfo }) {
           {club.club_name}
         </h3>
         <div className="mb-1">
-          <dl className="mt-5 flex flex-grow flex-col justify-between">
+          <dl className="mt-3 flex flex-grow flex-col justify-between">
             <dt className="sr-only">Days</dt>
             <dd className="text-lg text-gray-500">{club.days}</dd>
             <dt className="sr-only">times</dt>
             <dd className="text-lg text-gray-500">{club.times}</dd>
-            <dd className="mt-10">
+            <dd className="flex justify-evenly mt-8">
               <span className="rounded-full bg-teal-100 px-2 py-1 text-sm font-medium text-green-800">
                 {club.availability}
               </span>
+              <button className="text-sm font-bold mt-0">Read more</button>
             </dd>
           </dl>
         </div>
