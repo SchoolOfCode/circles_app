@@ -38,9 +38,9 @@ export default function GroupModal({ setModalInfo, club, hideModal }) {
         <div className="p-8">
           <p className=" text-sm text-gray-501">{club.description}</p>
         </div>
-        <div className="flex flex-row justify-between pl-2 pr-2 text-sm text-black font-bold">
+        <div className="flex flex-col justify-between py-2 px-8 text-sm text-black font-bold">
           <h3 className="">{club.email}</h3>
-          <h3 className="mr-20">{`0${club.telephone}`}</h3>
+          <h3 className="">{`0${club.telephone}`}</h3>
         </div>
         <div>
           <div className="-mt-px flex divide-x divide-gray-200">
