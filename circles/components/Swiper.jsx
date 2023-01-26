@@ -44,7 +44,12 @@ export default function SwiperSlideshow() {
 
         <div className="grid grid-cols-2 gap-x-24 sm:grid-cols-2 lg:grid-cols-4 mt-14 sm:mt-20 px-24">
           <div>
-            <Image src={find} className="mx-auto w-24 lg:w-40 sm:w-40" />
+            <Image
+              src={find}
+              className="mx-auto w-24 lg:w-40 sm:w-40"
+              alt="find icon"
+              aria-label="find icon in a small circle with magnifying glass"
+            />
             <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">
               Find
             </h1>
@@ -54,7 +59,12 @@ export default function SwiperSlideshow() {
           </div>
 
           <div>
-            <Image src={community} className="mx-auto w-24 lg:w-40 sm:w-40" />
+            <Image
+              src={community}
+              className="mx-auto w-24 lg:w-40 sm:w-40"
+              alt="community icon"
+              aria-label="community icon in a small circle"
+            />
             <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">
               Community
             </h1>
@@ -65,7 +75,12 @@ export default function SwiperSlideshow() {
           </div>
 
           <div>
-            <Image src={support} className="mx-auto w-24 lg:w-40 sm:w-40" />
+            <Image
+              src={support}
+              className="mx-auto w-24 lg:w-40 sm:w-40"
+              alt="support icon"
+              aria-label="support icon in a small circle showing a handshake"
+            />
             <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">
               Support
             </h1>
@@ -76,7 +91,12 @@ export default function SwiperSlideshow() {
           </div>
 
           <div>
-            <Image src={connect} className="mx-auto w-24 lg:w-40 sm:w-40" />
+            <Image
+              src={connect}
+              className="mx-auto w-24 lg:w-40 sm:w-40"
+              alt="connect icon"
+              aria-label="connect icon in a small circle"
+            />
             <h1 className="font-semibold mb-2 text-sm lg:text-lg sm:text-xl pt-5 text-center">
               Connect
             </h1>
@@ -103,7 +123,12 @@ export default function SwiperSlideshow() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Image src={ipad1} className="w-full h-full bg-cover mt-20 " />
+          <Image
+            src={ipad1}
+            className="w-full h-full bg-cover mt-20 "
+            alt="ipad with circles app displayed"
+            aria-label="ipad with circles app displayed"
+          />
           <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
             <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
               "Access"
@@ -118,7 +143,12 @@ export default function SwiperSlideshow() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image src={ipad2} className="w-full h-full bg-cover mt-20" />
+          <Image
+            src={ipad2}
+            className="w-full h-full bg-cover mt-20"
+            alt="ipad and mobile with circles app displayed"
+            aria-label="ipad and mobile with circles app displayed"
+          />
           <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10 lg:text-4xl sm:text-2xl text-lg font-semibold">
             "Circles"
           </div>
@@ -131,7 +161,12 @@ export default function SwiperSlideshow() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image src={ipad3} className="w-full h-full bg-cover mt-20 " />
+          <Image
+            src={ipad3}
+            className="w-full h-full bg-cover mt-20 "
+            alt="ipad and mobile with circles app displayed"
+            aria-label="ipad and mobile with circles app displayed"
+          />
           <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10 lg:text-4xl sm:text-2xl text-lg font-semibold">
             "Sign up"
           </div>
@@ -143,7 +178,12 @@ export default function SwiperSlideshow() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image src={ipad4} className="w-full h-full bg-cover mt-20" />
+          <Image
+            src={ipad4}
+            className="w-full h-full bg-cover mt-20"
+            alt="ipad and mobile with circles app displayed"
+            aria-label="ipad and mobile with circles app displayed"
+          />
           <div className="absolute top-72 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10 lg:text-4xl sm:text-2xl text-lg font-semibold">
             "Keep Track"
           </div>
