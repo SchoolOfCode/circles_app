@@ -166,7 +166,7 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
             </div>
             <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
               <h3 className="font-semibold md:col-span-5">
-                If I can't attend an event can I cancel it?
+                How can I cancel my attendance to an event?
               </h3>
               <p className="md:pl-0 md:col-span-7 text-lg">
                 If for whatever reason you are unable to attend an event that
