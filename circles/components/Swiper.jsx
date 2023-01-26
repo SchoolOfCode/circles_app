@@ -37,9 +37,15 @@ export default function SwiperSlideshow() {
           {" "}
           Our purpose{" "}
         </h1>
-        <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32 lg:mt-2 lg:mx-96 font-semibold flex justify-center text-center text-gray-400 ">
-          Our mission is to support and encourage socially disconnected
-          individuals integrate into their local communities.
+        <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32 lg:mt-2 lg:mx-72 font-semibold text-center text-gray-400 ">
+          Our mission is to support individuals make the most of the{" "}
+          <a
+            href="https://www.england.nhs.uk/personalisedcare/social-prescribing/"
+            className="font-bold text-[#000000] hover:text-[rgba(186,229,243)] underline"
+          >
+            Social Prescribing
+          </a>{" "}
+          scheme.
         </smaller>
 
         <div className="grid grid-cols-2 gap-x-24 sm:grid-cols-2 lg:grid-cols-4 mt-14 sm:mt-20 px-24">
@@ -54,7 +60,7 @@ export default function SwiperSlideshow() {
               Find
             </h1>
             <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">
-              Helping you to find events near you and connect to your community.
+              Helping you find events near you that you are interested in.
             </p>
           </div>
 
@@ -69,8 +75,7 @@ export default function SwiperSlideshow() {
               Community
             </h1>
             <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">
-              Helping you to intergrate into your community and feel apart of
-              it.{" "}
+              Helping you find social circles and feel part of your community.{" "}
             </p>
           </div>
 
@@ -85,8 +90,7 @@ export default function SwiperSlideshow() {
               Support
             </h1>
             <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">
-              Providing you with the support you need most and offering a
-              helping hand where ever possible.
+              Providing you with the support you need most because we care.
             </p>
           </div>
 
@@ -101,8 +105,7 @@ export default function SwiperSlideshow() {
               Connect
             </h1>
             <p className="text-center text-xs sm:text-lg lg:text-lg xl:text-lg mb-10 sm:mb-20">
-              Helping you feel more connected to your local community and build
-              true connections.
+              Promoting meaningful connections via shared interests.
             </p>
           </div>
         </div>

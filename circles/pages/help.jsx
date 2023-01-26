@@ -150,19 +150,18 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
                 How do I get started?
               </h3>
               <p className="md:pl-0 md:col-span-7 text-lg">
-                Your Link worker will give you a pin and you will be able to
-                sign in with it, after that your details will be populated and
-                you can start attending local events..
+                Your social prescriber would have sent you an email with a
+                unique PIN you can use to sign in. Your Link Worker will be in
+                touch with more details.
               </p>
             </div>
             <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
               <h3 className="font-semibold md:col-span-5">
-                How many events can i sign up for?
+                How do I join a group?
               </h3>
               <p className="md:pl-0 md:col-span-7 text-lg ">
-                To sign up for an event, navigate your to the events page where
-                you will see your local events, choose the event you would like
-                to attend the click attending?
+                To join a group, navigate your to the groups page and get in
+                touch with the organisers directly, via email or phone.
               </p>
             </div>
             <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
@@ -171,9 +170,9 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
               </h3>
               <p className="md:pl-0 md:col-span-7 text-lg">
                 If for whatever reason you are unable to attend an event that
-                you are booked in for, you can cancel at any time before the
-                event by going to the event page, finding the event and clicking
-                cancel.
+                you are booked in for, you can cancel at any time by getting in
+                touch with the group or organisation. Most events are drop-in
+                only so you may not need to do this.
               </p>
             </div>
             <div className="py-6 space-y-2 md:grid md:grid-cols-12 md:gap-8 md:space-y-0">
@@ -182,7 +181,8 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
               </h3>
               <p className="md:pl-0 md:col-span-7 text-lg">
                 If you need additional support please contact your assigned Link
-                worker and they can assist you..
+                Worker so they can assist you. Otherwise, go to our contact page
+                and send us an email.
               </p>
             </div>
           </div>

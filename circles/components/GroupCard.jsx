@@ -16,14 +16,14 @@ export default function GroupCard({ club, setModalInfo }) {
           src={club.image}
           alt="" //add cub.alt from new field from groups model
         />
-        <h3 className="mt-6 mb-6 text-lg font-semibold text-gray-900 pb-1">
+        <h3 className="mt-6 mb-3 text-lg font-semibold text-gray-900 pb-1">
           {club.club_name}
         </h3>
         <div className="mb-1">
-          <dl className="mt-3 flex flex-grow flex-col justify-between">
+          <dl className="mt-0 flex flex-grow flex-col justify-between">
             <dt className="sr-only">Days</dt>
             <dd className="text-lg text-gray-500">{club.days}</dd>
-            <dt className="sr-only">times</dt>
+            <dt className="sr-only">Times</dt>
             <dd className="text-lg text-gray-500">{club.times}</dd>
             <dd className="flex justify-evenly mt-8">
               <span className="rounded-full bg-teal-100 px-2 py-1 text-sm font-medium text-green-800">
