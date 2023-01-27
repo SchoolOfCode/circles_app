@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import ipad1 from "../public/images/1.png";
 import ipad2 from "../public/images/2.png";
 import ipad3 from "../public/images/3.png";
@@ -38,13 +37,10 @@ export default function SwiperSlideshow() {
           {" "}
           Our purpose{" "}
         </h1>
-        <p className="lg:text-sm sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32 lg:mt-2 lg:mx-96 font-semibold text-gray-400 text-center ">
+        <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32 lg:mt-2 lg:mx-96 font-semibold flex justify-center text-center text-gray-400 ">
           Our mission is to support and encourage socially disconnected
-          individuals integrate into their local communities. We are apart of the social 
-          prescribing scheme, which shares the same mission
-          {" "}<Link href="https://www.england.nhs.uk/personalisedcare/social-prescribing/" 
-          className="text-black hover:text-[rgba(186,229,243)]">click here</Link> to learn more.
-        </p>
+          individuals integrate into their local communities.
+        </smaller>
 
         <div className="grid grid-cols-2 gap-x-24 sm:grid-cols-2 lg:grid-cols-4 mt-14 sm:mt-20 px-24">
           <div>
