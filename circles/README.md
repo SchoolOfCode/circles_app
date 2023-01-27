@@ -84,20 +84,33 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Google spreadsheets
 - Google Presentation 
 
-### Improvements
+### Improvements & Stretch goals
 
-- Work on the responsiveness of the website so that it's available on both mobile and Ipad
 - Scroll bar on the account page needs to disappear when there are no events 
-- 
-- 
+- Develop the account platform for the Link workers. Features would include a component that allows Link workers to track their assigned clients.
+- Fully responsive on mobile and tablets. MVP achieved as a web app.
+- Schedule and carry out more real-world testing and empathy maps with the target audience. Collate feedback and integrate this into a new sprint.
+- Group administrators have accounts to set up new groups on the platform. Requests to join groups could be made directly through the app
+- Further integration of Next Auth with more tables added to the db for authorisation of different accounts.
+- Delve further into accessibility and aim to achieve 100 on Lighthouse reports. Increase the ARIA coverage on the app.
+- Build a more comprehensive testing suite which could be integrated into Github tools.
+
+
+
+
 
 ### Challenges
-- Can only use 5 connections 
-- 
-- 
-- 
-- 
-- 
+- Database connections- Limited to 5 on our free plan. This made running the servers during development a balancing act when we sometimes required more connections.
+- Deployment & merging: We had a good merging policy in place but occasionally road blocks appeared along the way. Eg: package-lock errors and empty components
+- CSS consistency across the site
+- Responsiveness across the site 
+- Date-Time formatting: Matching the dates produced by the date picker to the storage format in the db. 
+
+
+
+
+
+
 
 
 ## Authors:
@@ -124,5 +137,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-
