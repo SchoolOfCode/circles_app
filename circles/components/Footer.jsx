@@ -7,6 +7,9 @@ export default function Footer() {
       <div className="mt-8 space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
         <div className="sm:grid grid-cols-12 lg:grid grid-cols-12 xl:grid grid-cols-12">
           <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
+          <div className="pb-1">
+              <Image src={Logoblack} alt="circles logo" className="flex justify-center space-x-3 md:justify-start w-32 sm:w-40 -mt-16 ml-40 lg:mt-0 sm:mt-0 sm:ml-28  align-middle" />
+            </div>
             <a
               rel="noopener noreferrer"
               href="#"
@@ -14,9 +17,7 @@ export default function Footer() {
             >
               <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400"></div>
             </a>
-            <div className="absolute right-3/4">
-              <Image src={Logoblack} alt="circles logo" className="w-32 sm:w-40 -mt-16 ml-40 lg:mt-0 sm:mt-0 sm:ml-28  " />
-            </div>
+            
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
@@ -24,56 +25,11 @@ export default function Footer() {
               EXPLORE
             </p>
             <ul className="text-xs lg:text-sm md:text-sm sm:text-sm">
-              <li>
+            <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#about"
+                  href="/"
                   className="hover:dark:text-white"
-                >
-                  About
-                </a>
-              </li>
-              
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-white"
-                >
-                  Resources
-                </a>
-              </li>
-              
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="/help"
-                  className="hover:dark:text-white"
-                >
-                  Useful Links
-                </a>
-              </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="/circles/pages/help.jsx"
-                  className="hover:dark:text-white"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-span-6 text-center md:text-left md:col-span-3 sm:mr-20 mt-10 sm:mt-0 lg:mt-0 xl:mt-0">
-            <p className="pb-1 sm:text-sm lg:text-sm md:text-lg text-xs font-semibold">
-              INFORMATION
-            </p>
-            <ul className="lg:text-sm md:text-sm sm:text-sm text-xs">
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
                 >
                   Home
                 </a>
@@ -81,50 +37,56 @@ export default function Footer() {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
+                  href="/groups"
+                  className="hover:dark:text-white"
                 >
-                  Organisations
-                </a>
-              </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
-                >
-                  Media
+                  Groups
                 </a>
               </li>
               
+        
+              
+            </ul>
+          </div>
+          
+          <div className="col-span-6 text-center md:text-left md:col-span-3 sm:mr-20 mt-10 sm:mt-0 lg:mt-0 xl:mt-0">
+            <p className="pb-1 sm:text-sm lg:text-sm md:text-lg text-xs font-semibold">
+              INFORMATION
+            </p>
+            <ul className="lg:text-sm md:text-sm sm:text-sm text-xs">
+            <li>
+                <a
+                  rel="noopener noreferrer"
+                  href="/account"
+                  className="hover:dark:text-white"
+                >
+                  Account
+                </a>
+              </li>
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
-                  className="hover:dark:text-violet-400"
+                  href="/contactus"
+                  className="hover:dark:text-white"
                 >
-                  Blog
+                  Contact
                 </a>
-				</li>
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="hover:dark:text-violet-400"
-                  >
-                    Terms and Conditions
-                  </a>
-                </li>
+              </li>
+              
               
             </ul>
           </div>
         </div>
+        
 
         <div className="grid justify-center mt-6 lg:justify-between pl-10 pr-10 pb-14 text-sm text-center dark:text-gray-400 h-14 sm:h-2 md:h-5 lg:-5 w-full lg:bg-[#BAE5F3] pt-8">
           <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
+            
             <span className="lg:text-sm md:text-xs sm:text-xs text-xs ">
               © 2023 Circles. Privacy Policy All rights reserved.
+              
             </span>
+            
           </div>
 
           <div className="flex justify-center pt-0 md:pl-20 space-x-4 lg:pt-0 lg:col-end-13 md:col-end-13 sm:col-end-5 ">
