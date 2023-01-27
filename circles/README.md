@@ -119,7 +119,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [Danny Bains](https://github.com/DannyBains2)
 
-- Gabriel Bricklesby
+- Gabriel Brocklesby
 
 - [Iona Meadows](https://github.com/ionajosephine)
 
