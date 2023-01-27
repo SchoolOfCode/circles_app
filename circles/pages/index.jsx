@@ -35,6 +35,15 @@ export default function Home() {
             email.
           </Link>
         </p>
+        <div className="card w-96 bg-base-100 shadow-xl mt-6">
+          <div className="card-body">
+            <h2 className="card-title">Demo Login Details</h2>
+            <p>email: johndoe@test.com</p>
+            <p>Password: test</p>
+          <div className="card-actions justify-end">
+    </div>
+  </div>
+</div>
         <div className="w-screen h-20 bg-blue"></div>
       </div>
       <SwiperSlideshow />
