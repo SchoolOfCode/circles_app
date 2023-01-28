@@ -37,7 +37,7 @@ export default function SwiperSlideshow() {
           {" "}
           Our purpose{" "}
         </h1>
-        <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32  lg:mt-2 lg:ml-[360px] font-semibold  text-gray-400 ">
+        <smaller className="lg:text-lg sm:text-lg text-xs sm:mt-10 mt-5 sm:mx-32  lg:mt-2 lg:ml-[300px] font-semibold  text-gray-400">
           Our mission is to support individuals make the most of the{" "}
           <a
             href="https://www.england.nhs.uk/personalisedcare/social-prescribing/"
@@ -144,52 +144,61 @@ export default function SwiperSlideshow() {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide  >
-          <Image src={ipad2}  className="w-full h-full bg-cover mt-20" alt="ipad and mobile with circles app displayed"
-            aria-label="ipad and mobile with circles app displayed"/>
+        <SwiperSlide>
+          <Image
+            src={ipad2}
+            className="w-full h-full bg-cover mt-20"
+            alt="ipad and mobile with circles app displayed"
+            aria-label="ipad and mobile with circles app displayed"
+          />
           <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
-          <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
-            Connect with circles
-          </div>
-          <div data-swiper-parallax="-100">
-            <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
-            Connect with people with similar
-            interests and find events near you.
-            </p>
+            <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
+              Connect with circles
             </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide  >
-          <Image src={ipad2}  className="w-full h-full bg-cover mt-20" alt="ipad and mobile with circles app displayed"
-            aria-label="ipad and mobile with circles app displayed"/>
-          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
-          <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
-          Keep Track
-          </div>
-          <div data-swiper-parallax="-100">
-            <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
-            Your dashboard will help you
-            manage and keep-up-to-date 
-            with your events.
-            </p>
+            <div data-swiper-parallax="-100">
+              <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
+                Connect with people with similar interests and find events near
+                you.
+              </p>
             </div>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image src={ipad4} className="w-full h-full bg-cover mt-20" alt="ipad and mobile with circles app displayed"
-            aria-label="ipad and mobile with circles app displayed" />
+          <Image
+            src={ipad2}
+            className="w-full h-full bg-cover mt-20"
+            alt="ipad and mobile with circles app displayed"
+            aria-label="ipad and mobile with circles app displayed"
+          />
           <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
-
-          <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
-            Sign up
+            <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
+              Keep Track
+            </div>
+            <div data-swiper-parallax="-100">
+              <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
+                Your dashboard will help you manage and keep-up-to-date with
+                your events.
+              </p>
+            </div>
           </div>
-          <div data-swiper-parallax="-100">
-            <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
-            Sign up for an event by email or a quick call.
+        </SwiperSlide>
 
-            </p>
+        <SwiperSlide>
+          <Image
+            src={ipad4}
+            className="w-full h-full bg-cover mt-20"
+            alt="ipad and mobile with circles app displayed"
+            aria-label="ipad and mobile with circles app displayed"
+          />
+          <div className="absolute top-14 lg:top-1/3 sm:top-40 lg:left-56 sm:left-20 left-10">
+            <div className="lg:text-4xl sm:text-2xl text-lg font-semibold">
+              Sign up
+            </div>
+            <div data-swiper-parallax="-100">
+              <p className="sm:mr-[22em] mr-48 sm:left-20 lg:mr-[35em] lg:text-2xl sm:text-lg text-[0.6em] lg:mt-10 mt-3">
+                Sign up for an event by email or a quick call.
+              </p>
             </div>
           </div>
         </SwiperSlide>

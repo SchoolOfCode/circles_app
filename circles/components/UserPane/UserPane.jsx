@@ -4,13 +4,7 @@ import "react-sliding-pane/dist/react-sliding-pane.css";
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 
-export default function UserPane({
-  visible,
-  user,
-  closePane,
-  handleUpcoming,
-  handlePast,
-}) {
+export default function UserPane({ visible, user, closePane }) {
   const [max, setMax] = useState(false);
 
   const paneWidth = max || window.innerWidth < 600 ? "100%" : "400px";
