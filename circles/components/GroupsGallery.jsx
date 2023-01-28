@@ -47,7 +47,7 @@ export default function GroupsGallery({ data }) {
 
   return (
     <div className="pt-32 pb-32 px-10 bg-gradient-to-b from-yellow-100 to-[#BAE5F3] h-full">
-      <h1 className="text-6xl flex justify-center mb-20 ">Circles near you.</h1>
+      <h1 className="text-6xl flex justify-center mb-20 ">Circles Near You.</h1>
       <div className="flex justify-center">
         <FuzzySearchBar
           className="mb-20 w-full max-w-md"
