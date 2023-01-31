@@ -34,13 +34,13 @@ Our solution was to design a web-based, centralised platform that allows users t
 
 - **Languages:** Javascript, CSS3, PostgreSQL
 
-- **Libraries:** React,TailwindCSS
+- **Frameworks:** Next.js, React.js, TailwindCSS
 
-- **Frameworks:** Next, Daisy UI, Mamba UI, Swiper, Framer motion
+- **Libraries:** Daisy UI, Mamba UI, Swiper, Framer motion, Fuse.js
 
-- **Server:** Node, Express, Dotenv, Prisma
+- **Server:** Next.js, Prisma
 
-- **Authentication:** NextAuth.js
+- **Authentication:** Next/Auth
 
 - **Testing:** Cypress, React Testing Library, Jest
 
