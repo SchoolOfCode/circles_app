@@ -5,8 +5,7 @@ Welcome to the Circles app, designed to help users find their circles. For the b
 
 <br/><h1 style="font-style: bold; font-size: 25px;">The Problem</h1>
 
-Watch our promo video: https://www.youtube.com/watch?v=mioXPCu1JEo
-Link to our deployed app: https://circlesapp.netlify.app/
+Watch our promo video here: https://www.youtube.com/watch?v=mioXPCu1JEo
 
 Social isolation is becoming more prevalent in today's society and can be caused by a number of reasons.  Poverty, grief, illness or disability to name a few. For these reasons, individuals can struggle to integrate into their local communities. This is where social prescribing steps in. Social prescribing, also known as community referral, allows health professionals to refer individuals to link workers who will then connect them to support in their community. 
 
