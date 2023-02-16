@@ -1,8 +1,7 @@
 export const helpLinks = [
   {
     id: 1,
-    image:
-      "https://www.ageuk.org.uk/bp-assets/globalassets/calderdale--kirklees/2022/_potential-web-banner-1.png",
+    image: "/circles/public/images/help-cards/age_uk.png",
     title: "Age Uk",
     description:
       "We're a local charity supporting older people, their families and carers. Our aim is to make Herefordshire & Worcestershire a great place to grow older!",
