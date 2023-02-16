@@ -112,7 +112,7 @@ We provide friendship, conversation and support 24 hours a day, 7 days a week"
           <Card
             img="https://www.rehab4addiction.co.uk/wp-content/uploads/2019/02/what-happens-at-smart-recovery-meeting-1200x720.png"
             title="SMART Recovery"
-            description="MART Recovery helps participants decide whether they have a problem, builds up their motivation to change and offers a set of proven tools and techniques to support recovery."
+            description="SMART Recovery helps participants decide whether they have a problem, builds up their motivation to change and offers a set of proven tools and techniques to support recovery."
             href="https://smartrecovery.org.uk/"
             alt="Smart Recovery logo"
           />
