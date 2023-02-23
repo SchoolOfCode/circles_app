@@ -4,7 +4,7 @@ import Link from "next/link";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 import QuestionDisplay from "../components/QuestionDisplay";
-import { helpLinks } from "../data/help-links";
+import { helpLinks } from "../data/help-links"; // import helpLinks array from help-links.js file
 
 export default function Faq() {
   return (
