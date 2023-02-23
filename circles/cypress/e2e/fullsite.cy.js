@@ -1,6 +1,6 @@
 it("Full e2e", function () {
   cy.visit("https://circlesapp.netlify.app/");
-  cy.get(".lg\\:top-64 > .lg\\:text-lg > .underline").click();
+  // cy.get(".lg\\:top-64 > .lg\\:text-lg > .underline").click();
   cy.get(".mt-12 > :nth-child(1) > .text-gray-900").clear("M");
   cy.get(".mt-12 > :nth-child(1) > .text-gray-900").type("Matt");
   cy.get(".mt-12 > .md\\:ml-6 > .text-gray-900").clear();
