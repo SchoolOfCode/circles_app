@@ -1,5 +1,6 @@
 import Image from "next/image";
 import image from "../public/images/slice11.png";
+import ageuk from "../public/images/age_uk_logo 3.png";
 import Link from "next/link";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
@@ -36,12 +37,13 @@ export default function Faq() {
         <div className="grid gap-x-8 gap-y-20  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 mt-28 lg:mt-80">
           {helpLinks.map((helpLink) => (
             <Card
-              key={helpLink.id}
-              img={helpLink.image}
-              title={helpLink.title}
-              description={helpLink.description}
-              href={helpLink.href}
-              alt={helpLink.alt}
+              helpLink={helpLink}
+              // key={helpLink.id}
+              // src={helpLink.image}
+              // title={helpLink.title}
+              // description={helpLink.description}
+              // href={helpLink.href}
+              // alt={helpLink.alt}
             />
           ))}
         </div>

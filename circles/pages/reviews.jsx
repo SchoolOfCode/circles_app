@@ -1,3 +1,5 @@
+//This is a prototype page that should not be used
+
 export default function Reviews() {
   return (
     <>
